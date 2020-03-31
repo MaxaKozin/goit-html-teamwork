@@ -1,0 +1,11 @@
+.page-nav {
+  @include flex($type: 'between');
+  padding-bottom: remc(20);
+}
+
+.sidebar-icon {
+  @include flex($type: 'column');
+  width: 28px;
+  height: 17px;
+  fill: $white;
+}
