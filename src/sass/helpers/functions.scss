@@ -1,0 +1,11 @@
+// Функция преобразования пикселей в рем
+
+// Используем следующим образом:
+
+//   font-size: remc(48);
+
+// итог font-size: 3rem;
+
+@function remc($pxsize, $rembase: 16) {
+  @return ($pxsize/$rembase) + rem;
+}
