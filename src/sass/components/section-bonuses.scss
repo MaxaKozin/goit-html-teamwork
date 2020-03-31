@@ -157,5 +157,16 @@
     font-family: $acrom-xbold;
     font-size: remc(8);
     box-shadow: 0 remc(5) remc(6) rgba(196, 87, 15, 0.26);
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: $cyan;
+      box-shadow: 0 remc(5) remc(6) rgba(23, 236, 255, 0.26);
+    }
+
+    &--click {
+      background-color: $btn_click;
+      box-shadow: 0 remc(2) remc(8) rgba(1, 1, 1, 0.3);
+    }
   }
 }
