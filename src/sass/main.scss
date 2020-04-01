@@ -5,4 +5,22 @@
 @import 'base.scss';
 @import 'fonts.scss';
 
+
+// Components
+
+// Section-1
+@import 'components/header.scss';
+@import 'components/relative.scss';
+@import 'components/page-header.scss';
+@import 'components/overlay.scss';
+@import 'components/page-nav.scss';
+@import 'components/head-text.scss';
+@import 'components/button.scss';
+
+// Section-2
+@import 'components/motivation.scss';
+@import 'components/motivation-text.scss';
+@import 'components/lists.scss';
+
+// Section-17
 @import 'components/section-bonuses.scss';

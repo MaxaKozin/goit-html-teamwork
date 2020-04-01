@@ -1,0 +1,18 @@
+.motivation-list {
+  padding-bottom: 44px;
+}
+
+.motivation-list__item {
+  padding-left: remc(18);
+
+  &::before {
+    display: block;
+    content: '';
+    background-color: $black;
+    width: remc(8);
+    height: remc(8);
+    position: absolute;
+    left: 0;
+    top: remc(4);
+  }
+}
