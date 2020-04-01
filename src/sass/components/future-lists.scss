@@ -1,0 +1,27 @@
+.future-list {
+  padding-left: remc(60);
+
+  &__item {
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(6);
+      height: remc(6);
+      position: absolute;
+      left: remc(-38);
+      top: remc(7);
+    }
+  }
+}
+.list-title {
+  font-family: $acrom-xbold;
+  font-size: remc(14);
+  line-height: remc(20);
+  text-transform: uppercase;
+}
+.list-text {
+  font-family: $acrom;
+  font-size: remc(14);
+  line-height: remc(20);
+}

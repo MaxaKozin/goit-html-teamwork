@@ -7,20 +7,25 @@
   line-height: remc(16);
   font-family: $acrom-xbold;
   text-transform: uppercase;
+  padding-left: remc(40);
+  margin-top: remc(44);
+  margin-bottom: remc(18);
   text-align: center;
-  &::before {
-    display: block;
-    content: '';
-    background-color: $black;
-    width: remc(25);
-    height: remc(4);
-  }
 }
 
 .motivation-article {
   font-size: remc(21);
   line-height: remc(26);
   text-transform: uppercase;
+  text-align: center;
+}
+.list-article {
+  font-family: $acrom-xbold;
+  font-size: remc(14);
+  line-height: remc(20);
+  text-transform: uppercase;
+  margin-top: remc(44);
+  margin-bottom: remc(18);
 }
 .motivation-article__span {
   background-color: $black;
@@ -31,7 +36,6 @@
   text-transform: uppercase;
   font-family: $acrom-xbold;
 }
-
 .concluding {
   font-family: $acrom-medium;
   color: $orange;
