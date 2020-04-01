@@ -1,33 +1,24 @@
 .future-title {
-  font-family: $acrom-bold;
-  font-size: remc(18);
-  line-height: remc(24);
+  @extend %medium-bold;
   color: $white;
   background-color: $black;
 }
 .future-text {
-  font-family: $acrom-bold;
-  font-size: remc(14);
-  line-height: remc(20);
+  @extend %small-bold;
 }
 .future-subtext {
-  font-size: remc(14);
-  line-height: remc(20);
+  @extend %small-regular;
 }
 .future-subtext__span {
   background-color: $cyan_mark;
 }
 .future-subtitle {
-  font-family: $acrom-bold;
-  font-size: remc(18);
-  line-height: remc(24);
+  @extend %medium-bold;
   color: $white;
   text-transform: uppercase;
   background-color: $black;
 }
 .future-subtitle__text {
-  font-family: $acrom;
-  font-size: remc(14);
-  line-height: remc(20);
+  @extend %small-regular;
   padding-left: remc(40);
 }

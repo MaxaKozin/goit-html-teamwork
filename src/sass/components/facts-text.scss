@@ -1,13 +1,9 @@
 .facts-article {
-  font-family: $acrom-xbold;
-  font-size: remc(18);
-  line-height: remc(24);
+  @extend %medium-xbold;
   margin: 0 auto;
 }
 .facts-text {
-  font-family: $acrom-medium;
-  font-size: remc(14);
-  line-height: remc(19);
+  @extend %small-medium;
   padding-left: remc(40);
   margin-top: remc(36);
   margin-bottom: remc(40);
@@ -19,13 +15,9 @@
   margin-bottom: remc(12s);
 }
 .facts-list-items__text {
-  font-family: $acrom-medium;
-  font-size: remc(14);
-  line-height: remc(19);
+  @extend %small-medium;
   background-color: $cyan_mark;
 }
 .facts-list-items__comment {
-  font-size: remc(14);
-  line-height: remc(19);
   margin-top: remc(18);
 }

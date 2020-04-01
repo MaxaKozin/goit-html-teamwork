@@ -15,13 +15,9 @@
   }
 }
 .list-title {
-  font-family: $acrom-xbold;
-  font-size: remc(14);
-  line-height: remc(20);
+  @extend %small-xbold;
   text-transform: uppercase;
 }
 .list-text {
-  font-family: $acrom;
-  font-size: remc(14);
-  line-height: remc(20);
+  @extend %small-regular;
 }

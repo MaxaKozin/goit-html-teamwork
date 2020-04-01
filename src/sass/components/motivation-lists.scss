@@ -18,8 +18,6 @@
     margin-bottom: remc(20);
   }
   &--span {
-    font-family: $acrom-bold;
-    font-size: remc(14);
-    line-height: remc(20);
+    @extend %small-bold;
   }
 }
