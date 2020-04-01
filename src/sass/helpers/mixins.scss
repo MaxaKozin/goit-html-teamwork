@@ -28,33 +28,25 @@
 // миксины для флекса
 
 @mixin flex($type: 'all') {
-  display: -webkit-box;
   display: flex;
   @if $type== 'all' {
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
-  } @else if $type== 'between' {
-    -webkit-box-pack: justify;
-    justify-content: space-between;
   } @else if $type== 'hor' {
-    -webkit-box-pack: center;
     justify-content: center;
   } @else if $type== 'ver' {
-    -webkit-box-align: center;
     align-items: center;
   } @else if $type== 'between-center' {
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
-  } @else if $type== 'wrap-around' {
-    justify-content: space-around;
-    flex-wrap: wrap;
   } @else if $type== 'column' {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
+  } @else if $type== 'column-center' {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } @else if $type== 'align-center' {
+    align-content: space-between;
+    justify-content: center;
   }
 }

@@ -20,9 +20,7 @@
   text-align: center;
 }
 .list-article {
-  font-family: $acrom-xbold;
-  font-size: remc(14);
-  line-height: remc(20);
+  @extend %small-xbold;
   text-transform: uppercase;
   margin-top: remc(44);
   margin-bottom: remc(18);
