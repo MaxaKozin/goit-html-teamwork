@@ -1,0 +1,15 @@
+.after-course{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: col(8);
+      }
+
+
+
+
+}

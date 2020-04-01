@@ -1,0 +1,20 @@
+.now{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: remc(13.5);
+
+    &__container {
+        width: col(8);
+      }
+    
+    &__argument[
+      color: $orange;
+      width: 340px;
+    ]
+
+
+
+}
