@@ -1,0 +1,34 @@
+.important {
+  padding-top: remc(55);
+  padding-bottom: remc(65);
+  position: relative;
+
+  &__title {
+    font-family: $acrom-xbold;
+    font-size: remc(18);
+    line-height: remc(24);
+    position: absolute;
+    top: remc(18);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__container {
+    margin: 0 auto;
+    width: col(10);
+    padding: remc(80);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $price_bg;
+    box-shadow: 0 remc(8) remc(14) rgba(0, 0, 0, 0.15);
+  }
+
+  &__value {
+      font-family: $acrom-medium;
+      color: $white;
+      font-size: remc(13);
+      line-height: remc(19.33);
+  }
+}
