@@ -37,6 +37,10 @@ img {
   margin: 0 auto;
   padding: 0 18px;
   width: 480px;
+
+  @include tablet {
+    width: 640px;
+  }
 }
 
 // .container {

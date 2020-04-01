@@ -6,8 +6,19 @@
   align-items: center;
   padding: remc(44) 0;
 
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: remc(60) 0;
+  }
+
   &__container {
     width: col(8);
+
+    @include tablet {
+      width: col(5);
+    }
   }
 
   &__title {
@@ -16,6 +27,11 @@
     text-transform: uppercase;
     color: $white;
     margin-bottom: remc(23);
+    padding: remc(2) 0;
+
+    @include tablet {
+      font-size: remc(27);
+    }
 
     > span {
       background-color: $black;
@@ -30,6 +46,13 @@
     margin-bottom: remc(58);
     position: relative;
 
+    @include tablet {
+      font-size: remc(9);
+      padding-left: remc(48);
+      padding-right: remc(58);
+      margin-bottom: remc(36);
+    }
+
     &::after {
       content: '';
       display: block;
@@ -39,15 +62,47 @@
       left: remc(22);
       top: remc(12);
       background-color: $black;
+
+      @include tablet {
+        width: remc(29);
+        height: remc(5);
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: remc(8);
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      z-index: 5;
+
+      @include tablet {
+        width: remc(5);
+      }
     }
   }
 
   &__item {
-    padding-left: remc(56);
     margin-bottom: remc(38);
+    
+    @include tablet {
+      margin-bottom: remc(20);
+    }
 
     &:last-child {
       margin-bottom: remc(25);
+
+      @include tablet {
+        margin-bottom: remc(10);
+      }
     }
   }
 
@@ -58,16 +113,28 @@
     line-height: remc(21.85);
     margin-bottom: remc(15);
     position: relative;
+    padding-left: remc(56);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(11.78);
+      margin-bottom: remc(11);
+      padding-left: remc(43);
+      padding-right: remc(43);
+    }
 
     &--first {
       &::before {
         content: '01.';
         display: block;
         position: absolute;
-        left: remc(-19);
+        left: 0;
         top: remc(3);
         font-size: remc(25);
-        transform: translateX(-100%);
+
+        @include tablet {
+          font-size: remc(17);
+        }
       }
     }
 
@@ -76,10 +143,14 @@
         content: '02.';
         display: block;
         position: absolute;
-        left: remc(-19);
+        left: 0;
         top: remc(3);
         font-size: remc(25);
-        transform: translateX(-100%);
+        overflow: hidden;
+
+        @include tablet {
+          font-size: remc(17);
+        }
       }
     }
   }
@@ -89,6 +160,14 @@
     color: $secondary_text;
     line-height: remc(17.65);
     position: relative;
+    padding-left: remc(56);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(11.78);
+      padding-left: remc(43);
+      padding-right: remc(43);
+    }
 
     &::before {
       content: '';
@@ -98,7 +177,14 @@
       height: remc(11);
       background-color: $cyan_mark;
       top: 0;
-      left: remc(-31);
+      left: remc(25);
+
+      @include tablet {
+        width: remc(7);
+        height: remc(7);
+        top: remc(2);
+        left: remc(12);
+      }
     }
   }
 
@@ -111,6 +197,10 @@
     width: col(10);
     padding: remc(66);
     box-shadow: 0 remc(8) remc(14) rgba($black, 0.15);
+
+    @include tablet {
+      width: col(6);
+    }
   }
 
   &__label {
@@ -132,6 +222,10 @@
     font-size: remc(9);
     line-height: remc(12);
 
+    @include tablet {
+      margin-bottom: remc(16);
+    }
+
     &:focus {
       outline: none;
       border-bottom: remc(1) solid $orange;
@@ -143,6 +237,10 @@
 
     &:last-of-type {
       margin-bottom: remc(32);
+
+      @include tablet {
+        margin-bottom: remc(27);
+      }
     }
   }
 
@@ -159,14 +257,25 @@
     box-shadow: 0 remc(5) remc(6) rgba(196, 87, 15, 0.26);
     transition: all 0.2s linear;
 
+    @include tablet {
+      padding: remc(12) remc(19);
+      font-size: remc(7);
+    }
+
     &:hover {
       background-color: $cyan;
       box-shadow: 0 remc(5) remc(6) rgba(23, 236, 255, 0.26);
     }
 
-    &--click {
+    &:active {
       background-color: $btn_click;
       box-shadow: 0 remc(2) remc(8) rgba(1, 1, 1, 0.3);
     }
+  }
+}
+
+.input-wrapper:focus-within {
+  .input-wrapper__label {
+    color: $orange;
   }
 }

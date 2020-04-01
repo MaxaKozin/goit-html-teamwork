@@ -6,7 +6,9 @@
     </p>
     <ul class="list bonus__list">
       <li class="bonus__item">
-        <h4 class="bonus__heading bonus__heading--first">PDF «Карта профессий в IT»</h4>
+        <h4 class="bonus__heading bonus__heading--first">
+          PDF «Карта профессий в IT»
+        </h4>
         <p class="bonus__description">
           Чтобы видеть, куда дальше двигаться и какие перспективы тебя ожидают —
           <span class="bonus__highlight">ценность 215 грн</span>
@@ -24,24 +26,42 @@
     </ul>
   </div>
   <form action="#" class="bonus__form">
-    <label class="bonus__label" for="bonus__name">Имя</label>
-    <input id="bonus__name" class="bonus__input" type="text" required placeholder="Как вас зовут?" />
-    <label class="bonus__label" for="bonus__phone">Телефон</label>
-    <input
-      id="bonus__phone"
-      class="bonus__input"
-      type="tel"
-      required
-      placeholder="Ваш номер телефона"
-    />
-    <label class="bonus__label" for="bonus__email">E-mail</label>
-    <input
-      id="bonus__email"
-      class="bonus__input"
-      type="email"
-      required
-      placeholder="Адрес электронного ящика"
-    />
+    <div class="input-wrapper">
+      <label class="bonus__label input-wrapper__label" for="bonus__name"
+        >Имя</label
+      >
+      <input
+        id="bonus__name"
+        class="bonus__input input-wrapper__form"
+        type="text"
+        required
+        placeholder="Как вас зовут?"
+      />
+    </div>
+    <div class="input-wrapper">
+      <label class="bonus__label input-wrapper__label" for="bonus__phone"
+        >Телефон</label
+      >
+      <input
+        id="bonus__phone"
+        class="bonus__input input-wrapper__form"
+        type="tel"
+        required
+        placeholder="Ваш номер телефона"
+      />
+    </div>
+    <div class="input-wrapper">
+      <label class="bonus__label input-wrapper__label" for="bonus__email"
+        >E-mail</label
+      >
+      <input
+        id="bonus__email"
+        class="bonus__input input-wrapper__form"
+        type="email"
+        required
+        placeholder="Адрес электронного ящика"
+      />
+    </div>
     <button class="bonus__btn">Приобрести видео-курс</button>
   </form>
 </section>
