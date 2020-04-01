@@ -4,7 +4,6 @@
 
 .motivation-list__item {
   padding-left: remc(18);
-
   &::before {
     display: block;
     content: '';
@@ -13,6 +12,14 @@
     height: remc(8);
     position: absolute;
     left: 0;
-    top: remc(4);
+    top: remc(6);
+  }
+  &:not(:last-child) {
+    margin-bottom: remc(20);
+  }
+  &--span {
+    font-family: $acrom-bold;
+    font-size: remc(14);
+    line-height: remc(20);
   }
 }

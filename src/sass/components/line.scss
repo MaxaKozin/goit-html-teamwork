@@ -1,0 +1,10 @@
+.line::before {
+  display: block;
+  content: '';
+  background-color: $black;
+  width: remc(25);
+  height: remc(4);
+  position: absolute;
+  top: remc(8);
+  left: 0;
+}
