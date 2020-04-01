@@ -9,7 +9,96 @@
         width: col(8);
       }
 
+    &__title{
+      font-family: $acrom-xbold;
+      font-size: remc(18);
+      padding-bottom: remc(20);
+    }
 
+    &__subtitle{
+      width: 230px;
+      font-size: remc(13.5);
+      font-family: $acrom-medium;
+      padding-bottom: remc(35);
+    }
+
+    &__image{
+      padding-bottom: remc(28);
+    }
+
+   &__cause{
+     font-size: remc(13.5);
+     font-family: $acrom-xbold;
+     background-color: $black;
+     color: $white;
+     margin-bottom: remc(15);
+     padding: remc(2) remc(2);
+   }
+
+   &__cause--describe{
+     font-family: $acrom;
+     color: $secondary_text;
+     font-size: remc(13.5);
+     width: 315px;
+     padding-bottom: remc(28);
+   }
+
+   &__title--second{
+     font-size: remc(13.5);
+     line-height: remc(19);
+     font-family: $acrom-xbold;
+     width: 375px;
+     text-transform: uppercase;
+     padding-bottom: remc(25);
+   }
+
+   &__list{
+     list-style: none;
+     font-size: remc(13.5);
+     line-height: remc(19);
+     width: 250px;
+   }
+
+   &__item--title{
+    font-family: $acrom-bold;
+    padding-bottom: remc(12);
+   }
+
+   &__item--subtitle{
+     font-family: $acrom;
+     padding-bottom: remc(30);
+   }
+
+   &__price--container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+   &__price{
+    
+     font-size: remc(17);
+     font-family: $acrom-medium;
+     line-height: remc(29);
+     background-color: $cyan_mark;
+     width: 150px;
+   }
+
+   &__price-first{
+    
+     text-decoration: line-through;
+     font-size: remc(17);
+     line-height: remc(44);
+     color: $old_price;
+     padding: remc(0) remc(20);
+   }
+
+   &__price-second{
+    
+     font-size: remc(36);
+     line-height: remc(44);
+     font-family: $acrom-xbold;
+     padding: remc(0) remc(20);
+   }
 
 
 }

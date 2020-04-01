@@ -10,11 +10,52 @@
         width: col(8);
       }
     
-    &__argument[
+    &__argument{
       color: $orange;
       width: 340px;
-    ]
+      padding-top: remc(43);
+      padding-bottom: remc(23);
+    }
+    
+    &__title{
+      font-size: remc(18);
+      background-color: $black;
+      color: $white;
+      padding: remc(2) remc(10);
+    }
 
+    &__second--argument{
+      width: 260px;
+      font-family: $acrom-medium;
+      padding-top: remc(25);
+    }
 
+    &__second--title{
+      width: 365px;
+      font-size: remc(13.5);
+      font-family: $acrom-xbold;
+      padding-top: remc(55);
+      padding-bottom: remc(30);
+    }
 
+    &__list{
+      
+      list-style: none;
+      text-align: center left;
+      width: 265px;
+    }
+
+    &__item{
+      font-size: remc(13.5);
+    }
+
+    &__item--title{
+      font-family: $acrom-bold;
+      padding-bottom: remc(14);
+    }
+
+    &__item--describe{
+       font-family: $acrom;
+       padding-bottom: remc(28);
+    }
 }
