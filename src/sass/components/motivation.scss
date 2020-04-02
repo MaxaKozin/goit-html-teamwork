@@ -14,6 +14,16 @@
     padding-left: remc(40);
     margin-top: remc(44);
     margin-bottom: remc(18);
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(25);
+      height: remc(4);
+      position: absolute;
+      top: remc(5);
+      left: 0;
+    }
   }
   &-article {
     font-family: $acrom-xbold;
@@ -34,8 +44,9 @@
   }
   &-list {
     padding-bottom: 44px;
+    padding-left: remc(18);
     &__item {
-      padding-left: remc(18);
+      // padding-left: remc(18);
       &::before {
         display: block;
         content: '';
@@ -43,7 +54,7 @@
         width: remc(8);
         height: remc(8);
         position: absolute;
-        left: 0;
+        left: remc(-18);
         top: remc(6);
       }
       &:not(:last-child) {
