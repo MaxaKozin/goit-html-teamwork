@@ -3,18 +3,47 @@
   padding-bottom: remc(65);
   position: relative;
 
+  @include tablet {
+    padding-top: remc(56);
+    padding-bottom: remc(56);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding-top: remc(63);
+    padding-bottom: remc(63);
+  }
+
   &__title {
     font-family: $acrom-xbold;
+    text-transform: uppercase;
     font-size: remc(18);
     line-height: remc(24);
     position: absolute;
     top: remc(18);
     left: 50%;
     transform: translateX(-50%);
+
+    @include tablet {
+      font-size: remc(27);
+      line-height: remc(33.65);
+      position: static;
+      transform: none;
+      margin-bottom: remc(33);
+    }
+
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(37.5);
+      margin-bottom: remc(38);
+      padding-left: remc(5);
+    }
   }
 
   &__container {
-    margin: 0 auto;
+    margin: 0 auto remc(40);
     width: col(10);
     padding: remc(80);
     display: flex;
@@ -23,12 +52,292 @@
     align-items: center;
     background-color: $price_bg;
     box-shadow: 0 remc(8) remc(14) rgba(0, 0, 0, 0.15);
+
+    @include tablet {
+      width: col(5);
+      padding: remc(55);
+      margin: 0;
+      box-shadow: 0 remc(11) remc(22) rgba(0, 0, 0, 0.15);
+    }
+
+    @include desktop {
+      padding: remc(63);
+      box-shadow: 0 remc(14) remc(27) rgba(0, 0, 0, 0.15);
+    }
   }
 
   &__value {
-      font-family: $acrom-medium;
-      color: $white;
-      font-size: remc(13);
-      line-height: remc(19.33);
+    font-family: $acrom-medium;
+    color: $white;
+    font-size: remc(13);
+    line-height: remc(19.33);
+    margin-bottom: remc(29);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13.46);
+      margin-bottom: remc(20);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+      margin-bottom: remc(24);
+    }
+  }
+
+  &__price {
+    font-family: $acrom-xbold;
+    color: $white;
+    text-transform: uppercase;
+
+    &--overall {
+      font-size: remc(14);
+      line-height: remc(29);
+      position: relative;
+      padding-left: remc(45);
+      margin-bottom: remc(29);
+
+      @include tablet {
+        font-size: remc(10);
+        line-height: remc(20.19);
+        margin-bottom: remc(20);
+      }
+
+      @include desktop {
+        font-size: remc(11);
+        line-height: remc(22.5);
+        margin-bottom: remc(24);
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: remc(11);
+        top: 50%;
+        transform: translateY(-50%);
+        width: remc(37);
+        height: remc(1);
+        background-color: $white;
+
+        @include tablet {
+          width: remc(26);
+          height: remc(1);
+        }
+
+        @include desktop {
+          width: remc(29);
+          height: remc(2);
+        }
+      }
+    }
+
+    &--today {
+      font-size: remc(39);
+
+      @include tablet {
+        font-size: remc(27);
+      }
+
+      @include desktop {
+        font-size: remc(30);
+      }
+
+      span {
+        font-size: remc(13);
+
+        @include tablet {
+          font-size: remc(9);
+        }
+
+        @include desktop {
+          font-size: remc(10);
+        }
+      }
+    }
+  }
+
+  &__today {
+    font-family: $acrom-medium;
+    font-size: remc(13);
+    line-height: remc(19.33);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(14);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+    }
+
+    span {
+      background-color: $cyan-mark;
+    }
+  }
+
+  &__description {
+    width: col(10);
+    margin: 0 auto;
+
+    @include tablet {
+      width: col(5);
+      margin: 0;
+      padding-left: remc(31);
+      padding-right: remc(31);
+    }
+  }
+
+  &__heading {
+    font-family: $acrom-bold;
+    font-size: remc(14);
+    line-height: remc(18.86);
+    margin-bottom: remc(15);
+    padding-left: remc(40);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(11.78);
+      margin-bottom: remc(8);
+      padding-left: remc(28);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(13.13);
+      margin-bottom: remc(9);
+      padding-left: remc(29);
+    }
+  }
+
+  &__losung {
+    font-size: remc(14);
+    line-height: remc(18.86);
+    color: $secondary-text;
+    margin-bottom: remc(25);
+    padding-left: remc(40);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(11.78);
+      padding-left: remc(28);
+      margin-bottom: remc(15);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(13.13);
+      margin-bottom: remc(17);
+      padding-left: remc(29);
+      padding-right: remc(5);
+    }
+  }
+
+  &__but {
+    font-family: $acrom-medium;
+    font-size: remc(14);
+    line-height: remc(21.55);
+    color: $orange;
+    margin-bottom: remc(31);
+    padding-left: remc(40);
+    position: relative;
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13.46);
+      padding-left: remc(28);
+      padding-right: remc(30);
+      margin-bottom: remc(21);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+      margin-bottom: remc(22);
+      padding-left: remc(29);
+      padding-right: remc(30);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: remc(34);
+      width: remc(4);
+      background-color: $black;
+      position: absolute;
+      left: remc(8);
+      top: remc(4);
+      transform: rotate(30deg);
+
+      @include tablet {
+        height: remc(22);
+        width: remc(3);
+        left: remc(5);
+      }
+
+      @include desktop {
+        height: remc(24);
+        left: remc(6);
+      }
+    }
+  }
+
+  &__button {
+    margin-left: remc(40);
+    display: block;
+    padding: remc(16) remc(44);
+    border: none;
+    font-family: $acrom-xbold;
+    font-size: remc(10);
+    line-height: remc(14.59);
+    letter-spacing: remc(1.2);
+    color: $white;
+    text-transform: uppercase;
+    background-color: $orange;
+    transition: all 0.2s linear;
+    box-shadow: 0 remc(5) remc(6) rgba(196, 87, 15, 0.26);
+
+    @include tablet {
+      margin-left: 0;
+      padding: remc(11) remc(30);
+      font-size: remc(7);
+      line-height: remc(10.09);
+      white-space: nowrap;
+    }
+
+    @include desktop {
+      font-size: remc(8);
+      line-height: remc(11.25);
+      padding: remc(12) remc(33);
+      margin-left: remc(5);
+    }
+
+    &:hover {
+      background-color: $cyan;
+      box-shadow: 0 remc(5) remc(6) rgba(23, 236, 255, 0.26);
+
+      @include tablet {
+        box-shadow: 0 remc(7) remc(10) rgba(23, 236, 255, 0.26);
+      }
+
+      @include desktop {
+        box-shadow: 0 remc(9) remc(13) rgba(23, 236, 255, 0.26);
+      }
+    }
+
+    &:active {
+      background-color: $btn_click;
+      box-shadow: 0 remc(5) remc(6) rgba(23, 236, 255, 0.26);
+
+      @include tablet {
+        box-shadow: 0 remc(7) remc(10) rgba(23, 236, 255, 0.26);
+      }
+
+      @include desktop {
+        box-shadow: 0 remc(9) remc(13) rgba(23, 236, 255, 0.26);
+      }
+    }
   }
 }
