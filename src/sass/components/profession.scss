@@ -10,21 +10,32 @@
   }
 
    &__title{
+       
        font-family: $acrom-xbold;
        font-size: remc(18);
        line-height: remc(24);
        text-transform: uppercase;
        width: 235px;
+       padding-top: remc(35);
+       padding-bottom: remc(10);
+
    }
 
    &__subtitle{
+       position: relative;
        font-family: $acrom-medium;
        font-size: remc(13.5);
        line-height: remc(20);
        width: 235px;
-   }
+       padding-bottom: remc(30);
 
-   &__subtitle:last-child{
-    font-family: $acrom;
-   }
+       &:last-child{
+        font-family: $acrom;
+       }
+    }
+
+
+   
+
+   
 }

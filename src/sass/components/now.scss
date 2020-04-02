@@ -11,11 +11,26 @@
       }
     
     &__argument{
+      position: relative;
       color: $orange;
       width: 340px;
       padding-top: remc(43);
       padding-bottom: remc(23);
+
+      &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: remc(13);
+        height: remc(2);
+        top: remc(50);
+        left: remc(-30);
+        background-color: $black;
+        transform: rotate(-45deg);
+      }
+
     }
+     
     
     &__title{
       font-size: remc(18);
@@ -25,9 +40,21 @@
     }
 
     &__second--argument{
+      position: relative;
       width: 260px;
       font-family: $acrom-medium;
       padding-top: remc(25);
+
+      &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: remc(20);
+        height: remc(2);
+        top: remc(30);
+        left: remc(-35);
+        background-color: $black;
+      }
     }
 
     &__second--title{
@@ -47,11 +74,52 @@
 
     &__item{
       font-size: remc(13.5);
+      position: relative;
+      counter-reset: section;
+
+      &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: remc(49);
+        height: remc(13);
+        top: remc(25);
+        left: remc(-50);
+        color: $white;
+        padding: remc(0) remc(5);
+        
+        transform: rotate(-90deg);
+        background-color: $orange;
+      }
+
+      &:nth-child(1):before{
+        content: '[001]';
+      }
+
+      &:nth-child(2):before{
+        content: '[002]';
+      }
+
+      &:nth-child(3):before{
+        content: '[003]';
+      }
+
+      &:nth-child(4):before{
+        content: '[004]';
+      }
+
+      &:nth-child(5):before{
+        content: '[005]';
+      }
+
+      &:nth-child(6):before{
+        content: '[006]';
+      }
     }
 
     &__item--title{
       font-family: $acrom-bold;
-      padding-bottom: remc(14);
+   
     }
 
     &__item--describe{
