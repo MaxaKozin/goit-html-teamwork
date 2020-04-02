@@ -10,9 +10,19 @@
     padding-left: remc(40);
     margin-top: remc(36);
     margin-bottom: remc(40);
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(25);
+      height: remc(4);
+      position: absolute;
+      top: remc(7);
+      left: 0;
+    }
   }
   &-list {
-    padding-left: remc(18);
+    padding-left: remc(25);
     &-items {
       &::before {
         display: block;
@@ -21,7 +31,7 @@
         width: remc(10);
         height: remc(10);
         position: absolute;
-        left: remc(-15);
+        left: remc(-25);
         top: remc(12);
       }
       &__title--span {

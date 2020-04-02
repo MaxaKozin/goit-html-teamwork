@@ -30,10 +30,20 @@
       padding-left: remc(26);
       margin-top: remc(18);
       width: remc(298);
+      &::before {
+        display: block;
+        content: '';
+        background-color: $black;
+        width: remc(14);
+        height: remc(4);
+        position: absolute;
+        top: remc(8);
+        left: 0;
+      }
     }
   }
   &-list {
-    padding-left: remc(60);
+    padding-left: remc(22);
     margin-top: remc(44);
     &__item {
       &::before {
@@ -43,7 +53,7 @@
         width: remc(6);
         height: remc(6);
         position: absolute;
-        left: remc(-38);
+        left: remc(-22);
         top: remc(7);
       }
       &--title {
