@@ -1,0 +1,152 @@
+.blue-number {
+  width: remc(302);
+  @include flex('column');
+}
+
+.blue-item {
+  margin-bottom: remc(30);
+  padding-left: remc(60);
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: remc(8);
+    height: remc(30);
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    box-shadow: 2px 0px 4px 0px $white;
+  }
+}
+
+.blue-item__heading {
+  @extend %small-xbold;
+  text-transform: uppercase;
+  margin-bottom: remc(14);
+  position: relative;
+
+  &:before {
+    content: "";
+    font-family: $acrom-xbold;
+    font-size: remc(25);
+    line-height: remc(29);
+    display: block;
+    width: remc(40);
+    position: absolute;
+    top: 0;
+    left: remc(-60);
+    z-index: 2;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: remc(10);
+    height: remc(10);
+    position: absolute;
+    top: remc(32);
+    left: remc(-32);
+    background-color: $cyan_mark;
+    z-index: 1;
+  }
+}
+
+.first:before {
+  content: "01.";
+}
+
+.second:before {
+  content: "02.";
+}
+
+.third:before {
+  content: "03.";
+}
+
+.fourth:before {
+  content: "04.";
+}
+
+.blue-item__paragraph {
+  @extend %small-regular;
+  color: $secondary_text;
+}
+
+@include tablet {
+  .blue-number {
+    width: 100%;
+    @include flex('hor');
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .blue-item {
+    width: remc(165);
+    padding-left: remc(44);
+    margin-right: remc(10);
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .blue-item__heading {
+    font-size: remc(9);
+    line-height: remc(15);
+    margin-bottom: remc(6);
+
+    &:before {
+      font-size: remc(17);
+      line-height: remc(20);
+      width: remc(32);
+      left: remc(-41);
+    }
+
+    &:after {
+      width: remc(7);
+      height: remc(7);
+      top: remc(22);
+      left: remc(-22);
+    }
+  }
+
+  .blue-item__paragraph {
+    font-size: remc(8);
+    line-height: remc(12);
+  }
+}
+
+@include desktop {
+  .blue-number {
+    justify-content: space-between;
+  }
+
+  .blue-item {
+    margin-right: 0;
+  }
+
+  .blue-item__heading {
+    font-size: remc(10);
+    line-height: remc(16);
+
+    &:before {
+      font-size: remc(19);
+      line-height: remc(23);
+      width: remc(32);
+      left: remc(-41);
+    }
+
+    &:after {
+      top: remc(26);
+      left: remc(-16);
+    }
+  }
+
+  .blue-item__paragraph {
+    font-size: remc(9);
+    line-height: remc(13);
+  }
+}
