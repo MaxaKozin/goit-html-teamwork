@@ -19,25 +19,6 @@
   align-items: center;
 }
 
-.start-step__end-paragraph {
-  font-family: $acrom-medium;
-  font-size: remc(18);
-  line-height: remc(24);
-  color: $orange;
-  padding-left: remc(30);
-  position: relative;
-
-  &:before {
-    content: "/";
-    display: block;
-    color: $black;
-    font-size: remc(50);
-    position: absolute;
-    top: remc(15);
-    left: 0;
-  }
-}
-
 @include tablet {
   .start-step {
     display: flex;
@@ -58,7 +39,7 @@
     align-items: flex-end;
   }
 
-  .start-step__end-paragraph {
+  .end-paragraph {
     font-size: remc(9);
     line-height: remc(13);
 
@@ -81,7 +62,7 @@
     width: remc(372);
   }
 
-  .start-step__end-paragraph {
+  .end-paragraph {
     font-size: remc(10);
     line-height: remc(15);
   }

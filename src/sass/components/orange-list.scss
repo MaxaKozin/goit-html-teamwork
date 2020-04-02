@@ -1,0 +1,71 @@
+.orange-list {
+  @include flex('column-center');
+}
+
+.orange-item {
+  padding-left: col(1);
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.orange-item:before {
+  content: "";
+  display: block;
+  width: col(2);
+  height: 12px;
+  color: $white;
+  background-color: $orange;
+  @extend %small-bold;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 24px;
+  left: -20px;
+}
+
+.orange-1:before {
+  content: "[ 001 ]";
+}
+
+.orange-2:before {
+  content: "[ 002 ]";
+}
+
+.orange-3:before {
+  content: "[ 003 ]";
+}
+
+.orange-4:before {
+  content: "[ 004 ]";
+}
+
+.orange-5:before {
+  content: "[ 005 ]";
+}
+
+.orange-6:before {
+  content: "[ 006 ]";
+}
+
+.orange-item__heading {
+  @extend %small-bold;
+  padding-bottom: 12px;
+}
+
+.orange-item__paragraph {
+  @extend %small-regular;
+}
+
+@include tablet {
+  .orange-list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: col(8);
+  }
+
+  .orange-item {
+    width: col(4);
+  }
+  // допилить стили оранж листа под таблетки и десктопы
+}
