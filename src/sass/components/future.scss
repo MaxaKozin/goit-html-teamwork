@@ -1,0 +1,111 @@
+.future {
+  @include flex($type: 'column-center');
+  &-title {
+    margin-top: remc(34);
+    margin-bottom: remc(30);
+    &__span {
+      @extend %medium-bold;
+      color: $white;
+      background-color: $black;
+    }
+  }
+  &-text {
+    @extend %small-bold;
+  }
+  &-subtext {
+    @extend %small-regular;
+    margin-bottom: remc(50);
+    &__span {
+      background-color: $cyan_mark;
+    }
+  }
+  &-subtitle {
+    @extend %medium-bold;
+    color: $white;
+    text-transform: uppercase;
+    background-color: $black;
+
+    &__text {
+      @extend %small-regular;
+      padding-left: remc(26);
+      margin-top: remc(18);
+      width: remc(298);
+    }
+  }
+  &-list {
+    padding-left: remc(60);
+    margin-top: remc(44);
+    &__item {
+      &::before {
+        display: block;
+        content: '';
+        background-color: $black;
+        width: remc(6);
+        height: remc(6);
+        position: absolute;
+        left: remc(-38);
+        top: remc(7);
+      }
+      &--title {
+        @extend %small-xbold;
+        text-transform: uppercase;
+        margin-bottom: remc(20);
+      }
+      &--text {
+        @extend %small-regular;
+      }
+      &:not(:last-child) {
+        margin-bottom: remc(28);
+      }
+    }
+  }
+}
+
+// .future-title {
+//   @extend %medium-bold;
+//   color: $white;
+//   background-color: $black;
+// }
+// .future-text {
+//   @extend %small-bold;
+// }
+// .future-subtext {
+//   @extend %small-regular;
+// }
+// .future-subtext__span {
+//   background-color: $cyan_mark;
+// }
+// .future-subtitle {
+//   @extend %medium-bold;
+//   color: $white;
+//   text-transform: uppercase;
+//   background-color: $black;
+// }
+// .future-subtitle__text {
+//   @extend %small-regular;
+//   padding-left: remc(40);
+// }
+
+// .future-list {
+//   padding-left: remc(60);
+
+//   &__item {
+//     &::before {
+//       display: block;
+//       content: '';
+//       background-color: $black;
+//       width: remc(6);
+//       height: remc(6);
+//       position: absolute;
+//       left: remc(-38);
+//       top: remc(7);
+//     }
+//   }
+// }
+// .list-title {
+//   @extend %small-xbold;
+//   text-transform: uppercase;
+// }
+// .list-text {
+//   @extend %small-regular;
+// }
