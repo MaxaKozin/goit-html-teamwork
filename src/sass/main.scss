@@ -1,7 +1,12 @@
 @import 'helpers/variables.scss';
 @import 'helpers/mixins.scss';
 @import 'helpers/functions.scss';
+@import 'helpers/placeholders.scss';
 @import 'normalize.scss';
 @import 'base.scss';
 @import 'fonts.scss';
-@import './components/wrapper.scss'
+// section5-7
+@import './section-5/components/wrapper.scss';
+@import './section-5/components/wrapper_imag-6.scss';
+@import './section-5/components/components_section.scss';
+@import './section-5/components/img_style.scss';
