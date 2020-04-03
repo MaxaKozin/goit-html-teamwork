@@ -4,13 +4,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: remc(44) 0;
+  padding-top: remc(44);
+  padding-bottom: remc(44);
 
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: remc(60) 0;
+    padding-top: remc(60);
+    padding-bottom: remc(60);
   }
 
   &__container {
@@ -90,7 +92,7 @@
   &__list {
     position: relative;
 
-    &::before { 
+    &::before {
       content: '';
       display: block;
       height: 100%;
@@ -108,7 +110,7 @@
 
   &__item {
     margin-bottom: remc(38);
-    
+
     @include tablet {
       margin-bottom: remc(20);
     }
