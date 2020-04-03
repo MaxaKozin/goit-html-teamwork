@@ -9,3 +9,10 @@
 @function remc($pxsize, $rembase: 16) {
   @return ($pxsize/$rembase) + rem;
 }
+
+// считает проценты колонки
+// вызов col(количество-колонок)
+$col-count: 12;
+@function col($columns) {
+  @return unquote((100 / $col-count) * $columns + '%');
+}

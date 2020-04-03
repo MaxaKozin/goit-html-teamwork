@@ -5,8 +5,30 @@
 @import 'normalize.scss';
 @import 'base.scss';
 @import 'fonts.scss';
+
+// Components
+
+// Section-1
+@import 'components/header.scss';
+@import 'components/relative.scss';
+
+// Section-2
+@import 'components/motivation.scss';
+
+// Section-3
+@import 'components/facts.scss';
+
+// Section-4
+@import 'components/future.scss';
+
 // section5-7
-@import './section-5/components/wrapper.scss';
-@import './section-5/components/wrapper_imag-6.scss';
-@import './section-5/components/components_section.scss';
-@import './section-5/components/img_style.scss';
+@import 'components/wrapper.scss';
+@import 'components/wrapper_imag-6.scss';
+@import 'components/components_section.scss';
+@import 'components/img_style.scss';
+
+// Section-17
+@import 'components/section-bonuses.scss';
+
+// Section-18
+@import 'components/section-important.scss';
