@@ -5,21 +5,25 @@
 .orange-item {
   padding-left: col(1);
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: remc(25);
+
+  &.orange-6 {
+    margin-bottom: 0;
+  }
 }
 
 .orange-item:before {
   content: "";
   display: block;
   width: col(2);
-  height: 12px;
+  height: remc(12);
   color: $white;
   background-color: $orange;
   @extend %small-bold;
   transform: rotate(-90deg);
   position: absolute;
-  top: 24px;
-  left: -20px;
+  top: remc(24);
+  left: remc(-20);
 }
 
 .orange-1:before {
@@ -48,7 +52,7 @@
 
 .orange-item__heading {
   @extend %small-bold;
-  padding-bottom: 12px;
+  padding-bottom: remc(12);
 }
 
 .orange-item__paragraph {
@@ -61,11 +65,60 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: col(8);
+    width: col(9);
   }
 
   .orange-item {
-    width: col(4);
+    width: col(3.6);
+    padding-left: col(0.5);
+    margin-right: remc(18);
+
+    &:before {
+      width: remc(22);
+      height: remc(7);
+      font-size: remc(6);
+      line-height: remc(8);
+      top: remc(14);
+      left: remc(-8);
+    }
+
+    &.orange-6 {
+      margin-bottom: remc(25);
+    }
   }
-  // допилить стили оранж листа под таблетки и десктопы
+
+  .orange-3,
+  .orange-6 {
+    margin-right: 0;
+  }
+  
+  .orange-item__heading {
+    font-size: remc(9);
+    line-height: remc(12);
+  }
+
+  .orange-item__paragraph {
+    font-size: remc(8);
+    line-height: remc(12);
+  }
+}
+
+@include desktop {
+  .orange-item {
+    &:before {
+      line-height: remc(10);
+      height: remc(8);
+      top: remc(10);
+    }
+  }
+
+  .orange-item__heading {
+    font-size: remc(10);
+    line-height: remc(13);
+  }
+
+  .orange-item__paragraph {
+    font-size: remc(9);
+    line-height: remc(13);
+  }
 }
