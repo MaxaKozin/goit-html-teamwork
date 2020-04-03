@@ -1,0 +1,339 @@
+.bonus {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: remc(44);
+  padding-bottom: remc(44);
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: remc(60);
+    padding-bottom: remc(60);
+  }
+
+  &__container {
+    width: col(8);
+
+    @include tablet {
+      width: col(5);
+    }
+  }
+
+  &__title {
+    font-family: $acrom-xbold;
+    font-size: remc(18);
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: remc(23);
+    padding: remc(2) 0;
+
+    @include tablet {
+      font-size: remc(27);
+    }
+
+    @include desktop {
+      font-size: remc(30);
+    }
+
+    > span {
+      background-color: $black;
+    }
+  }
+
+  &__subtitle {
+    padding-left: remc(62);
+    font-family: $acrom-medium;
+    font-size: remc(16);
+    line-height: remc(19.5);
+    margin-bottom: remc(58);
+    position: relative;
+
+    @include tablet {
+      font-size: remc(9);
+      padding-left: remc(48);
+      padding-right: remc(58);
+      margin-bottom: remc(36);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      padding-left: remc(52);
+      padding-right: remc(52);
+      margin-bottom: remc(40);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: remc(20);
+      height: remc(3);
+      left: remc(22);
+      top: remc(12);
+      background-color: $black;
+
+      @include tablet {
+        width: remc(29);
+        height: remc(5);
+        left: 0;
+      }
+
+      @include desktop {
+        width: remc(34);
+        height: remc(6);
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: remc(8);
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      z-index: 5;
+
+      @include tablet {
+        width: remc(5);
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: remc(38);
+
+    @include tablet {
+      margin-bottom: remc(20);
+    }
+
+    @include desktop {
+      margin-bottom: remc(23);
+    }
+
+    &:last-child {
+      margin-bottom: remc(25);
+
+      @include tablet {
+        margin-bottom: remc(10);
+      }
+
+      @include desktop {
+        margin-bottom: remc(18);
+      }
+    }
+  }
+
+  &__heading {
+    font-family: $acrom-xbold, sans-serif;
+    text-transform: uppercase;
+    font-size: remc(13);
+    line-height: remc(21.85);
+    margin-bottom: remc(15);
+    position: relative;
+    padding-left: remc(56);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(11.78);
+      margin-bottom: remc(11);
+      padding-left: remc(43);
+      padding-right: remc(43);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(16.25);
+      margin-bottom: remc(12);
+      padding: 0 remc(48);
+    }
+
+    &--first {
+      &::before {
+        content: '01.';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: remc(3);
+        font-size: remc(25);
+
+        @include tablet {
+          font-size: remc(17);
+        }
+
+        @include desktop {
+          font-size: remc(19);
+        }
+      }
+    }
+
+    &--second {
+      &::before {
+        content: '02.';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: remc(3);
+        font-size: remc(25);
+        overflow: hidden;
+
+        @include tablet {
+          font-size: remc(17);
+        }
+
+        @include desktop {
+          font-size: remc(19);
+        }
+      }
+    }
+  }
+
+  &__description {
+    font-size: remc(12);
+    color: $secondary_text;
+    line-height: remc(17.65);
+    position: relative;
+    padding-left: remc(56);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(11.78);
+      padding-left: remc(43);
+      padding-right: remc(43);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(13.13);
+      padding: 0 remc(48);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: remc(11);
+      height: remc(11);
+      background-color: $cyan_mark;
+      top: 0;
+      left: remc(25);
+
+      @include tablet {
+        width: remc(7);
+        height: remc(7);
+        top: remc(2);
+        left: remc(12);
+      }
+
+      @include desktop {
+        width: remc(10);
+        height: remc(10);
+        left: remc(20);
+      }
+    }
+  }
+
+  &__highlight {
+    background-color: $black;
+    color: $white;
+  }
+
+  &__form {
+    width: col(10);
+    padding: remc(66);
+    box-shadow: 0 remc(8) remc(14) rgba($black, 0.15);
+
+    @include tablet {
+      width: col(6);
+    }
+  }
+
+  &__label {
+    font-family: $acrom-bold;
+    color: $black;
+    opacity: 0.36;
+    font-size: remc(8);
+    line-height: remc(12);
+    margin-bottom: remc(10);
+  }
+
+  &__input {
+    display: block;
+    margin-bottom: remc(20);
+    border: none;
+    border-bottom: remc(1) solid $form_grey;
+    width: 100%;
+    color: $black;
+    font-size: remc(9);
+    line-height: remc(12);
+
+    @include tablet {
+      margin-bottom: remc(16);
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: remc(1) solid $orange;
+    }
+
+    &::placeholder {
+      color: $black;
+    }
+
+    &:last-of-type {
+      margin-bottom: remc(32);
+
+      @include tablet {
+        margin-bottom: remc(27);
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    border: none;
+    background-color: $orange;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: remc(13) remc(21);
+    font-family: $acrom-xbold;
+    font-size: remc(8);
+    box-shadow: 0 remc(5) remc(6) rgba(196, 87, 15, 0.26);
+    transition: all 0.2s linear;
+
+    @include tablet {
+      padding: remc(12) remc(19);
+      font-size: remc(7);
+    }
+
+    @include desktop {
+      padding: remc(13) remc(21);
+      font-size: remc(8);
+    }
+
+    &:hover {
+      background-color: $cyan;
+      box-shadow: 0 remc(5) remc(6) rgba(23, 236, 255, 0.26);
+    }
+
+    &:active {
+      background-color: $btn_click;
+      box-shadow: 0 remc(2) remc(8) rgba(1, 1, 1, 0.3);
+    }
+  }
+}
+
+.input-wrapper:focus-within {
+  .input-wrapper__label {
+    color: $orange;
+  }
+}

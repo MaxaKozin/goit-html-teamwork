@@ -1,0 +1,59 @@
+.facts {
+  @include flex($type: 'column-center');
+  padding-bottom: remc(50);
+  &-article {
+    @extend %medium-xbold;
+    margin: 0 auto;
+  }
+  &-text {
+    @extend %small-medium;
+    padding-left: remc(40);
+    margin-top: remc(36);
+    margin-bottom: remc(40);
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(25);
+      height: remc(4);
+      position: absolute;
+      top: remc(7);
+      left: 0;
+    }
+  }
+  &-list {
+    padding-left: remc(25);
+    &-items {
+      &::before {
+        display: block;
+        content: '';
+        background-color: $orange;
+        width: remc(10);
+        height: remc(10);
+        position: absolute;
+        left: remc(-25);
+        top: remc(12);
+      }
+      &__title--span {
+        font-size: remc(13);
+        line-height: remc(29);
+      }
+      &:not(:last-child) {
+        margin-bottom: remc(26);
+      }
+      &__title {
+        font-family: $acrom-xbold;
+        font-size: remc(23);
+        line-height: remc(29);
+        margin-bottom: remc(12s);
+      }
+      &__text {
+        @extend %small-medium;
+        background-color: $cyan_mark;
+      }
+      &__comment {
+        margin-top: remc(18);
+      }
+    }
+  }
+}

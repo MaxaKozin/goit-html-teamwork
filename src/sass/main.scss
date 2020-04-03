@@ -1,12 +1,41 @@
 @import 'helpers/variables.scss';
 @import 'helpers/mixins.scss';
 @import 'helpers/functions.scss';
+@import 'helpers/placeholders.scss';
 @import 'normalize.scss';
 @import 'base.scss';
 @import 'fonts.scss';
 
+
+// Components
+
+// Section-1
+@import 'components/header.scss';
+@import 'components/relative.scss';
+
+// Section-2
+@import 'components/motivation.scss';
+
+// Section-3
+@import 'components/facts.scss';
+
+// Section-4
+@import 'components/future.scss';
+
+// section5-7
+@import 'components/wrapper.scss';
+@import 'components/wrapper_imag-6.scss';
+@import 'components/components_section.scss';
+@import 'components/img_style.scss';
+
+//sections 13-16
 @import 'components/profession';
 @import 'components/now';
 @import 'components/after-course';
 @import 'components/video-course';
 
+// Section-17
+@import 'components/section-bonuses.scss';
+
+// Section-18
+@import 'components/section-important.scss';

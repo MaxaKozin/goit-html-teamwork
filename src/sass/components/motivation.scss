@@ -1,0 +1,72 @@
+.motivation {
+  @include flex($type: 'column-center');
+  @extend %small-regular;
+  padding-top: remc(56);
+  padding-bottom: remc(76);
+  &-text {
+    margin-bottom: remc(26);
+  }
+  &-span {
+    font-size: remc(15);
+    line-height: remc(16);
+    font-family: $acrom-xbold;
+    text-transform: uppercase;
+    padding-left: remc(40);
+    margin-top: remc(44);
+    margin-bottom: remc(18);
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(25);
+      height: remc(4);
+      position: absolute;
+      top: remc(5);
+      left: 0;
+    }
+  }
+  &-article {
+    font-family: $acrom-xbold;
+    font-size: remc(21);
+    line-height: remc(26);
+    text-transform: uppercase;
+    text-align: center;
+    &__span {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  &-list-article {
+    @extend %small-xbold;
+    text-transform: uppercase;
+    margin-top: remc(44);
+    margin-bottom: remc(18);
+  }
+  &-list {
+    padding-bottom: 44px;
+    padding-left: remc(18);
+    &__item {
+      // padding-left: remc(18);
+      &::before {
+        display: block;
+        content: '';
+        background-color: $black;
+        width: remc(8);
+        height: remc(8);
+        position: absolute;
+        left: remc(-18);
+        top: remc(6);
+      }
+      &:not(:last-child) {
+        margin-bottom: remc(20);
+      }
+      &--span {
+        @extend %small-bold;
+      }
+    }
+  }
+  &-concluding {
+    font-family: $acrom-medium;
+    color: $orange;
+  }
+}
