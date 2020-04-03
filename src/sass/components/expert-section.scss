@@ -1,0 +1,39 @@
+.expert-section {
+  padding: 20px 0;
+  @include flex('column');
+  justify-content: center;
+  align-items: center;
+}
+
+.expert-section__heading-container {
+  width: col(8);
+}
+
+.expert-section__heading-container--temp p {
+  margin: 0 auto 42px;
+}
+
+.expert-section--h-size {
+  width: col(12);
+  font-family: $acrom-xbold;
+  font-size: remc(19);
+  line-height: remc(23);
+  text-align: center;
+
+  &:before {
+    content: "[";
+  }
+}
+
+.expert-section--p-size {
+  width: col(5);
+  @extend %small-medium;
+}
+
+.expert-section-p-color {
+  background-color: $cyan_mark;
+}
+
+.expert-section__heading-container--main {
+  display: none;
+}
