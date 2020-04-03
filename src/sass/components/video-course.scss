@@ -16,10 +16,22 @@
     }
 
     &__subtitle{
+      position: relative;
       width: 230px;
       font-size: remc(13.5);
       font-family: $acrom-medium;
       padding-bottom: remc(35);
+
+      &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: remc(20);
+        height: remc(2);
+        top: remc(5);
+        left: remc(-40);
+        background-color: $black;
+      }
     }
 
     &__image{
@@ -59,6 +71,45 @@
      width: 250px;
    }
 
+   &__item{
+     position: relative;
+
+    &:before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: remc(49);
+      height: remc(13);
+      top: remc(25);
+      left: remc(-50);
+      color: $white;
+      padding: remc(0) remc(5);
+      
+      transform: rotate(-90deg);
+      background-color: $orange;
+    }
+
+    &:nth-child(1):before{
+      content: '[001]';
+    }
+
+    &:nth-child(2):before{
+      content: '[002]';
+    }
+
+    &:nth-child(3):before{
+      content: '[003]';
+    }
+
+    &:nth-child(4):before{
+      content: '[004]';
+    }
+
+    &:nth-child(5):before{
+      content: '[005]';
+    }
+   }
+
    &__item--title{
     font-family: $acrom-bold;
     padding-bottom: remc(12);
@@ -80,7 +131,8 @@
      font-family: $acrom-medium;
      line-height: remc(29);
      background-color: $cyan_mark;
-     width: 150px;
+     width: 143px;
+     text-align: center;
    }
 
    &__price-first{
@@ -90,6 +142,7 @@
      line-height: remc(44);
      color: $old_price;
      padding: remc(0) remc(20);
+     flex-wrap: wrap;
    }
 
    &__price-second{
@@ -98,6 +151,7 @@
      line-height: remc(44);
      font-family: $acrom-xbold;
      padding: remc(0) remc(20);
+     flex-wrap: wrap;
    }
 
 
