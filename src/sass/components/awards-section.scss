@@ -1,0 +1,65 @@
+.awards-section {
+  padding: remc(36) 0 ;
+  @include flex('all');
+  flex-direction: column-reverse;
+}
+
+.awards-section__mobile-heading {
+  width: col(10);
+  @extend %medium-xbold;
+  text-transform: uppercase;
+  padding-bottom: remc(22);
+  order: 4;
+}
+
+.awards-section__heading-container {
+  width: col(8);
+  order: 2;
+}
+
+.awards-section__heading-container--h-sizes {
+  display: none;
+}
+
+.awards-section__heading-container--p-sizes {
+  padding-bottom: remc(38);
+}
+
+@include tablet {
+  .awards-section {
+    @include flex('between-center');
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .awards-section__mobile-heading {
+    display: none;
+  }
+
+  .awards-section__heading-container {
+    width: col(5);
+    order: 0;
+  }
+
+  .awards-section__heading-container--h-sizes {
+    display: block;
+  }
+
+  .awards-section__heading-container--p-sizes {
+    width: col(8);
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+@include desktop {
+  .awards-section__heading-container--h-sizes {
+    font-size: remc(30);
+    line-height: remc(38);
+  }
+
+  .awards-section__heading-container--p-sizes {
+    font-size: remc(10);
+    line-height: remc(15);
+  }
+}

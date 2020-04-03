@@ -1,0 +1,30 @@
+.orange-button {
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  font-family: $acrom-xbold;
+  font-size: remc(11);
+  line-height: remc(18);
+  color: $white;
+  background-color: $orange;
+  padding: remc(16) remc(36);
+  margin-bottom: remc(24);
+}
+
+@include tablet {
+  .orange-button {
+    font-size: remc(6);
+    line-height: remc(10);
+    padding: remc(8) remc(21);
+    margin-bottom: 0;
+    margin-right: remc(34);
+  }
+}
+
+@include desktop {
+  .orange-button {
+    font-size: remc(7);
+    line-height: remc(11);
+    padding: remc(8) remc(21);
+  }
+}

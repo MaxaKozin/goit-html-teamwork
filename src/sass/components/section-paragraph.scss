@@ -1,0 +1,38 @@
+.section-paragraph {
+  @extend %small-medium;
+  letter-spacing: -0.025em;
+  width: remc(300);
+  padding-left: remc(36);
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    background-color: $black;
+    width: remc(22);
+    height: remc(3);
+    position: absolute;
+    top: remc(10);
+    left: 0;
+  }
+}
+
+@include tablet {
+  .section-paragraph {
+    font-size: remc(9);
+    line-height: remc(14);
+    width: remc(176);
+  }
+}
+
+@include desktop {
+  .section-paragraph {
+    font-size: remc(10);
+    line-height: remc(15);
+    width: remc(176);
+
+    &:before {
+      top: remc(6);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.section-heading {
+  @extend %medium-xbold;
+  text-transform: uppercase;
+  width: remc(196);
+  margin-bottom: remc(20);
+
+  &:after {
+    content: "]";
+  }
+}
+
+.section-heading--black {
+  background-color: $black;
+  color: $white;
+
+  &:before {
+    content: "[ ";
+    background-color: $black;
+    color: $white;
+  }
+}
+
+@include tablet {
+  .section-heading {
+    font-size: remc(27);
+    line-height: remc(34);
+  }
+}
+
+@include desktop {
+  .section-heading {
+    font-size: remc(30);
+    line-height: remc(37);
+    width: remc(218);
+  }
+}

@@ -1,0 +1,71 @@
+.preamble {
+  width: col(12);
+  @include flex('column-center');
+  order: 3;
+}
+
+.preamble__heading-container {
+  width: col(8);
+}
+
+.preamble__heading {
+  @extend %small-xbold;
+  text-transform: uppercase;
+  padding-bottom: remc(16);
+}
+
+.preamble__paragraraph {
+  @extend %small-regular;
+  padding-bottom: remc(42);
+}
+
+.preamble__img {
+  width: col(11);
+}
+
+.preamble--margin {
+  margin-bottom: remc(60);
+}
+
+@include tablet {
+  .preamble {
+    width: col(6.5);
+    order: 0;
+  }
+
+  .preamble__heading-container {
+    @include flex('hor');
+    padding-bottom: remc(24);
+  }
+
+  .preamble__heading {
+    font-size: remc(9);
+    line-height: remc(15);
+    margin-right: remc(16);
+    padding-bottom: 0;
+    width: col(5);
+  }
+
+  .preamble__paragraraph {
+    font-size: remc(8);
+    line-height: remc(12);
+    width: col(6);
+    padding-bottom: 0;
+  }
+
+  .preamble--margin {
+    margin-bottom: 0;
+  }
+}
+
+@include desktop {
+  .preamble__heading {
+    font-size: remc(10);
+    line-height: remc(16);
+  }
+
+  .preamble__paragraraph {
+    font-size: remc(9);
+    line-height: remc(13);
+  }
+}
