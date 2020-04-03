@@ -1,0 +1,84 @@
+.after-course{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: col(8);
+      }
+
+    &__title{
+       font-family: $acrom-xbold;
+       font-size: remc(18);
+       width: 210px;
+       padding-bottom: remc(42);
+    }
+
+    &__list{
+      list-style: none;
+      width: 240px;
+      counter-reset: section;
+    }
+
+    &__item-title{
+      position: relative;
+      font-size: remc(13.5);
+      font-family: $acrom-xbold;
+      padding-bottom: remc(12);
+
+      &:before{
+        content: counter(section);
+        counter-increment: section 1;
+  display: inline-block;
+  position: absolute;
+  left: remc(-40);
+  top: remc(0);
+  transform: translateY(-50%);
+  padding: 12px;
+  font-size: remc(16);
+  width: 21px;
+  height: 14px;
+  text-align: center;
+  color: #000;
+  
+      }
+    }
+
+    &__item-subtitle{
+      font-family: $acrom;
+      color: $secondary_text;
+      padding-bottom: remc(29);
+    }
+
+    &__addly{
+      position: relative;
+      color: $orange;
+      font-size: remc(13.5);
+
+      &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: remc(16);
+        height: remc(2);
+        top: remc(5);
+        left: remc(-30);
+        background-color: $black;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &__button{
+      font-size: remc(10.8);
+      color: $white;
+      background-color: $orange;
+      border: none;
+      padding: remc(17) remc(25) ;
+      margin-top: remc(35);
+      margin-bottom: remc(65);
+    }
+
+
+}

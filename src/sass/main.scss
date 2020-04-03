@@ -6,6 +6,7 @@
 @import 'base.scss';
 @import 'fonts.scss';
 
+
 // Components
 
 // Section-1
@@ -26,6 +27,12 @@
 @import 'components/wrapper_imag-6.scss';
 @import 'components/components_section.scss';
 @import 'components/img_style.scss';
+
+//sections 13-16
+@import 'components/profession';
+@import 'components/now';
+@import 'components/after-course';
+@import 'components/video-course';
 
 // Section-17
 @import 'components/section-bonuses.scss';
