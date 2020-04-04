@@ -114,7 +114,7 @@
         content: '';
         display: block;
         position: absolute;
-        left: remc(11);
+        left: remc(0);
         top: 50%;
         transform: translateY(-50%);
         width: remc(37);
@@ -123,12 +123,12 @@
 
         @include tablet {
           width: remc(26);
-          height: remc(1);
+          height: remc(2);
+          left: remc(11);
         }
 
         @include desktop {
           width: remc(29);
-          height: remc(2);
         }
       }
     }
@@ -184,7 +184,7 @@
 
     @include tablet {
       width: col(5);
-      margin: 0;
+      margin: 0 col(0.5);
       padding-left: remc(31);
       padding-right: remc(31);
     }
@@ -196,12 +196,14 @@
     line-height: remc(18.86);
     margin-bottom: remc(15);
     padding-left: remc(40);
+    padding-right: remc(40);
 
     @include tablet {
       font-size: remc(9);
       line-height: remc(11.78);
       margin-bottom: remc(8);
       padding-left: remc(28);
+      padding-right: remc(0);
     }
 
     @include desktop {
@@ -218,6 +220,7 @@
     color: $secondary-text;
     margin-bottom: remc(25);
     padding-left: remc(40);
+    padding-right: remc(28);
 
     @include tablet {
       font-size: remc(8);
