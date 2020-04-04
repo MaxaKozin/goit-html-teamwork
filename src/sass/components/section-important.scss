@@ -184,7 +184,7 @@
 
     @include tablet {
       width: col(5);
-      margin: 0;
+      margin: 0 col(0.5);
       padding-left: remc(31);
       padding-right: remc(31);
     }
