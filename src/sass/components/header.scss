@@ -1,22 +1,73 @@
 .header {
   @include flex($type: 'column-center');
+  min-height: 613px;
   margin: 0 auto;
+  width: col(12);
+
+  @include tablet {
+    width: col(12);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 475px;
+  }
   &__overlay {
     padding-top: remc(15);
     padding-bottom: remc(40);
     background-color: $bg_footer;
     background-image: url(../images/bg_accent_cloud.png);
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    background-position: center;
     width: 100%;
   }
-}
-
-.page-header {
-  &__nav {
-    @include flex($type: 'between-center');
-    padding-bottom: remc(20);
+  &-menu {
+    &__nav {
+      @include flex($type: 'between-center');
+      padding-bottom: remc(20);
+    }
+  }
+  &-title {
+    @include abs_center($top: 50%, $left: 50%);
+    @extend %xlarge-xbold;
+    text-transform: uppercase;
+    color: $black;
+    opacity: 0.2;
+    margin: 0;
+    padding: 0;
+  }
+  &__container {
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--article {
+      @extend %large-xbold;
+      color: $white;
+      text-align: center;
+      margin-bottom: remc(36);
+    }
+    &--text {
+      @extend %small-bold;
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: remc(158);
+    }
+    &--subtitle {
+      @extend %small-xbold;
+      color: $white;
+      margin-bottom: remc(10);
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &--subtext {
+      @extend %small-xbold;
+      color: $light-grey-banner;
+      margin-bottom: remc(38);
+      text-align: center;
+    }
   }
 }
 
@@ -25,45 +76,6 @@
   width: 28px;
   height: 17px;
   fill: $white;
-}
-
-.header-title {
-  @include abs_center($top: 50%, $left: 50%);
-  @extend %xlarge-xbold;
-  text-transform: uppercase;
-  color: $white;
-  margin: 0;
-  padding: 0;
-}
-
-.header-article {
-  @extend %large-xbold;
-  color: $white;
-  text-align: center;
-  margin-bottom: remc(36);
-}
-
-.heder-text {
-  @extend %small-bold;
-  color: $white;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: remc(158);
-}
-
-.header-subtitle {
-  @extend %small-xbold;
-  color: $white;
-  margin-bottom: remc(10);
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.header-subtext {
-  @extend %small-xbold;
-  color: $light-grey-banner;
-  margin-bottom: remc(38);
-  text-align: center;
 }
 
 .button {
