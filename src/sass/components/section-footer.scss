@@ -1,0 +1,175 @@
+.footer {
+  background-color: $bg_footer;
+  padding-top: remc(36);
+  padding-bottom: remc(32);
+
+  &__column {
+    width: col(2.5);
+
+    @include tablet {
+      width: col(2);
+    }
+  }
+
+  &__img-wrapper {
+    width: remc(41);
+
+    @include tablet {
+      width: remc(57);
+    }
+
+    @include desktop {
+      width: remc(63);
+    }
+  }
+
+  &__heading {
+    font-family: $acrom-xbold;
+    font-size: remc(10);
+    color: $white;
+    letter-spacing: remc(2.56);
+    text-transform: uppercase;
+    margin-bottom: remc(6);
+
+    @include tablet {
+      font-size: remc(8);
+      letter-spacing: remc(1.4);
+      margin-bottom: remc(11);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+    }
+  }
+
+  &__content {
+    font-size: remc(9);
+    line-height: remc(11);
+    color: $address_color;
+    letter-spacing: remc(0);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(11.78);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(13.13);
+    }
+  }
+
+  &__button {
+    display: block;
+    background: none;
+    border: remc(1) solid $btn_footer;
+    color: $white;
+    font-family: $acrom-xbold;
+    font-size: remc(9);
+    line-height: remc(18);
+    text-transform: uppercase;
+    letter-spacing: remc(1.15);
+    padding: 0 remc(11);
+    cursor: pointer;
+    transition: all .2s linear;
+    margin-top: remc(4);
+
+    &:hover:focus {
+      background-color: $cyan;
+      border: remc(1) solid $cyan;
+    }
+
+    &:active {
+      background-color: $btn_footer_click;
+      border: remc(1) solid $btn_footer_click;
+    }
+
+    @include tablet {
+      font-size: remc(7);
+      line-height: remc(27);
+      letter-spacing: remc(0.6);
+      padding: 0 remc(25);
+      margin-top: 0;
+    }
+
+    @include desktop {
+      font-size: remc(8);
+      line-height: remc(30);
+      padding: 0 remc(28);
+    }
+  }
+
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.socials {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  &__link {
+    font-family: $acrom-bold;
+    font-size: remc(9);
+    line-height: remc(14.58);
+    color: $white;
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(16.25);
+    }
+  }
+}
+
+.subfooter {
+  background-color: $bg_footer2;
+  padding-top: remc(9);
+  padding-bottom: remc(7);
+
+  @include tablet {
+    padding-top: remc(12);
+    padding-bottom: remc(12);
+  }
+
+  @include desktop {
+    padding-top: remc(14);
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+  }
+
+  &__item {
+    font-family: $acrom-light;
+    font-size: remc(6);
+    color: $font_footer2;
+    letter-spacing: remc(0.92);
+
+    @include tablet {
+      font-family: $gilroy;
+      font-size: remc(7);
+      letter-spacing: remc(0.72);
+    }
+
+    @include desktop {
+      font-size: remc(8);
+    }
+
+    &:nth-child(-n+2) {
+      margin-right: remc(8);
+    }
+  }
+}
