@@ -1,0 +1,55 @@
+.expert-list__item {
+  width: col(12);
+  padding-left: remc(20);
+  padding-bottom: remc(28);
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: remc(6);
+    height: remc(6);
+    background-color: $black;
+    position: absolute;
+    top: remc(6);
+    left: 0;
+  }
+}
+
+.expert-list__heading {
+  @extend %small-xbold;
+  text-transform: uppercase;
+}
+
+.expert-list__paragraph {
+  @extend %small-regular;
+}
+
+@include tablet {
+  .expert-list__item {
+    padding-bottom: remc(12);
+  }
+
+  .expert-list__heading {
+    font-size: remc(9);
+    line-height: remc(15);
+    padding-bottom: remc(2);
+  }
+
+  .expert-list__paragraph {
+    font-size: remc(8);
+    line-height: remc(13);
+  }
+}
+
+@include desktop {
+  .expert-list__heading {
+    font-size: remc(10);
+    line-height: remc(16);
+  }
+
+  .expert-list__paragraph {
+    font-size: remc(9);
+    line-height: remc(15);
+  }
+}
