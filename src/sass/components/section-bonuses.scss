@@ -101,6 +101,7 @@
       position: absolute;
       left: 0;
       z-index: 5;
+      box-shadow: remc(2) 0 remc(4) $white;
 
       @include tablet {
         width: remc(5);
@@ -183,7 +184,6 @@
         left: 0;
         top: remc(3);
         font-size: remc(25);
-        overflow: hidden;
 
         @include tablet {
           font-size: remc(17);
@@ -309,6 +309,7 @@
     font-size: remc(8);
     box-shadow: 0 remc(5) remc(6) rgba(196, 87, 15, 0.26);
     transition: all 0.2s linear;
+    cursor: pointer;
 
     @include tablet {
       padding: remc(12) remc(19);
