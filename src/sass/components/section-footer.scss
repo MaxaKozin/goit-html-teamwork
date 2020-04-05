@@ -173,3 +173,17 @@
     }
   }
 }
+
+.rezart-icon {
+  display: block;
+  width: remc(14);
+  fill: $white;
+
+  @include tablet {
+    width: remc(18);
+  }
+
+  @include desktop {
+    width: remc(19);
+  }
+}
