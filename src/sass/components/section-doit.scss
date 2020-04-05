@@ -124,6 +124,7 @@
 
   &__button {
     display: block;
+    cursor: pointer;
     text-align: center;
     text-transform: uppercase;
     color: $white;
@@ -137,6 +138,7 @@
     border: none;
     background-color: $orange;
     box-shadow: 0 remc(5) remc(6) rgba(196, 87, 15, 0.26);
+    transition: all .2s linear;
     
     @include tablet {
       font-size: remc(7);
