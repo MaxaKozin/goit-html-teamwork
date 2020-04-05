@@ -1,8 +1,9 @@
-<section class="header">
+<section class="header relative">
+  <h1 class="header__title">goit</h1>
   <div class="header__overlay">
-    <div class="header-menu relative container">
-      <header class="header-menu__nav">
-        <a class="logo link" href="#"
+    <div class="header__navigation container">
+      <nav class="header__navigation--menu">
+        <a href="" class="header__logo link"
           ><img
             src="./images/icon/icon_goit.png"
             alt="logo"
@@ -13,32 +14,34 @@
             sizes="63px"
             height="19"
         /></a>
-        <nav class="header-menu__nav--sidebar">
+        <nav class="header__navigation--sidebar">
           <svg class="sidebar-icon">
             <use href="./images/icon/svg/sprite.svg#sidebar-icon"></use>
           </svg>
         </nav>
-      </header>
-      <h1 class="header-title">goit</h1>
-      <div class="header__container">
-        <h2 class="header__container--article">
+      </nav>
+    </div>
+    <div class="header__container container relative">
+      <div class="header__container-big">
+        <h2 class="header__container-big--article">
           [ Пошаговый <br />Видео-курс_ ]
         </h2>
-        <p class="header__container--text">
+        <p class="header__container-big--text">
           «Старт в карьере web-разработчика с 0» для тех, кто давно хотел
           зарабатывать больше работая в IT, но не знал, где реализовать себя
         </p>
       </div>
-      <div class="header__container">
-        <h3 class="header__container--subtitle">
+      <div class="header__container-small">
+        <h3 class="header__container-small--article">
           Открой для себя способ начать карьеру в сфере IT
         </h3>
-        <p class="header__container--subtext">
+        <p class="header__container-small--text">
           / Без математического склада ума, работая в комфортных условиях по
           приятному графику над интересными задачами и получая доход в $$$.
         </p>
       </div>
-      <button class="button">Приобрести курс</button>
+      <button class="header__button">Приобрести курс</button>
+      <h2 class="header__number">01</h2>
     </div>
   </div>
 </section>

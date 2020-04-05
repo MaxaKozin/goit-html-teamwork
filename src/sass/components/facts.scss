@@ -10,11 +10,6 @@
     background-position-x: right;
     background-position-y: center;
   }
-  @include desktop {
-    // font-size: remc(10);
-    // line-height: remc(15);
-    // margin-bottom: remc(24);
-  }
   &__container {
     @include flex($type: 'column-center');
     @include tablet {
@@ -148,13 +143,3 @@
     }
   }
 }
-
-// .bgimg {
-//   width: 200px;
-//   height: 200px;
-//   background-image: url(../images/graph.png);
-//   background-repeat: no-repeat;
-//   position: absolute;
-//   right: 0;
-//   bottom: 0;
-// }

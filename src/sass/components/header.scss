@@ -1,33 +1,5 @@
 .header {
-  @include flex($type: 'column-center');
-  min-height: 613px;
-  margin: 0 auto;
-  width: col(12);
-
-  @include tablet {
-    width: col(12);
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 475px;
-  }
-  &__overlay {
-    padding-top: remc(15);
-    padding-bottom: remc(40);
-    background-color: $bg_footer;
-    background-image: url(../images/bg_accent_cloud.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-  }
-  &-menu {
-    &__nav {
-      @include flex($type: 'between-center');
-      padding-bottom: remc(20);
-    }
-  }
-  &-title {
+  &__title {
     @include abs_center($top: 50%, $left: 50%);
     @extend %xlarge-xbold;
     text-transform: uppercase;
@@ -35,38 +7,141 @@
     opacity: 0.2;
     margin: 0;
     padding: 0;
+    @include tablet {
+      font-size: remc(236);
+    }
   }
+  &__overlay {
+    background-color: $bg_footer;
+    background-image: url(../images/bg_accent_cloud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: remc(15);
+    padding-bottom: remc(40);
+    min-height: remc(612);
+    @include tablet {
+      min-height: remc(475);
+    }
+  }
+  &__navigation {
+    &--menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: remc(24);
+      @include tablet {
+        padding-bottom: remc(50);
+      }
+    }
+  }
+
   &__container {
+    background-image: url(../images/bg_accent_cloud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    &-big {
+      width: col(11);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: remc(158);
+      &--article {
+        @extend %large-xbold;
+        color: $white;
+        margin-bottom: remc(36);
+        text-transform: uppercase;
+        @include tablet {
+          font-size: remc(45);
+          line-height: remc(56);
+          margin-bottom: remc(22);
+        }
+      }
+      &--text {
+        @extend %small-bold;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        @include tablet {
+          width: col(6);
+          font-size: remc(8);
+          line-height: remc(13);
+        }
+      }
+      @include tablet {
+        width: col(7);
+        padding-bottom: remc(26);
+      }
+    }
+    &-small {
+      width: col(11);
+      &--article {
+        @extend %small-xbold;
+        color: $white;
+        margin-bottom: remc(10);
+        text-transform: uppercase;
+        @include tablet {
+          font-size: remc(11);
+          line-height: remc(17);
+        }
+      }
+      &--text {
+        @extend %small-xbold;
+        color: $light-grey-banner;
+        margin-bottom: remc(38);
+        @include tablet {
+          font-size: remc(10);
+          line-height: remc(13);
+        }
+      }
+      @include tablet {
+        width: col(3);
+      }
+    }
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      flex-wrap: wrap;
     }
-    &--article {
-      @extend %large-xbold;
-      color: $white;
-      text-align: center;
-      margin-bottom: remc(36);
+  }
+
+  &__button {
+    @extend %xsmall-xbold;
+    border: none;
+    background-color: $orange;
+    box-shadow: 0px 5px 6px 0px $button_shadow;
+    width: remc(219);
+    height: remc(55);
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: remc(2);
+    display: block;
+    margin: 0 auto;
+    @include tablet {
+      font-size: remc(7);
+      line-height: remc(10);
+      width: remc(111);
+      height: remc(29);
+      margin: 0;
+      letter-spacing: remc(1);
     }
-    &--text {
-      @extend %small-bold;
-      color: $white;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: remc(158);
-    }
-    &--subtitle {
-      @extend %small-xbold;
-      color: $white;
-      margin-bottom: remc(10);
-      text-transform: uppercase;
-      text-align: center;
-    }
-    &--subtext {
-      @extend %small-xbold;
-      color: $light-grey-banner;
-      margin-bottom: remc(38);
-      text-align: center;
+  }
+  &__number {
+    opacity: 0;
+    @include tablet {
+      opacity: 1;
+      font-size: remc(13);
+      font-family: $acrom;
+      color: white;
+      position: absolute;
+      transform: rotate(270deg);
+      bottom: 0;
     }
   }
 }
@@ -76,18 +151,4 @@
   width: 28px;
   height: 17px;
   fill: $white;
-}
-
-.button {
-  @extend %xsmall-xbold;
-  border: none;
-  background-color: $orange;
-  box-shadow: 0px 5px 6px 0px $button_shadow;
-  width: 219px;
-  height: 55px;
-  color: $white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
-  margin: 0 auto;
 }
