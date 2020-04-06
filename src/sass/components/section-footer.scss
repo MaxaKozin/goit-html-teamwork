@@ -74,7 +74,12 @@
     transition: all .2s linear;
     margin-top: remc(4);
 
-    &:hover:focus {
+    &:hover {
+      background-color: $cyan;
+      border: remc(1) solid $cyan;
+    }
+
+    &:focus {
       background-color: $cyan;
       border: remc(1) solid $cyan;
     }
@@ -157,6 +162,11 @@
     font-size: remc(6);
     color: $font_footer2;
     letter-spacing: remc(0.92);
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
 
     @include tablet {
       font-family: $gilroy;
