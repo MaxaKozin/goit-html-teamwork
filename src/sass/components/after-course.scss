@@ -5,6 +5,15 @@
     justify-content: center;
     align-items: center;
 
+    @include tablet{
+      flex-direction: row;
+    }
+
+    &__wrapper{
+      display: flex;
+     flex-wrap: wrap;
+    }
+
     &__container {
         width: col(8);
       }
@@ -12,14 +21,25 @@
     &__title{
        font-family: $acrom-xbold;
        font-size: remc(18);
-       width: 210px;
+       width: remc(210);
        padding-bottom: remc(42);
+       text-transform: uppercase;
+
+       @include tablet{
+        font-size: remc(27);
+        width: remc(310);
+        line-height: remc(33);
+       }
     }
 
     &__list{
       list-style: none;
-      width: 240px;
+      width: remc(240);
       counter-reset: section;
+
+      @include tablet{
+        width: remc(115);
+      }
     }
 
     &__item-title{
@@ -27,6 +47,11 @@
       font-size: remc(13.5);
       font-family: $acrom-xbold;
       padding-bottom: remc(12);
+
+      @include tablet{
+        font-size: remc(9);
+        line-height: remc(15);
+      }
 
       &:before{
         content: counter(section);
@@ -50,12 +75,22 @@
       font-family: $acrom;
       color: $secondary_text;
       padding-bottom: remc(29);
+
+      @include tablet{
+        font-size: remc(8);
+        line-height: remc(10);
+      }
     }
 
     &__addly{
       position: relative;
       color: $orange;
       font-size: remc(13.5);
+
+      @include tablet{
+        font-size: remc(9);
+        line-height: remc(14);
+      }
 
       &:before{
         position: absolute;
@@ -73,12 +108,25 @@
     &__button{
       font-size: remc(10.8);
       color: $white;
+      width: remc(133);
+      height: remc(28);
       background-color: $orange;
       border: none;
       padding: remc(17) remc(25) ;
       margin-top: remc(35);
       margin-bottom: remc(65);
+
+      @include tablet{
+        font-size: remc(7);
+        line-height: remc(10);
+      }
     }
 
+   
+}
 
+@media (max-width: 767px) {
+  .after-course__image {
+    display: none;
+  }
 }

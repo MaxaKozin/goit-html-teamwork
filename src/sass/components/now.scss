@@ -6,11 +6,18 @@
     align-items: center;
     font-size: remc(13.5);
 
+    @include tablet{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     &__container {
         width: col(8);
       }
     
     &__argument{
+      font-size: remc(9);
+      line-height: remc(14);
       position: relative;
       color: $orange;
       width: 340px;
@@ -27,6 +34,11 @@
         left: remc(-30);
         background-color: $black;
         transform: rotate(-45deg);
+
+        @include tablet{
+          width: remc(19);
+        height: remc(3);
+        }
       }
 
     }
@@ -37,6 +49,14 @@
       background-color: $black;
       color: $white;
       padding: remc(2) remc(10);
+      text-transform: uppercase;
+      font-family: $acrom-xbold;
+
+      @include tablet{
+        font-size: remc(27);
+        line-height: remc(30);
+        padding: remc(0) remc(0);
+      }
     }
 
     &__second--argument{
@@ -54,29 +74,56 @@
         top: remc(30);
         left: remc(-35);
         background-color: $black;
+
+        @include tablet{
+          width: remc(29);
+        height: remc(3);
+        top: remc(30);
+        left: remc(-45);
+        }
       }
     }
 
     &__second--title{
-      width: 365px;
+      width: remc(365);
       font-size: remc(13.5);
       font-family: $acrom-xbold;
       padding-top: remc(55);
       padding-bottom: remc(30);
+      text-transform: uppercase;
+
+      
+
+      @include tablet{
+        width: remc(120);
+        flex-wrap: wrap;
+      }
     }
 
     &__list{
-      
       list-style: none;
-      text-align: center left;
-      width: 265px;
+      text-align: center;
+    
+      @include tablet{
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      }
     }
 
     &__item{
       font-size: remc(13.5);
       position: relative;
       counter-reset: section;
+      width: remc(265);
+    
+      
 
+      @include tablet{
+        margin-left: remc(48);
+        width: remc(125);
+      }
+      
       &:before{
         position: absolute;
         display: block;
@@ -87,7 +134,6 @@
         left: remc(-50);
         color: $white;
         padding: remc(0) remc(5);
-        
         transform: rotate(-90deg);
         background-color: $orange;
       }
@@ -119,11 +165,25 @@
 
     &__item--title{
       font-family: $acrom-bold;
-   
     }
 
     &__item--describe{
        font-family: $acrom;
        padding-bottom: remc(28);
+    }
+
+    &__wrapper{
+      @include tablet{
+      width: col(5);
+      margin-left: remc(97);
+      }
+    }
+
+    &__wrapper--second{
+  
+      @include tablet{
+      display: flex;
+      margin-top: remc(55);
+    }
     }
 }
