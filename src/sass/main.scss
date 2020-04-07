@@ -26,12 +26,10 @@
 @import 'components/wrapper_imag-6.scss';
 @import 'components/components_section.scss';
 @import 'components/img_style.scss';
-
-//sections 13-16
-@import 'components/profession';
-@import 'components/now';
-@import 'components/after-course';
-@import 'components/video-course';
+@import 'components/style_section5.scss';
+@import 'components/style_section6.scss';
+@import 'components/style_section7.scss';
+@import 'components/style_section8.scss';
 
 // Section-9
 @import 'components/end-paragraph.scss';
@@ -53,6 +51,12 @@
 // Section-12
 @import 'components/expert-section.scss';
 @import 'components/expert-list.scss';
+
+//sections 13-16
+@import 'components/profession';
+@import 'components/now';
+@import 'components/after-course';
+@import 'components/video-course';
 
 // Section-17
 @import 'components/section-bonuses.scss';
