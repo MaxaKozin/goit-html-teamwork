@@ -1,8 +1,6 @@
-.wrapper {
-  @include phone;
-}
-
-.taur_wrapper {
-  width: 23.625rem;
-  margin: 0 auto;
+@include phone {
+  .wrapper {
+    min-width: 480px;
+    padding-top: 4.375rem;
+  }
 }

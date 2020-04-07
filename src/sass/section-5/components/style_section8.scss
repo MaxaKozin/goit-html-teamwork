@@ -1,0 +1,122 @@
+.img_con_comp img {
+  margin: 0 auto;
+}
+
+.tablet-desk_version {
+  display: none;
+}
+
+.header_discription_text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .header_text_style {
+    font-family: $acrom-xbold, $acrom-bold;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+  }
+
+  .comment_text_style {
+    font-family: $acrom-medium;
+    color: $black;
+    font-weight: bold;
+    font-size: remc(14);
+    line-height: remc(16);
+    padding-left: 6rem;
+
+    &::before {
+      display: block;
+      background-color: $black;
+      content: '';
+      width: 1.5rem;
+      height: 0.16rem;
+      transform: translate(-140%, 350%);
+    }
+  }
+}
+
+.mean_comp {
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 27.5rem;
+}
+
+.list_srtle_mob {
+  list-style: square;
+}
+
+.mobile_version {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mobile_text_head {
+  font-family: $acrom-bold;
+  font-size: remc(26);
+  line-height: remc(16);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.mobile_text_descriprion {
+  font-family: $acrom;
+  font-size: remc(13);
+  line-height: remc(16);
+}
+
+@include tablet {
+  .mobile_version {
+    display: none;
+  }
+
+  .dispalay_opt {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .tablet-desk_version {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    h2::before {
+      display: block;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: $black;
+      margin-bottom: 10px;
+    }
+  }
+
+  .dispalay_tab {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 312px;
+  }
+
+  .header_discription_text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 312px;
+  }
+}
+
+@include desktop {
+  .img_con_meancomp {
+    width: 21.75rem;
+  }
+
+  .img_con_comp {
+    width: 19.125rem;
+  }
+}
