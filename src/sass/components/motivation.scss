@@ -52,13 +52,18 @@
     }
   }
   &__photo {
+    padding-top: remc(96);
     @include tablet {
+      padding: 0;
       width: col(5);
     }
   }
   &__text {
     margin-bottom: remc(26);
+    position: absolute;
+    top: remc(-224);
     @include tablet {
+      position: initial;
       font-size: remc(9);
       line-height: remc(13);
       margin-bottom: remc(34);

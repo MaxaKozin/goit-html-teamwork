@@ -1,4 +1,17 @@
 .header {
+  &__background {
+    &--img {
+      display: none;
+      @include tablet {
+        display: block;
+        // background-image: url(../images/img_main.png);
+        position: absolute;
+        top: -24px;
+        right: 0px;
+        width: col(8.5);
+      }
+    }
+  }
   &__title {
     @include abs_center($top: 50%, $left: 50%);
     @extend %xlarge-xbold;
@@ -7,21 +20,29 @@
     opacity: 0.2;
     margin: 0;
     padding: 0;
+
     @include tablet {
       font-size: remc(236);
     }
+    @include desktop {
+      font-size: remc(263);
+    }
   }
-  &__overlay {
+  &__background {
     background-color: $bg_footer;
     background-image: url(../images/bg_accent_cloud.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
     padding-top: remc(15);
-    padding-bottom: remc(40);
+    padding-bottom: remc(38);
     min-height: remc(612);
     @include tablet {
       min-height: remc(475);
+    }
+    @include desktop {
+      min-height: remc(530);
     }
   }
   &__navigation {
@@ -30,23 +51,22 @@
       flex-direction: row;
       justify-content: space-between;
       padding-bottom: remc(24);
-      @include tablet {
-        padding-bottom: remc(50);
-      }
+    }
+    @include tablet {
+      padding-bottom: remc(50);
+    }
+    @include desktop {
+      width: auto;
+      padding-bottom: remc(56);
     }
   }
 
   &__container {
-    background-image: url(../images/bg_accent_cloud.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     &-big {
-      width: col(11);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -57,10 +77,16 @@
         color: $white;
         margin-bottom: remc(36);
         text-transform: uppercase;
+        z-index: 1;
         @include tablet {
           font-size: remc(45);
           line-height: remc(56);
           margin-bottom: remc(22);
+        }
+        @include desktop {
+          font-size: remc(50);
+          line-height: remc(63);
+          margin-bottom: remc(34);
         }
       }
       &--text {
@@ -68,10 +94,47 @@
         color: $white;
         text-transform: uppercase;
         text-align: center;
+        padding-left: remc(22);
+        padding-right: remc(28);
+        &::before {
+          display: inline-block;
+          content: '<';
+          font-family: $acrom-xbold;
+          font-size: remc(23);
+          color: $cyan;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          display: inline-block;
+          content: '/>';
+          font-family: $acrom-xbold;
+          font-size: remc(23);
+          color: $cyan;
+          position: absolute;
+          top: remc(40);
+          right: 0;
+        }
         @include tablet {
-          width: col(6);
+          width: col(7.2);
           font-size: remc(8);
           line-height: remc(13);
+          text-align: start;
+          &::before,
+          &::after {
+            font-size: remc(13);
+            line-height: remc(17);
+          }
+        }
+        @include desktop {
+          font-size: remc(9);
+          line-height: remc(15);
+          &::before,
+          &::after {
+            font-size: remc(15);
+            line-height: remc(19);
+          }
         }
       }
       @include tablet {
@@ -80,7 +143,8 @@
       }
     }
     &-small {
-      width: col(11);
+      padding-left: remc(22);
+      padding-right: remc(28);
       &--article {
         @extend %small-xbold;
         color: $white;
@@ -90,17 +154,28 @@
           font-size: remc(11);
           line-height: remc(17);
         }
+        @include desktop {
+          line-height: remc(19);
+        }
       }
       &--text {
         @extend %small-xbold;
         color: $light-grey-banner;
         margin-bottom: remc(38);
         @include tablet {
-          font-size: remc(10);
+          font-size: remc(11);
           line-height: remc(13);
+        }
+        @include desktop {
+          font-size: remc(10);
+          line-height: remc(15);
         }
       }
       @include tablet {
+        width: col(3);
+        padding: 0;
+      }
+      @include desktop {
         width: col(3);
       }
     }
@@ -110,7 +185,6 @@
       flex-wrap: wrap;
     }
   }
-
   &__button {
     @extend %xsmall-xbold;
     border: none;
@@ -129,23 +203,86 @@
       width: remc(111);
       height: remc(29);
       margin: 0;
+      margin-left: remc(94);
+      letter-spacing: remc(1);
+    }
+    @include desktop {
+      font-size: remc(7);
+      line-height: remc(11);
+      width: remc(123);
+      height: remc(33);
+      margin-left: remc(104);
       letter-spacing: remc(1);
     }
   }
-  &__number {
-    opacity: 0;
+  &__socials {
+    display: none;
     @include tablet {
-      opacity: 1;
+      width: col(0.7);
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 100px;
+      right: 0;
+    }
+  }
+  &__link {
+    &--icon {
+      width: remc(10);
+      height: remc(9);
+      fill: $white;
+    }
+  }
+  &__number {
+    display: none;
+    &--small {
+      display: none;
+    }
+    @include tablet {
+      display: inline-block;
       font-size: remc(13);
       font-family: $acrom;
       color: white;
-      position: absolute;
       transform: rotate(270deg);
-      bottom: 0;
+      padding-right: remc(22);
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 11px;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      @include desktop {
+        font-size: remc(15);
+        bottom: remc(-64);
+        left: remc(-64);
+        &--small {
+          display: inline-block;
+          font-size: remc(9);
+          line-height: remc(11);
+          color: white;
+          position: absolute;
+          bottom: remc(-3);
+          left: remc(50);
+        }
+      }
     }
   }
 }
+.footer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  @include tablet {
+  }
+  @include desktop {
+    width: auto;
+  }
+}
 .sidebar-icon {
   @include flex($type: 'column');
   width: 28px;
