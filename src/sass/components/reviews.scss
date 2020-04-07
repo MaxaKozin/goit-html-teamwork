@@ -1,0 +1,218 @@
+.reviews {
+  width: col(8);
+  text-align: justify;
+
+  .main-title {
+    width: col(9);
+
+    @include tablet {
+      display: inline-block;
+      width: col(12);
+    }
+  }
+
+  .facts-container {
+    @include tablet {
+      width: col(3);
+    }
+    @include desktop {
+      width: col(3);
+    }
+  }
+
+  .main-subtitle {
+    @include tablet {
+      margin-top: remc(26.4);
+      margin-right: remc(45.7);
+      padding-left: remc(46.4);
+    }
+    @include desktop {
+      width: remc(182);
+      margin-top: remc(31.6);
+      margin-right: remc(45.7);
+      padding-left: remc(46.4);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &-slider {
+    @include tablet {
+      width: col(8);
+      margin-top: 0;
+    }
+  }
+
+  .slider {
+    &-content {
+      height: remc(213.4);
+      display: flex;
+      box-shadow: 0px 8px 14px 0px #00000026;
+      padding: remc(19);
+      padding-right: remc(16);
+      width: 100%;
+
+      @include tablet {
+        padding: remc(31);
+        padding-right: remc(17.6);
+        height: remc(307);
+      }
+
+      @include desktop {
+        padding: remc(36);
+        padding-right: remc(17.6);
+        height: remc(343.8);
+      }
+    }
+
+    &__user-photo {
+      width: remc(55);
+      height: remc(55);
+      margin-right: remc(18.8);
+
+      img {
+        margin-bottom: remc(10);
+      }
+
+      @include tablet {
+        margin-right: remc(30);
+        width: remc(77);
+        height: remc(77);
+
+        img {
+          margin-bottom: remc(17);
+        }
+
+        @include desktop {
+          font-size: remc(8.75);
+          line-height: remc(15);
+          margin-right: remc(36.8);
+          width: remc(87);
+          height: remc(87);
+
+          img {
+            margin-bottom: remc(21.8);
+          }
+        }
+      }
+    }
+
+    &__username {
+      @extend %xsmall-xbold;
+      text-transform: uppercase;
+      font-size: remc(5.46);
+      line-height: remc(9.37);
+
+      @include tablet {
+        font-size: remc(7.85);
+        line-height: remc(13.46);
+      }
+    }
+
+    &__text {
+      @extend %small-regular;
+      font-size: remc(5.46);
+      line-height: remc(9.28);
+      padding-right: 25px;
+      overflow: scroll;
+      overflow-x: hidden;
+
+      @include tablet {
+        font-size: remc(8);
+        line-height: remc(13.76);
+        padding-right: 25px;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $black;
+      }
+
+      &::-webkit-scrollbar-track {
+        opacity: 0.1;
+      }
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+    }
+
+    &__counter {
+      font-family: $acrom-xbold;
+      padding-left: remc(20);
+      padding-top: remc(3);
+      font-size: remc(3.9);
+      line-height: remc(10.15);
+
+      @include tablet {
+        padding-left: remc(37.6);
+        padding-top: remc(12.3);
+        font-size: remc(5.61);
+        line-height: remc(14.58);
+      }
+
+      @include desktop {
+        padding-left: remc(42.4);
+        padding-top: remc(13.9);
+        font-size: remc(7.65);
+        line-height: remc(14.58);
+      }
+
+      &--active {
+        text-decoration: line-through;
+        font-size: remc(10);
+        line-height: remc(14.6);
+
+        @include tablet {
+          font-size: remc(10.2);
+          line-height: remc(10.15);
+        }
+      }
+    }
+
+    &-btn-container {
+      padding-right: 4px;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+
+      &--left,
+      &--right {
+        font-family: $acrom-xbold;
+        display: inline-block;
+        width: remc(14);
+        height: remc(14);
+        line-height: remc(14);
+        color: $white;
+        background-color: $black;
+        border: none;
+
+        @include tablet {
+          width: remc(20);
+          height: remc(20);
+          line-height: remc(20);
+        }
+
+        @include desktop {
+          width: remc(22);
+          height: remc(22);
+          line-height: remc(22);
+        }
+      }
+    }
+  }
+}

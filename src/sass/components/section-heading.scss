@@ -1,3 +1,88 @@
+.heading-container {
+  @include flex($type: 'column-center');
+  @include tablet {
+    width: col(4);
+  }
+}
+
+.main-title {
+  @extend %medium-xbold;
+  text-align: initial;
+  margin: 0 auto;
+  text-transform: uppercase;
+
+  &--negative {
+    color: $white;
+    text-transform: uppercase;
+    background-color: $black;
+
+    @include tablet {
+      width: col(10);
+      font-size: remc(27);
+      line-height: remc(34);
+    }
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(34);
+    }
+  }
+
+  @include tablet {
+    font-size: remc(27);
+    line-height: remc(34);
+  }
+  @include desktop {
+    font-size: remc(30);
+    line-height: remc(37);
+    letter-spacing: 0.01em;
+  }
+}
+
+.main-subtitle {
+  @extend %small-medium;
+  ///Phone
+  text-align: initial;
+  font-size: remc(13.5);
+  line-height: remc(19.5);
+  padding-left: remc(32.8);
+  margin-top: remc(34.1);
+  margin-bottom: remc(36.8);
+
+  &::before {
+    display: block;
+    content: '';
+    background-color: $black;
+    width: remc(20);
+    height: remc(3);
+    position: absolute;
+    top: remc(7);
+    left: 0;
+
+    @include tablet {
+      width: remc(28);
+      height: remc(4);
+    }
+  }
+  @include tablet {
+    font-size: remc(9);
+    line-height: remc(14);
+    padding-left: remc(40);
+    margin-top: remc(36);
+    margin-bottom: remc(40);
+  }
+  @include desktop {
+    padding-left: remc(40);
+    width: col(7);
+    font-size: remc(10);
+    line-height: remc(15);
+
+    &::before {
+      width: remc(32);
+      top: remc(5);
+    }
+  }
+}
+
 .section-heading {
   @extend %medium-xbold;
   text-transform: uppercase;
@@ -5,7 +90,7 @@
   margin-bottom: remc(20);
 
   &:after {
-    content: "]";
+    content: ']';
   }
 }
 
@@ -14,7 +99,7 @@
   color: $white;
 
   &:before {
-    content: "[ ";
+    content: '[ ';
     background-color: $black;
     color: $white;
   }

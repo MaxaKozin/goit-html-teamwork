@@ -28,17 +28,6 @@
   background-color: $black;
 }
 
-.taur_wrapper--shadow {
-  display: flex;
-  width: 23.125rem;
-  margin: auto;
-  height: 13.125rem;
-  overflow: scroll;
-  border: 1px solid transparent;
-  background-color: $white;
-  box-shadow: 0px 8px 14px 0px #00000026;
-}
-
 .immg_section-5 {
   padding-right: 1.25rem;
   height: 7.5rem;
@@ -46,48 +35,6 @@
   position: sticky;
 }
 
-.text2_p_section-5 {
-  @extend %xsmall-xbold;
-  font-weight: bold;
-}
-
-.text_span_section-5 {
-  @extend %small-regular;
-}
-
-.taur_wrapper--btn {
-  display: flex;
-  justify-content: space-between;
-  width: 23.125rem;
-  margin: 0 auto;
-  padding-top: 1.25rem;
-}
-
-.text3_p_section-5 {
-  @extend %small-xbold;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.line-through {
-  text-decoration: line-through;
-}
-
-.btn-leaft {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: $white;
-  background-color: $black;
-  border: none;
-}
-
-.btn-right {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: $white;
-  background-color: $black;
-  border: none;
-}
 
 // section-6
 

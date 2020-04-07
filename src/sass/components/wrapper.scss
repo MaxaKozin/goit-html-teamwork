@@ -1,8 +1,18 @@
 .wrapper {
   @include phone;
+  @include tablet;
 }
 
 .taur_wrapper {
-  width: 23.625rem;
+  width: remc(295);
   margin: 0 auto;
+  
+  @include tablet {
+    width: remc(640);
+  }
+
+  @include desktop {
+    width: remc(715);
+  }
+
 }

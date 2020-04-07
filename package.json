@@ -49,5 +49,7 @@
     "require-dir": "^1.2.0",
     "usedcss": "^1.0.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "css": "^2.2.4"
+  }
 }

@@ -8,6 +8,10 @@
 
 // Components
 
+@import 'components/components_section.scss';
+@import 'components/section-heading.scss';
+
+
 // Section-1
 @import 'components/header.scss';
 @import 'components/relative.scss';
@@ -21,10 +25,12 @@
 // Section-4
 @import 'components/future.scss';
 
+// Section-5
+@import 'components/reviews.scss';
+
 // section5-7
 @import 'components/wrapper.scss';
 @import 'components/wrapper_imag-6.scss';
-@import 'components/components_section.scss';
 @import 'components/img_style.scss';
 
 //sections 13-16
@@ -36,7 +42,6 @@
 // Section-9
 @import 'components/end-paragraph.scss';
 @import 'components/start-step.scss';
-@import 'components/section-heading.scss';
 @import 'components/section-paragraph.scss';
 @import 'components/blue-number-list.scss';
 

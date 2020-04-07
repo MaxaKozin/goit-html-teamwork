@@ -10,49 +10,49 @@
     background-position-x: right;
     background-position-y: center;
   }
-  &__container {
-    @include flex($type: 'column-center');
-    @include tablet {
-      width: col(4);
-    }
-  }
-  &-article {
-    @extend %medium-xbold;
-    margin: 0 auto;
-    text-transform: uppercase;
-    @include tablet {
-      font-size: remc(27);
-      line-height: remc(34);
-    }
-    @include desktop {
-      font-size: remc(30);
-      line-height: remc(38);
-    }
-  }
-  &-text {
-    @extend %small-medium;
-    padding-left: remc(40);
-    margin-top: remc(36);
-    margin-bottom: remc(40);
-    &::before {
-      display: block;
-      content: '';
-      background-color: $black;
-      width: remc(25);
-      height: remc(4);
-      position: absolute;
-      top: remc(7);
-      left: 0;
-    }
-    @include tablet {
-      font-size: remc(9);
-      line-height: remc(13);
-    }
-    @include desktop {
-      font-size: remc(10);
-      line-height: remc(15);
-    }
-  }
+  // &__container {
+  //   @include flex($type: 'column-center');
+  //   @include tablet {
+  //     width: col(4);
+  //   }
+  // }
+  // &-article {
+  //   @extend %medium-xbold;
+  //   margin: 0 auto;
+  //   text-transform: uppercase;
+  //   @include tablet {
+  //     font-size: remc(27);
+  //     line-height: remc(34);
+  //   }
+  //   @include desktop {
+  //     font-size: remc(30);
+  //     line-height: remc(38);
+  //   }
+  // }
+  // &-text {
+  //   @extend %small-medium;
+  //   padding-left: remc(40);
+  //   margin-top: remc(36);
+  //   margin-bottom: remc(40);
+  //   &::before {
+  //     display: block;
+  //     content: '';
+  //     background-color: $black;
+  //     width: remc(25);
+  //     height: remc(4);
+  //     position: absolute;
+  //     top: remc(7);
+  //     left: 0;
+  //   }
+  //   @include tablet {
+  //     font-size: remc(9);
+  //     line-height: remc(13);
+  //   }
+  //   @include desktop {
+  //     font-size: remc(10);
+  //     line-height: remc(15);
+  //   }
+  // }
   &-list {
     padding-left: remc(25);
     @include tablet {
