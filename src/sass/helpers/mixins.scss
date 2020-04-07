@@ -17,11 +17,36 @@
   }
 }
 
-
 //миксин для центровки абсолютно позиционированного элемента
 @mixin abs_center($top: 50%, $left: 50%) {
   position: absolute;
   left: $left;
   top: $top;
   transform: translate(-$top, -$left);
+}
+
+// миксины для флекса
+
+@mixin flex($type: 'all') {
+  display: flex;
+  @if $type== 'all' {
+    justify-content: center;
+    align-items: center;
+  } @else if $type== 'hor' {
+    justify-content: center;
+  } @else if $type== 'ver' {
+    align-items: center;
+  } @else if $type== 'between-center' {
+    justify-content: space-between;
+    align-items: center;
+  } @else if $type== 'column' {
+    flex-direction: column;
+  } @else if $type== 'column-center' {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } @else if $type== 'align-center' {
+    align-content: space-between;
+    justify-content: center;
+  }
 }

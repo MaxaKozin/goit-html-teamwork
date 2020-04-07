@@ -1,0 +1,227 @@
+.motivation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %small-regular;
+  padding-top: remc(56);
+  padding-bottom: remc(76);
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__background-title {
+    position: absolute;
+    transform: rotate(90deg);
+    top: remc(104);
+    left: remc(-65);
+    text-transform: uppercase;
+    font-family: $acrom-xbold;
+    font-size: remc(98);
+    opacity: 0.051;
+    @include tablet {
+      top: remc(380);
+      left: remc(-460);
+      font-size: remc(140);
+      z-index: -1;
+    }
+    @include desktop {
+      top: remc(424);
+      left: remc(-512);
+      font-size: remc(156);
+    }
+  }
+  &__container {
+    @include tablet {
+      width: col(12);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &--inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include tablet {
+        width: col(5);
+      }
+    }
+  }
+  &__photo {
+    @include tablet {
+      width: col(5);
+    }
+  }
+  &__text {
+    margin-bottom: remc(26);
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13);
+      margin-bottom: remc(34);
+    }
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+      margin-bottom: remc(38);
+    }
+  }
+  &__span {
+    font-size: remc(15);
+    line-height: remc(16);
+    font-family: $acrom-xbold;
+    text-transform: uppercase;
+    padding-left: remc(40);
+    margin-top: remc(44);
+    margin-bottom: remc(18);
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(25);
+      height: remc(4);
+      position: absolute;
+      top: remc(5);
+      left: 0;
+    }
+    @include tablet {
+      width: col(7);
+      font-size: remc(10);
+      line-height: remc(17);
+      margin-top: 0;
+      margin-bottom: remc(14);
+    }
+    @include desktop {
+      font-size: remc(11);
+      line-height: remc(19);
+      margin-bottom: remc(16);
+    }
+  }
+  &__article {
+    font-family: $acrom-xbold;
+    font-size: remc(21);
+    line-height: remc(26);
+    text-transform: uppercase;
+    &--span {
+      background-color: $black;
+      color: $white;
+    }
+    @include tablet {
+      width: col(11);
+      font-size: remc(27);
+      line-height: remc(34);
+    }
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(38);
+    }
+  }
+  &-list-article {
+    @extend %small-xbold;
+    text-transform: uppercase;
+    margin-top: remc(44);
+    margin-bottom: remc(18);
+    @include tablet {
+      width: col(12);
+      font-size: remc(17);
+      line-height: remc(20);
+      margin-top: remc(66);
+      margin-bottom: remc(16);
+    }
+    @include desktop {
+      width: col(3);
+    }
+  }
+  &-list {
+    padding-bottom: remc(44);
+    padding-left: remc(18);
+    @include tablet {
+      width: col(12);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: remc(8);
+      line-height: remc(13);
+      padding-left: 0;
+      &:last-child {
+        justify-content: flex-end;
+      }
+    }
+    @include desktop {
+      width: col(9);
+      margin-top: remc(66);
+      align-items: flex-start;
+      font-size: remc(9);
+      line-height: remc(15);
+    }
+    &__item {
+      &::before {
+        display: block;
+        content: '';
+        background-color: $black;
+        width: remc(8);
+        height: remc(8);
+        position: absolute;
+        left: remc(-18);
+        top: remc(6);
+        @include tablet {
+          display: none;
+        }
+      }
+      &:last-child {
+        font-family: $acrom-medium;
+        color: $orange;
+        width: col(8);
+        margin: 0 auto;
+        &::before {
+          display: none;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: remc(20);
+      }
+      @include tablet {
+        width: col(3);
+        &:nth-child(-n + 4) {
+          margin-bottom: remc(22);
+        }
+        &:not(:nth-child(4n)) {
+          padding-right: remc(16);
+        }
+        &:last-child {
+          width: col(4);
+          margin: 0;
+          font-size: remc(10);
+          line-height: remc(14);
+        }
+      }
+      @include desktop {
+        margin: 0;
+        width: col(4);
+        &:not(:nth-child(3n)) {
+          padding-right: remc(20);
+        }
+        &:last-child {
+          margin-top: remc(10);
+          font-size: remc(10);
+          line-height: remc(15);
+        }
+      }
+      &--span {
+        @extend %small-bold;
+        @include tablet {
+          font-size: remc(9);
+          line-height: remc(13);
+        }
+        @include desktop {
+          font-size: remc(10);
+          line-height: remc(15);
+        }
+      }
+    }
+  }
+}

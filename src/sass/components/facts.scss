@@ -1,0 +1,145 @@
+.facts {
+  @include flex($type: 'column-center');
+  padding-bottom: remc(50);
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    background-image: url(../images/graph.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position-x: right;
+    background-position-y: center;
+  }
+  &__container {
+    @include flex($type: 'column-center');
+    @include tablet {
+      width: col(4);
+    }
+  }
+  &-article {
+    @extend %medium-xbold;
+    margin: 0 auto;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: remc(27);
+      line-height: remc(34);
+    }
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(38);
+    }
+  }
+  &-text {
+    @extend %small-medium;
+    padding-left: remc(40);
+    margin-top: remc(36);
+    margin-bottom: remc(40);
+    &::before {
+      display: block;
+      content: '';
+      background-color: $black;
+      width: remc(25);
+      height: remc(4);
+      position: absolute;
+      top: remc(7);
+      left: 0;
+    }
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13);
+    }
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+    }
+  }
+  &-list {
+    padding-left: remc(25);
+    @include tablet {
+      padding-left: 0;
+      width: col(6);
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+    }
+    &-items {
+      &::before {
+        display: block;
+        content: '';
+        background-color: $orange;
+        width: remc(10);
+        height: remc(10);
+        position: absolute;
+        left: remc(-25);
+        top: remc(12);
+        @include tablet {
+          display: none;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: remc(26);
+      }
+      &__title {
+        font-family: $acrom-xbold;
+        font-size: remc(23);
+        line-height: remc(29);
+        margin-bottom: remc(12s);
+        @include tablet {
+          font-size: remc(17);
+          line-height: remc(20);
+        }
+        @include desktop {
+          font-size: remc(19);
+          line-height: remc(23);
+        }
+      }
+      &__title--span {
+        font-size: remc(13);
+        line-height: remc(29);
+        @include tablet {
+          font-size: remc(9);
+          line-height: remc(20);
+        }
+        @include desktop {
+          font-size: remc(10);
+          line-height: remc(23);
+        }
+      }
+      &__text {
+        @extend %small-medium;
+        background-color: $cyan_mark;
+        @include tablet {
+          font-size: remc(8);
+          line-height: remc(13);
+        }
+        @include desktop {
+          font-size: remc(9);
+          line-height: remc(15);
+        }
+      }
+      &__comment {
+        margin-top: remc(18);
+        @include tablet {
+          font-size: remc(8);
+          line-height: remc(12);
+        }
+        @include desktop {
+          font-size: remc(9);
+          line-height: remc(13);
+        }
+      }
+      @include tablet {
+        width: col(6);
+        padding-left: remc(18);
+        &:not(:last-child),
+        :not(:first-child) {
+          order: 1;
+        }
+        &:first-child,
+        :last-child {
+          margin-bottom: remc(20);
+        }
+      }
+    }
+  }
+}

@@ -5,10 +5,68 @@
 @import 'normalize.scss';
 @import 'base.scss';
 @import 'fonts.scss';
-// section5-8
-@import './section-5/components/wrapper.scss';
-// @import './section-5/components/components_section_5-8.scss';
-@import './section-5/components/style_section5.scss';
-@import './section-5/components/style_section6.scss';
-@import './section-5/components/style_section7.scss';
-@import './section-5/components/style_section8.scss';
+
+// Components
+
+// Section-1
+@import 'components/header.scss';
+@import 'components/relative.scss';
+
+// Section-2
+@import 'components/motivation.scss';
+
+// Section-3
+@import 'components/facts.scss';
+
+// Section-4
+@import 'components/future.scss';
+
+// section5-7
+@import 'components/wrapper.scss';
+@import 'components/wrapper_imag-6.scss';
+@import 'components/components_section.scss';
+@import 'components/img_style.scss';
+@import 'components/style_section5.scss';
+@import 'components/style_section6.scss';
+@import 'components/style_section7.scss';
+@import 'components/style_section8.scss';
+
+// Section-9
+@import 'components/end-paragraph.scss';
+@import 'components/start-step.scss';
+@import 'components/section-heading.scss';
+@import 'components/section-paragraph.scss';
+@import 'components/blue-number-list.scss';
+
+// Section-10
+@import 'components/video-step.scss';
+@import 'components/orange-list.scss';
+@import 'components/orange-button.scss';
+
+// Section-11
+@import 'components/awards-section.scss';
+@import 'components/preamble.scss';
+@import 'components/awards-list.scss';
+
+// Section-12
+@import 'components/expert-section.scss';
+@import 'components/expert-list.scss';
+
+//sections 13-16
+@import 'components/profession';
+@import 'components/now';
+@import 'components/after-course';
+@import 'components/video-course';
+
+// Section-17
+@import 'components/section-bonuses.scss';
+
+// Section-18
+@import 'components/section-important.scss';
+
+// Section-19
+@import 'components/section-doit.scss';
+
+// Section-20
+@import 'components/section-footer.scss';
+@import 'components/footer-modals.scss';

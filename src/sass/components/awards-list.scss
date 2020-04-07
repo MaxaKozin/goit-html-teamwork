@@ -1,0 +1,213 @@
+.awards-list {
+  width: col(8);
+}
+
+.awards-item {
+  margin-bottom: remc(32);
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: remc(68);
+    font-family: $futura-bold;
+    font-size: remc(39);
+    line-height: remc(14);
+    color: $black;
+    opacity: 0.05;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: remc(68);
+    left: remc(164);
+  }
+}
+
+.awards-item:first-of-type {
+  padding-top: remc(46);
+  background-image: url(../images/icon/icon_prize1.png);
+  background-repeat: no-repeat;
+  background-size: remc(80) remc(68);
+  background-position: remc(240) 0;
+
+  &:before {
+    content: "[ Go for IT ]";
+    font-family: $acrom-medium;
+    font-size: remc(12);
+    line-height: remc(16);
+    background-color: $black;
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.awards-item--01 {
+  padding-top: remc(46);
+  background-image: url(../images/icon/icon_prize2.png);
+  background-repeat: no-repeat;
+  background-size: remc(41) remc(136);
+  background-position: remc(278) remc(50);
+  position: relative;
+
+  &:before {
+    content: "[ Это признано IT-сообществом ]";
+    font-family: $acrom-medium;
+    font-size: remc(12);
+    line-height: remc(16);
+    background-color: $black;
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    content: "01_";
+  }
+}
+
+.awards-item--02,
+.awards-item--03 {
+  background-image: url(../images/icon/icon_prize3-4.png);
+  background-repeat: no-repeat;
+  background-size: remc(56) remc(108);
+  background-position: 262px 0;
+}
+
+.awards-item--02:after {
+  content: "02_";
+  top: remc(15);
+}
+
+.awards-item--03:after {
+  content: "03_";
+  top: remc(15);
+
+}
+
+.awards-item__heading {
+  width: remc(190);
+  text-transform: uppercase;
+  @extend %small-xbold;
+  padding-bottom: remc(12);
+}
+
+.awards-item__paragraph {
+  width: col(9.5);
+  @extend %small-regular;
+}
+
+.awards-item__paragraph--bold {
+  display: block;
+  @extend %small-xbold;
+}
+
+@include tablet {
+  .awards-list {
+    width: col(12);
+    margin-top: remc(60);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .awards-item {
+    width: col(2.8);
+    padding-top: remc(34);
+
+    &:before {
+      font-size: remc(9);
+      line-height: remc(12);
+    }
+  }
+
+  .awards-item:first-of-type {
+    padding-top: remc(34);
+    background-size: remc(58) remc(50);
+    background-position: remc(96) 0;
+
+    &:before {
+      font-size: remc(9);
+      line-height: remc(12);
+    }
+  }
+
+  .awards-item--01 {
+    background-size: remc(29) remc(98);
+    background-position: remc(124) remc(30);
+
+    &:after {
+      font-size: remc(28);
+      line-height: remc(10);
+      top: remc(32);
+      left: remc(118);
+    }
+  }
+
+  .awards-item--02,
+  .awards-item--03 {
+    background-size: remc(40) remc(79);
+    background-position: remc(105) remc(34);
+
+    &:after {
+      font-size: remc(28);
+      line-height: remc(10);
+      top: remc(32);
+      left: remc(112)
+    }
+  }
+  
+  .awards-item__heading {
+    width: col(4.9);
+    font-size: remc(9);
+    line-height: remc(13);
+    padding-bottom: remc(8);
+  }
+
+  .awards-item__heading--oon {
+    width: col(10);
+  }
+
+  .awards-item__paragraph {
+    font-size: remc(8);
+    line-height: remc(12);
+  }
+
+  .awards-item__paragraph--bold {
+    font-size: remc(8);
+    line-height: remc(12);
+  }
+}
+
+@include desktop {
+  .awards-list {
+    margin-top: remc(70);
+  }
+
+  .awards-item:first-of-type {
+    &:before {
+      font-size: remc(10);
+      line-height: remc(13);
+    }
+  }
+
+  .awards-item:before {
+    font-size: remc(10);
+    line-height: remc(13);
+  }
+
+  .awards-item__heading  {
+    font-size: remc(10);
+    line-height: remc(15);
+  }
+
+  .awards-item__paragraph {
+    font-size: remc(9);
+    line-height: remc(13);
+  }
+
+  .awards-item__paragraph--bold {
+    font-size: remc(9);
+    line-height: remc(13);
+  }
+}
