@@ -39,6 +39,9 @@
   } @else if $type== 'between-center' {
     justify-content: space-between;
     align-items: center;
+  } @else if $type== 'between-start' {
+    justify-content: space-between;
+    align-items: flex-start;
   } @else if $type== 'column' {
     flex-direction: column;
   } @else if $type== 'column-center' {
