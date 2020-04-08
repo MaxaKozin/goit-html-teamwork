@@ -1,4 +1,5 @@
 <section class="section profession container">
+  <div class="wrapper">
     <h2 class="profession__title">
           [ Он за руку введет тебя в профессию ]
     </h2>
@@ -6,17 +7,36 @@
         И буквально «имплантирует» свои практические навыки 
 в твой мозг, чтобы ты смог стартовать легко!
     </p>
-    <img
+  </div>
+  
+    <picture class="profession__image">
+	
+    <source
+    media="(min-width: 768px)"
+    src="./images/img_section13-2.png"
+		srcset="./images/img_section13-2.png 181w,
+    ./images/img_section13-2@2x.png 361w"
+    sizes="181px"
+    height="167"
+    >
+	
+    <img 
     src="./images/img_section13.png"
     alt=""
     srcset="./images/img_section13.png 444w, ./images/img_section13@2x.png 888w"
     sizes="444px"
     height="202"
   />
-  <h2 class="profession__title">
+  
+</picture>
+
+<div class="profession__wrapper">
+  <h2 class="profession__title profession__title--second">
     У него ушло более 7 лет чтобы создать систему обучения
   </h2>
-  <p class="profession__subtitle">
-    Простую понятную, легкую не для «математических гениев», а для обычных людей, чтобы любой смог быстро начать карьеру в IT!
+
+  <p class="profession__subtitle profession__subtitle--second">
+    Простую понятную, легкую не для «математических гениев», а для обычных людей, чтобы любой смог быстро начать карьеру в IT!
   </p>
+</div>
 </section>
