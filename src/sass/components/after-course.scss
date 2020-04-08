@@ -6,6 +6,9 @@
     @include tablet {
       width: 50px;
     }
+    @include desktop {
+      width: 90px;
+    }
   }
 
   @include tablet {
@@ -39,7 +42,7 @@
     @include desktop {
       font-size: remc(30);
       line-height: remc(37);
-      letter-spacing: 0.01em;
+      padding-bottom: remc(48.2);
     }
   }
 
@@ -65,7 +68,6 @@
 
     &:not(:last-of-type):before {
       content: '';
-      // display: inline-block;
       position: absolute;
       left: remc(-20);
       top: remc(22.4);
@@ -78,11 +80,20 @@
         left: remc(-11.2);
         top: remc(25.6);
       }
+
+      @include desktop {
+        left: remc(-8);
+        top: remc(27.2);
+      }
     }
     @include tablet {
       width: remc(121);
       min-height: remc(82.4);
-      // margin-bottom: 20px;
+    }
+
+    @include desktop {
+      width: remc(140.2);
+      min-height: remc(91.2);
     }
   }
 
@@ -120,7 +131,21 @@
 
       &::before {
         left: remc(-30.4);
-        top: remc(4);
+        font-size: remc(18.75);
+        line-height: remc(22.5);
+      }
+    }
+
+    @include desktop {
+      font-family: $acrom-xbold;
+      font-size: remc(10);
+      line-height: remc(16.25);
+      padding-left: remc(17.6);
+
+      &::before {
+        left: remc(-30.4);
+        font-size: remc(18.75);
+        line-height: remc(22.5);
       }
     }
   }
@@ -135,6 +160,13 @@
       line-height: remc(10.1);
       padding-bottom: 0;
       padding-left: remc(14.4);
+    }
+
+    @include desktop {
+      letter-spacing: 0.02rem;
+      line-height: remc(12.64);
+      padding-left: remc(19.2);
+      width: remc(135);
     }
   }
 
@@ -153,7 +185,7 @@
       width: remc(19.2);
       height: remc(2);
       top: remc(13);
-      left: remc(-28.4);
+      left: remc(-23.6);
       background-color: $black;
       transform: rotate(-58deg);
     }
@@ -163,6 +195,17 @@
       font-size: remc(9);
       line-height: remc(13.5);
       width: remc(80);
+      
+      &:before {
+        left: -1.775rem;
+      }
+    }
+
+    @include desktop {
+      margin-bottom: remc(10.4);
+      font-size: remc(10);
+      line-height: remc(15);
+      width: remc(91.2);
     }
   }
 
@@ -189,6 +232,13 @@
       width: remc(133);
       height: remc(29);
     }
+
+    @include desktop {
+      font-size: remc(7.5);
+      line-height: remc(11.25);
+      width: remc(148);
+      height: remc(32);
+    }
   }
 
   &__img {
@@ -198,6 +248,11 @@
       width: remc(257);
       margin-left: remc(22.4);
       margin-right: remc(8);
+    }
+    @include desktop {
+      width: remc(287);
+      height: remc(345);
+      margin-left: remc(27.2);
     }
   }
 }
