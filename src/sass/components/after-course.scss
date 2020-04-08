@@ -8,13 +8,14 @@
     }
   }
 
-  @include flex('between-start');
   @include tablet {
+    @include flex('between-start');
     background-size: 13rem 13rem;
     padding: 3.125rem 0 3.125rem;
   }
 
   &__container {
+    margin: 0 auto;
     width: col(6);
   }
 
@@ -22,7 +23,7 @@
     // font-family: $acrom-xbold;
     // font-size: remc(18);
     // width: 210px;
-    // padding-bottom: remc(42);
+    padding-bottom: remc(40.8);
     @extend %medium-xbold;
     text-align: initial;
     margin: 0 auto;
@@ -32,7 +33,7 @@
       font-size: remc(27);
       line-height: remc(34);
       margin-top: remc(20);
-      margin-bottom: remc(40.2);
+      padding-bottom: remc(40.2);
       // width: col(6);
     }
     @include desktop {
@@ -60,60 +61,73 @@
 
   &__item {
     position: relative;
+    min-height: remc(88);
 
     &:not(:last-of-type):before {
       content: '';
       // display: inline-block;
       position: absolute;
-      left: remc(-11.2);
-      top: remc(25.6);
+      left: remc(-20);
+      top: remc(22.4);
       transform: translateY(-50%);
       width: 7px;
-      height: 7px;
+      min-height: 7px;
       background-color: #16ebfe;
+
+      @include tablet {
+        left: remc(-11.2);
+        top: remc(25.6);
+      }
     }
     @include tablet {
       width: remc(121);
-      height: remc(61.6);
-      margin-bottom: 20px;
+      min-height: remc(82.4);
+      // margin-bottom: 20px;
     }
   }
 
   &__item-title {
-    position: relative;
     font-family: $acrom-xbold;
     font-size: remc(13.5);
+    line-height: remc(19.5);
+    position: relative;
     text-transform: uppercase;
-    padding-bottom: remc(12);
+    padding-bottom: remc(5.6);
 
     &:before {
       content: '0' counter(section) '.';
       counter-increment: section 1;
       display: inline-block;
       position: absolute;
-      left: remc(-41.6);
+      left: remc(-40);
       top: remc(0);
-      transform: translateY(-50%);
-      padding: 12px;
-      padding-top: 20px;
       font-size: remc(16);
-      width: 21px;
-      height: 14px;
       text-align: center;
       color: #000;
     }
+
+    @include phone {
+      &--padding {
+        padding-bottom: remc(0.05);
+      }
+    }
+
     @include tablet {
       font-size: remc(9);
       line-height: remc(15);
       padding-bottom: remc(5.6);
       padding-left: remc(12.8);
+
+      &::before {
+        left: remc(-30.4);
+        top: remc(4);
+      }
     }
   }
 
   &__item-subtitle {
-    font-family: $acrom;
+    @extend %small-regular;
     color: $secondary_text;
-    padding-bottom: remc(29);
 
     @include tablet {
       width: remc(123);
@@ -129,6 +143,8 @@
     position: relative;
     color: $orange;
     font-size: remc(13.5);
+    margin-top: remc(28);
+    margin-left: remc(33);
 
     &:before {
       position: absolute;
@@ -142,6 +158,7 @@
       transform: rotate(-58deg);
     }
     @include tablet {
+      margin: 0;
       margin-bottom: remc(12);
       font-size: remc(9);
       line-height: remc(13.5);
@@ -151,13 +168,16 @@
 
   &__button {
     @extend %small-xbold;
-    font-size: remc(10.8);
+    font-size: remc(6.73);
+    font-size: remc(10.1);
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: $white;
     background-color: $orange;
     border: none;
-    padding: remc(17) remc(25);
-    margin-top: remc(35);
+    width: remc(215);
+    height: remc(46);
+    margin-top: remc(33.4);
     margin-bottom: remc(65);
 
     @include tablet {
@@ -172,9 +192,12 @@
   }
 
   &__img {
+    display: none;
     @include tablet {
+      display: block;
       width: remc(257);
-      margin-right: remc(32);
+      margin-left: remc(22.4);
+      margin-right: remc(8);
     }
   }
 }
