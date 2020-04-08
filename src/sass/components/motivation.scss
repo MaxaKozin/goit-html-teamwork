@@ -55,7 +55,7 @@
     padding-top: remc(96);
     @include tablet {
       padding: 0;
-      width: col(5);
+      // width: col(5);
     }
   }
   &__text {
