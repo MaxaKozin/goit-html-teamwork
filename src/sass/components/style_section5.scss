@@ -1,136 +1,288 @@
-.head_text-look {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  font-family: $acrom-xbold, $acrom-bold;
-  font-size: 1.125rem;
-  padding-bottom: 2.5rem;
-}
+.section-reviews {
+  padding-top: remc(15);
+  padding-bottom: remc(59);
 
-.description_head {
-  display: flex;
-  margin: 0 auto;
-  padding-left: 0.8rem;
-  padding-bottom: 2.875rem;
-  width: 20rem;
-  font-family: $acrom-medium;
-  color: $black;
-  font-weight: bold;
-  font-size: remc(14);
-  line-height: remc(20);
+  @include tablet {
+    padding-top: remc(56);
+    padding-bottom: remc(56);
+    display: flex;
+    justify-content: space-between;
+  }
 
-  &::before {
-    display: block;
-    background-color: $black;
-    content: '';
-    width: 8rem;
-    height: 0.16rem;
-    transform: translate(-90%, 300%);
+  @include desktop {
+    padding-top: remc(62);
+    padding-bottom: remc(62);
   }
 }
 
-.description_black {
-  background-color: $black;
-  color: $white;
+.description {
+  &__wrapper {
+    width: col(8);
+    margin: 0 auto;
+    padding-left: remc(38);
+
+    @include tablet {
+      width: col(4);
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-family: $acrom-xbold;
+    font-size: remc(18);
+    line-height: remc(24);
+    margin-bottom: remc(40);
+
+    @include tablet {
+      font-size: remc(27);
+      line-height: remc(33.65);
+      margin-bottom: remc(35);
+    }
+
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(37.5);
+      margin-bottom: remc(40);
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-family: $acrom-medium;
+    color: $black;
+    font-size: remc(14);
+    line-height: remc(19.5);
+    margin-bottom: remc(38);
+    letter-spacing: remc(-0.4);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13.46);
+      margin: 0;
+      padding-left: remc(46);
+      padding-right: remc(54);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+      padding-left: remc(51);
+    }
+
+    &::before {
+      display: block;
+      background-color: $black;
+      content: '';
+      width: remc(20);
+      height: remc(4);
+      position: absolute;
+      left: remc(-38);
+      top: remc(6);
+
+      @include tablet {
+        width: remc(29);
+        height: remc(5);
+        left: 0;
+      }
+
+      @include desktop {
+        width: remc(32);
+      }
+    }
+  }
+
+  &__mark {
+    background-color: $black;
+    color: $white;
+  }
 }
 
-.block_comment {
-  display: flex;
-  margin: auto;
-  height: 16rem;
-  overflow: scroll;
-  border: 1px solid transparent;
-  background-color: $white;
-  box-shadow: 2px 10px 14px 0px #00000026;
-}
+.comments {
+  &__wrapper {
+    width: col(8);
+    margin: 0 auto;
 
-.comments_contein {
-  width: 23.125rem;
-}
+    @include tablet {
+      margin: 0;
+      width: col(7.7);
+    }
+  }
 
-.cont_img-gerl {
-  display: flex;
-  margin-right: 7rem;
-  margin-bottom: 0.7rem;
-  position: sticky;
-}
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    box-shadow: 0 remc(8) remc(14) #00000026;
+    padding: remc(20);
+    max-height: remc(213);
 
-.name_gerl {
-  font-family: $acrom-xbold;
-  color: $black;
-  font-weight: bold;
-  font-size: remc(13);
-  line-height: remc(18);
-}
+    @include tablet {
+      box-shadow: 0 remc(11) remc(22) #00000026;
+      padding: remc(28);
+      max-height: remc(305);
+    }
 
-.text_comment {
-  font-family: $acrom;
-  font-weight: bold;
-  font-size: remc(10);
-  line-height: remc(16);
+    @include desktop {
+      box-shadow: 0 remc(14) remc(27) #00000026;
+      padding: remc(31);
+      max-height: remc(340);
+    }
+  }
+
+  &__person {
+    margin-right: remc(16);
+
+    @include tablet {
+      margin-right: remc(26);
+    }
+
+    @include desktop {
+      margin-right: (30);
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: remc(11);
+    width: remc(55);
+    height: remc(55);
+    padding-top: remc(5);
+
+    @include tablet {
+      width: remc(79);
+      height: remc(79);
+      margin-bottom: remc(15);
+    }
+
+    @include desktop {
+      width: remc(87);
+      height: remc(87);
+      margin-bottom: remc(17);
+    }
+  }
+
+  &__name {
+    font-family: $acrom-xbold;
+    color: $black;
+    text-transform: uppercase;
+    font-size: remc(5);
+    line-height: remc(9.37);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(13.46);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(15);
+    }
+  }
+
+  &__text {
+    font-family: $acrom;
+    font-size: remc(5);
+    line-height: remc(9.37);
+    color: $secondary-text;
+    overflow: scroll;
+    padding-right: remc(10);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(13.46);
+      padding-right: remc(15);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(15);
+      padding-right: remc(18);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    padding-left: remc(24);
+    margin-right: auto;
+
+    @include tablet {
+      padding-left: remc(36);
+    }
+
+    @include desktop {
+      padding-left: remc(40);
+    }
+
+    label {
+      transition: all 0.2s linear;
+      font-family: $acrom-xbold;
+      font-size: remc(4);
+      cursor: pointer;
+
+      @include tablet {
+        font-size: remc(6);
+      }
+    }
+  }
+
+  &__radio {
+    display: none;
+
+    &:checked + label {
+      text-decoration: line-through;
+      font-size: remc(7);
+
+      @include tablet {
+        font-size: remc(10);
+      }
+
+      @include desktop {
+        font-size: remc(11);
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: remc(15);
+    height: remc(15);
+    text-align: center;
+    fill: $white;
+    background-color: $black;
+    border: none;
+    text-align: center;
+
+    @include tablet {
+      width: remc(21);
+      height: remc(21);
+    }
+
+    @include desktop {
+      width: remc(24);
+      height: remc(23);
+    }
+
+    > svg {
+      height: 100%;
+      width: remc(5);
+
+      @include tablet {
+        width: remc(6);
+      }
+
+      @include desktop {
+        width: remc(7);
+      }
+    }
+  }
 }
 
 .d_none {
   display: none;
-}
-
-.navigation_comment {
-  display: flex;
-  font-family: $acrom-xbold;
-  font-size: remc(10);
-  align-items: flex-end;
-}
-
-.line-through {
-  font-size: remc(12);
-  margin-right: 0.125rem;
-  margin-left: 0.625rem;
-  text-decoration: line-through;
-}
-
-.btn_navigation {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-
-  .btn {
-    width: 1.25rem;
-    height: 1.25rem;
-    text-align: center;
-    color: $white;
-    background-color: $black;
-    border: #7d7d7d;
-  }
-}
-
-@include tablet {
-  .tab_des_version {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .head_text-look {
-    width: 13.125rem;
-    font-size: remc(26);
-  }
-
-  .description_head {
-    width: 13.125rem;
-    padding-left: 1.25rem;
-  }
-
-  .block_comment {
-    margin-top: 1.25rem;
-    height: 25rem;
-  }
-}
-
-@include desktop {
-  .text_comment {
-    width: 400px;
-  }
-
-  .block_comment {
-    width: 480px;
-  }
 }
