@@ -1,43 +1,48 @@
 <section class="header relative">
   <h1 class="header__title">goit</h1>
-
   <div class="header__background">
     <div class="header__navigation container">
-      <nav class="header__navigation--menu">
-        <a href="" class="header__logo link"
-          ><img
-            src="./images/icon/icon_goit.png"
-            alt="logo"
-            srcset="
-              ./images/icon/icon_goit.png    63w,
-              /images/icon/icon_goit@2x.png 126w
-            "
-            sizes="63px"
-            height="19"
-        /></a>
-        <nav class="header__navigation--sidebar">
-          <svg class="sidebar-icon">
-            <use href="./images/icon/svg/sprite.svg#sidebar-icon"></use>
-          </svg>
-        </nav>
+      <a href="#" class="header__logo link"
+        ><img
+          src="./images/icon/icon_goit.png"
+          alt="header img"
+          srcset="
+            ./images/icon/icon_goit.png   1x,
+            /images/icon/icon_goit@2x.png 2x
+          "
+          sizes="63px"
+          height="19"
+      /></a>
+      <nav class="header__navigation--sidebar">
+        <svg class="header__navigation--sidebar-icon">
+          <use href="./images/icon/svg/sprite.svg#sidebar-icon"></use>
+        </svg>
+        <ul class="header__navigation--list list">
+          <li class="header__navigation--list-item">menu</li>
+          <li class="header__navigation--list-item">news</li>
+          <li class="header__navigation--list-item">info</li>
+          <li class="header__navigation--list-item">list</li>
+          <li class="header__navigation--list-item">contacts</li>
+        </ul>
       </nav>
     </div>
     <div class="header__container container relative">
-      <!-- <div class="header__background--img"></div> -->
-      <!-- <picture> -->
       <img
+        class="header__img"
         src="./images/img_main.png"
         srcset="./images/img_main.png 519w, ./images/img_main@2x.png 1038w"
         height="709"
         sizes="519px"
         alt=""
-        class="header__background--img"
       />
-      <!-- </picture> -->
       <div class="header__container-big">
         <h2 class="header__container-big--article">
-          [ Пошаговый <br />Видео <br />
-          -курс_ ]
+          [ Пошаговый <br /><span
+            class="header__container-big--article-after relative"
+            >Видео</span
+          ><span class="header__container-big--article-before relative"
+            >курс_ ]</span
+          >
         </h2>
         <p class="header__container-big--text relative">
           «Старт в карьере web-разработчика с 0» для тех, кто давно хотел
@@ -55,18 +60,17 @@
       </div>
       <button class="header__button">Приобрести курс</button>
     </div>
-
-    <div class="footer__header container relative">
+    <div class="header__footer container relative">
       <h2 class="header__number">01</h2>
       <p class="header__number--small">02.</p>
       <ul class="header__socials list">
-        <li class="header__sosials--items">
+        <li class="header__socials--items">
           <a class="header__link link" href="#"
             ><svg class="header__link--icon">
               <use href="./images/icon/svg/sprite.svg#facebook-icon"></use></svg
           ></a>
         </li>
-        <li class="header__sosials--items">
+        <li class="header__socials--items">
           <a class="header__link link" href="#"
             ><svg class="header__link--icon">
               <use href="./images/icon/svg/sprite.svg#twitter-icon"></use></svg
