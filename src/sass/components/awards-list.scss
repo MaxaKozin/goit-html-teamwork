@@ -73,7 +73,7 @@
   background-image: url(../images/icon/icon_prize3-4.png);
   background-repeat: no-repeat;
   background-size: remc(56) remc(108);
-  background-position: 262px 0;
+  background-position: remc(262) 0;
 }
 
 .awards-item--02:after {
@@ -129,7 +129,7 @@
   .awards-item:first-of-type {
     padding-top: remc(34);
     background-size: remc(58) remc(50);
-    background-position: 90px 0;
+    background-position: remc(90) 0;
 
     &:before {
       font-size: remc(9);
@@ -139,30 +139,30 @@
 
   .awards-item--01 {
     background-size: remc(29) remc(98);
-    background-position: 118px 28px;
+    background-position: remc(118) remc(28);
 
     &:before {
-      width: 156px;
+      width: remc(156);
     }
 
     &:after {
       font-size: remc(28);
       line-height: remc(10);
-      top: 32px;
-      left: 110px;
+      top: remc(32);
+      left: remc(110);
     }
   }
 
   .awards-item--02,
   .awards-item--03 {
     background-size: remc(40) remc(79);
-    background-position: 105px 34px;
+    background-position: remc(105) remc(34);
 
     &:after {
       font-size: remc(28);
       line-height: remc(10);
-      top: 32px;
-      left: 112px;
+      top: remc(32);
+      left: remc(112);
     }
   }
   
@@ -201,7 +201,7 @@
   }
 
   .awards-item--01:before {
-    width: 174px;
+    width: remc(174);
   }
 
   .awards-item:before {
