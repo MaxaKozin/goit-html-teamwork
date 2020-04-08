@@ -1,11 +1,12 @@
 .awards-section {
-  padding: remc(36) 0 ;
+  padding-top: remc(36);
+  padding-bottom: remc(36);
   @include flex('all');
   flex-direction: column-reverse;
 }
 
 .awards-section__mobile-heading {
-  width: col(10);
+  width: col(10.2);
   @extend %medium-xbold;
   text-transform: uppercase;
   padding-bottom: remc(22);

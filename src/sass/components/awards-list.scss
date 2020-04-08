@@ -1,5 +1,5 @@
 .awards-list {
-  width: col(8);
+  width: col(8.7);
 }
 
 .awards-item {
@@ -17,8 +17,8 @@
     opacity: 0.05;
     transform: rotate(-90deg);
     position: absolute;
-    top: remc(68);
-    left: remc(164);
+    top: remc(62);
+    left: remc(160);
   }
 }
 
@@ -60,6 +60,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 5;
   }
 
   &:after {
@@ -98,6 +99,10 @@
   @extend %small-regular;
 }
 
+.awards-item__paragraph--oon-width {
+  width: col(12);
+}
+
 .awards-item__paragraph--bold {
   display: block;
   @extend %small-xbold;
@@ -124,7 +129,7 @@
   .awards-item:first-of-type {
     padding-top: remc(34);
     background-size: remc(58) remc(50);
-    background-position: remc(96) 0;
+    background-position: 90px 0;
 
     &:before {
       font-size: remc(9);
@@ -134,26 +139,30 @@
 
   .awards-item--01 {
     background-size: remc(29) remc(98);
-    background-position: remc(124) remc(30);
+    background-position: 118px 28px;
+
+    &:before {
+      width: 156px;
+    }
 
     &:after {
       font-size: remc(28);
       line-height: remc(10);
-      top: remc(32);
-      left: remc(118);
+      top: 32px;
+      left: 110px;
     }
   }
 
   .awards-item--02,
   .awards-item--03 {
     background-size: remc(40) remc(79);
-    background-position: remc(105) remc(34);
+    background-position: 105px 34px;
 
     &:after {
       font-size: remc(28);
       line-height: remc(10);
-      top: remc(32);
-      left: remc(112)
+      top: 32px;
+      left: 112px;
     }
   }
   
@@ -165,7 +174,7 @@
   }
 
   .awards-item__heading--oon {
-    width: col(10);
+    width: col(10.4);
   }
 
   .awards-item__paragraph {
@@ -189,6 +198,10 @@
       font-size: remc(10);
       line-height: remc(13);
     }
+  }
+
+  .awards-item--01:before {
+    width: 174px;
   }
 
   .awards-item:before {
