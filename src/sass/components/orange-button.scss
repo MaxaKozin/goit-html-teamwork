@@ -7,8 +7,17 @@
   line-height: remc(18);
   color: $white;
   background-color: $orange;
+  box-shadow: 0px 5px 6px 0px rgba(196, 87, 15, 0.26);
   padding: remc(16) remc(36);
   margin-bottom: remc(24);
+
+  &:hover {
+    background-color: $cyan;
+  }
+
+  &:active {
+    background-color: $btn_click;
+  }
 }
 
 @include tablet {

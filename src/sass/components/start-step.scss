@@ -1,9 +1,10 @@
 .start-step {
   background-image: url(../images/bg-stap.png);
   background-repeat: no-repeat;
-  background-position: remc(60) remc(55);
+  background-position: remc(90) remc(70);
   background-size: remc(145) remc(145);
-  padding: remc(25) 0 remc(25);
+  padding-top: remc(25);
+  padding-bottom: remc(25);
 }
 
 .start-step__heading-container {
@@ -23,9 +24,10 @@
   .start-step {
     display: flex;
     justify-content: space-between;
-    background-position: remc(108) remc(50);
+    background-position: remc(104) remc(48);
     background-size: remc(208) remc(208);
-    padding: remc(50) 0 remc(50);
+    padding-top: remc(50);
+    padding-bottom: remc(50);
   }
 
   .start-step__heading-container {
@@ -54,8 +56,9 @@
 @include desktop {
   .start-step {
     background-size: remc(234) remc(234);
-    background-position: remc(120) remc(62);
-    padding: remc(62) 0 remc(62);
+    background-position: remc(116) remc(56);
+    padding-top: remc(62);
+    padding-bottom: remc(62);
   }
 
   .start-step__list-container {

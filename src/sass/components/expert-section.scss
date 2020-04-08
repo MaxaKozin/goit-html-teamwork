@@ -1,5 +1,6 @@
 .expert-section {
-  padding: remc(20) 0;
+  padding-top: remc(20);
+  padding-bottom: remc(20);
   @include flex('column');
   justify-content: center;
   align-items: center;
@@ -14,7 +15,7 @@
 }
 
 .expert-setion__img {
-  width: col(7.2);
+  width: col(7.8);
   height: remc(256);
   overflow: hidden;
   margin-bottom: remc(34);
@@ -51,7 +52,8 @@
 
 @include tablet {
   .expert-section{
-    padding: remc(50) 0;
+    padding-top: remc(50);
+    padding-bottom: remc(50);
   }
 
   .expert-section__heading-container--temp {
@@ -64,7 +66,7 @@
   }
 
   .expert-setion__img {
-    width: col(5.5);
+    width: col(5.8);
     height: remc(328);
     margin-bottom: 0;
   }
@@ -86,14 +88,15 @@
   }
 
   .expert-section--p-size {
-    width: col(10);
+    width: col(10.3);
     padding-bottom: remc(30);
   }
 }
 
 @include desktop {
   .expert-section{
-    padding: remc(60) 0;
+    padding-top: remc(60);
+    padding-bottom: remc(60);
   }
 
   .expert-setion__img {

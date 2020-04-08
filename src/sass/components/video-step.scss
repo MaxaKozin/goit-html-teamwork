@@ -55,10 +55,6 @@
 }
 
 @include tablet {
-  .video-step {
-    padding: remc(22) 0;
-  }
-
   .video-step__bg-img {
     display: none;
   }
