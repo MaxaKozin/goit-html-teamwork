@@ -4,26 +4,35 @@
   margin-bottom: remc(30.4);
 
   @include tablet {
-    @include flex('between-start');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
   }
 
   &__container {
-    margin: 0 auto;
-    margin-bottom: remc(11.2);
+    margin: 0 auto remc(11.2);
     width: col(8);
+    
     @include tablet {
-      @include flex('between-start');
+      display: flex;
+      margin: 0 auto 0 0;
       flex-wrap: wrap;
       width: col(6);
+      margin-bottom: 0;
     }
   }
 
   &__title-wrapper {
     @include tablet {
       order: -1;
-      @include flex('column-center');
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: col(6);
+      margin-right: remc(35);
+      margin-bottom: remc(28);
     }
   }
 
@@ -32,14 +41,23 @@
     text-align: center;
     margin: 0 auto;
     text-transform: uppercase;
-    padding-bottom: remc(14.4);
+    margin-bottom: remc(21);
 
     @include tablet {
       text-align: initial;
-      margin: 0 auto;
+      margin: 0;
       text-transform: uppercase;
       font-size: remc(27);
       line-height: remc(34);
+      margin-bottom: remc(22);
+      width: remc(215);
+    }
+
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(37.5);
+      margin-bottom: remc(25);
+      width: remc(240);
     }
   }
 
@@ -51,8 +69,21 @@
     font-size: remc(13.5);
     line-height: remc(19.5);
     font-family: $acrom-medium;
-    padding-bottom: remc(35);
+    margin-bottom: remc(35);
     padding-left: remc(11.8);
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13.46);
+      margin-bottom: 0;
+      padding-left: remc(17);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(15);
+      padding-left: remc(20);
+    }
 
     &:before {
       position: absolute;
@@ -63,29 +94,51 @@
       top: remc(7.6);
       left: remc(-25.6);
       background-color: $black;
+
+      @include tablet {
+        width: remc(29);
+        height: remc(4);
+        left: remc(-29);
+      }
+
+      @include desktop {
+        width: remc(32);
+        height: remc(4);
+        left: remc(-32);
+      }
     }
   }
 
   &__picture-element1 {
+    margin-bottom: remc(30);
+
     @include tablet {
       order: -2;
+      margin-bottom: remc(28);
     }
   }
 
   &__picture-element2 {
     display: none;
-
     @include tablet {
-      width: col(6);
+      display: block;
+      width: remc(225);
+      margin-right: remc(54);
+    }
+
+    @include desktop {
+      width: remc(251);
+      margin-right: remc(61);
     }
   }
 
   &__image {
     width: 100%;
     height: remc(195.8);
-    padding-bottom: remc(28);
+    margin-bottom: remc(30);
 
     @include tablet {
+      margin-bottom: 0;
       width: remc(275);
       height: auto;
     }
@@ -93,22 +146,53 @@
 
   &__cause {
     @extend %small-xbold;
-    display: inline;
     text-transform: uppercase;
     color: $white;
-    background-color: $black;
     width: remc(240);
     margin-bottom: remc(8.96);
+
+    >span {
+      background-color: $black;
+    }
+
+    @include tablet {
+      margin-right: remc(27);
+      width: remc(95);
+      font-size: remc(9);
+      line-height: remc(14.58);
+
+      &:nth-child(1) {
+        margin-bottom: remc(33);
+      }
+    }
     
+    @include desktop {
+      width: remc(105);
+      font-size: remc(10);
+      line-height: remc(16.25);
+    }
+
   }
 
   &__cause--describe {
     @extend %small-regular;
     color: $secondary_text;
-    // font-size: remc(13.5);
     width: remc(304);
     padding-bottom: remc(24.8);
     padding-top: remc(6.752);
+
+    @include tablet {
+      width: remc(165);
+      font-size: remc(8);
+      line-height: remc(11.78);
+      padding: 0;
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(13.13);
+      width: remc(180);
+    }
   }
 
   &__title--second {
@@ -122,7 +206,12 @@
     padding-left: remc(3.4);
 
     @include tablet {
-      width: col(2);
+      width: remc(105);
+      margin: 0;
+      padding: 0;
+      font-size: remc(9);
+      line-height: remc(14.58);
+      padding-bottom: remc(27);
     }
   }
 
@@ -143,16 +232,20 @@
         width: col(9);
       }
     }
+
     @include tablet {
       @include flex('between-start');
       flex-wrap: wrap;
       width: col(12);
+      padding-top: remc(55);
+      margin-bottom: 0;
     }
   }
 
   &__item {
     position: relative;
-    margin-left: remc(28.8);
+    padding-left: remc(31);
+
     margin-bottom: remc(23.28);
 
     &:before {
@@ -160,12 +253,19 @@
       position: absolute;
       display: block;
       content: '';
-      top: remc(25);
-      left: remc(-43.6);
+      top: remc(20);
+      left: remc(-24);
       color: $white;
       padding: 0 6px;
       transform: rotate(-90deg);
       background-color: $orange;
+
+      @include tablet {
+        font-size: remc(6);
+        line-height: remc(7);
+        padding: 0 remc(2);
+        left: remc(-5);
+      }
     }
 
     &:nth-child(1):before {
@@ -192,6 +292,11 @@
       @include flex('between-start');
       flex-wrap: wrap;
       width: col(4);
+      margin: 0;
+
+      &:nth-child(-n+3) {
+        margin-bottom: remc(25);
+      }
     }
   }
 
@@ -199,11 +304,41 @@
     @extend %small-bold;
     padding-bottom: remc(5.6);
     letter-spacing: -0.01rem;
+
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(11.78);
+      padding: 0;
+      margin-bottom: remc(9);
+    }
+
+    @include desktop {
+      font-size: remc(10);
+      line-height: remc(13.13);
+    }
   }
 
   &__item--subtitle {
     font-family: $acrom;
-    // padding-bottom: remc(30);
+    font-size: remc(14);
+    line-height: remc(19.5);
+    color: $secondary_text;
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(11.78);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(13.13);
+    }
+  }
+
+  .video-course__item--price {
+    @include tablet {
+      width: col(4);
+    }
   }
 
   &__price-block {
@@ -212,16 +347,38 @@
   }
 
   &__price-title {
-    display: inline;
     font-family: $acrom-medium;
     font-size: remc(17);
     line-height: remc(29);
-    background-color: $cyan_mark;
     text-align: center;
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(13.46);
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(15);
+    }
+
+    >span {
+      background-color: $cyan_mark;
+    }
 
     &--wrapper {
       width: remc(143);
       padding-top: remc(5);
+      margin-right: remc(21.2);
+
+      @include tablet {
+        width: auto;
+        margin-right: remc(13);
+      }
+
+      @include desktop {
+        margin-right: remc(15);
+      }
     }
   }
 
@@ -237,6 +394,17 @@
     text-decoration: line-through;
     color: $old_price;
     margin-bottom: remc(15);
+
+    @include tablet {
+      font-size: remc(8);
+      line-height: remc(20.19);
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      font-size: remc(9);
+      line-height: remc(22.5);
+    }
   }
 
   &__price-second {
@@ -244,9 +412,28 @@
     font-size: remc(36);
     line-height: remc(34.4);
 
+    @include tablet {
+      font-size: remc(17);
+      line-height: remc(19);
+    }
+
+    @include desktop {
+      font-size: remc(19);
+    }
+
     &--hrn-height {
       font-size: remc(19.4);
       line-height: remc(43.6);
+
+      @include tablet {
+        font-size: remc(9);
+        line-height: remc(20.19);
+      }
+
+      @include desktop {
+        font-size: remc(10);
+        line-height: remc(22.5);
+      }
     }
   }
 }

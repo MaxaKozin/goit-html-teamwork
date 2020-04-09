@@ -1,16 +1,18 @@
-.section {
-  margin-top: remc(36);
+.section-7 {
+  padding-bottom: remc(36);
   padding-top: remc(36);
   @include tablet {
-    margin-top: remc(56);
-    margin-bottom: remc(54);
+    padding-top: remc(56);
+    padding-bottom: remc(54);
   }
 }
+
 .head {
   @include tablet {
     display: flex;
   }
 }
+
 .section-head {
   width: remc(318);
   margin: 0 auto;
@@ -18,6 +20,7 @@
   @include tablet {
     width: remc(200);
   }
+  
   &__header {
     @extend %medium-xbold;
     width: remc(213);
@@ -32,9 +35,11 @@
       margin-bottom: remc(30);
     }
   }
+  
   &__description {
     @extend %small-medium;
     padding-left: remc(38);
+    
     &::before {
       display: block;
       content: '';
@@ -51,12 +56,14 @@
       line-height: remc(13);
     }
   }
+  
   &__image {
     @include tablet {
       align-self: flex-start;
     }
   }
 }
+
 .section-description {
   line-height: remc(20);
   font-size: remc(14);
@@ -67,15 +74,18 @@
     line-height: remc(15);
     font-size: remc(9);
   }
+  
   &__image-desk {
     padding-top: remc(27);
     align-self: flex-end;
   }
+  
   &-paragraphs {
     @include tablet {
       width: col(7);
     }
   }
+  
   &__header {
     @extend %small-xbold;
     text-transform: uppercase;
@@ -89,6 +99,7 @@
       line-height: remc(16);
       font-size: remc(10);
     }
+    
     &--text {
       @include tablet {
         width: remc(82);
@@ -100,16 +111,19 @@
         width: remc(86);
       }
     }
+    
     &--bgc {
       background-color: $black;
       display: inline-block;
     }
   }
+  
   &__text {
     width: remc(380);
     @include tablet {
       width: remc(170);
     }
+    
     &--bold {
       @extend %small-bold;
       margin-bottom: remc(16);
@@ -121,6 +135,7 @@
         line-height: remc(13);
       }
     }
+    
     &--regular {
       @extend %small-regular;
       @include tablet {
@@ -134,16 +149,19 @@
       }
     }
   }
+  
   &__image-mobile {
     @include tablet {
       display: none;
     }
   }
+  
   &__image-desk {
     @media screen and (max-width: 767px) {
       display: none;
     }
   }
+  
   &__list {
     padding-left: remc(40);
     padding-top: remc(40);
@@ -154,9 +172,11 @@
       padding-bottom: 0;
       padding-top: remc(8);
     }
+    
     &--order-2 {
       order: 2;
     }
+    
     &--order-3 {
       order: 3;
     }
