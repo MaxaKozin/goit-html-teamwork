@@ -2,7 +2,7 @@
   @extend %medium-xbold;
   text-transform: uppercase;
   width: remc(196);
-  margin-bottom: remc(20);
+  margin-bottom: remc(14);
 
   &:after {
     content: "]";
@@ -12,6 +12,7 @@
 .section-heading--black {
   background-color: $black;
   color: $white;
+  padding-right: remc(4);
 
   &:before {
     content: "[ ";
@@ -24,6 +25,7 @@
   .section-heading {
     font-size: remc(27);
     line-height: remc(34);
+    width: remc(200);
   }
 }
 
@@ -31,6 +33,6 @@
   .section-heading {
     font-size: remc(30);
     line-height: remc(37);
-    width: remc(218);
+    width: remc(222);
   }
 }

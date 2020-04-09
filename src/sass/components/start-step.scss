@@ -1,7 +1,7 @@
 .start-step {
   background-image: url(../images/bg-stap.png);
   background-repeat: no-repeat;
-  background-position: remc(90) remc(70);
+  background-position: remc(84) remc(50);
   background-size: remc(145) remc(145);
   padding-top: remc(25);
   padding-bottom: remc(25);
@@ -48,7 +48,7 @@
     &:before {
       font-size: remc(30);
       top: remc(8);
-      left: remc(8);
+      left: 0;
     }
   }
 }

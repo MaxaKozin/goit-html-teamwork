@@ -1,11 +1,12 @@
 .blue-number {
   width: remc(302);
   @include flex('column');
+  margin-bottom: remc(14);
 }
 
 .blue-item {
-  margin-bottom: remc(30);
-  padding-left: remc(60);
+  margin-bottom: remc(24);
+  padding-left: remc(52);
   position: relative;
 
   &:before {
@@ -16,7 +17,7 @@
     background-color: $white;
     position: absolute;
     top: 0;
-    left: 0;
+    left: remc(-8);
     z-index: 3;
     box-shadow: 2px 0px 4px 0px $white;
   }
@@ -25,7 +26,7 @@
 .blue-item__heading {
   @extend %small-xbold;
   text-transform: uppercase;
-  margin-bottom: remc(14);
+  margin-bottom: remc(6);
   position: relative;
 
   &:before {
