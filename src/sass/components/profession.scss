@@ -1,109 +1,115 @@
-.profession{
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.profession {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: remc(39);
+  padding-bottom: remc(39);
 
-    @include tablet{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: remc(56);
+    padding-bottom: remc(56);
+  }
+
+  &__title {
+    font-family: $acrom-xbold;
+    font-size: remc(18);
+    line-height: remc(24);
+    text-transform: uppercase;
+    width: remc(235);
+    padding-bottom: remc(10);
+
+    @include tablet {
+      font-size: remc(27);
+      line-height: remc(33);
+      width: remc(245);
+      margin-right: remc(34);
+      padding: 0 0 remc(30) 0;
     }
- 
-    &__title{
-        font-family: $acrom-xbold;
-        font-size: remc(18);
-        line-height: remc(24);
-        text-transform: uppercase;
-        width: remc(235);
-        padding-top: remc(35);
-        padding-bottom: remc(10);
-
-        @include tablet{
-            font-size: remc(27);
-            line-height: remc(33);
-            width: remc(245);
-            margin-right: remc(34);
-            padding: 0 0 remc(30) 0;
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(38);
     }
-        @include desktop{
-        font-size: remc(30);
-        line-height: remc(38);
-       }
+  }
+
+  &__title--second {
+    font-family: $acrom-xbold;
+    font-size: remc(13.5);
+    line-height: remc(20);
+    text-transform: uppercase;
+    padding-top: remc(30);
+    padding-bottom: remc(10);
+
+    @include tablet {
+      padding: 0 0 remc(15) 0;
+      width: remc(100);
+      font-size: remc(9);
+      line-height: remc(15);
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    font-family: $acrom-medium;
+    font-size: remc(13.5);
+    line-height: remc(20);
+    width: remc(275);
+    padding-bottom: remc(30);
+    padding-left: remc(30);
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: remc(15);
+      height: remc(4);
+      top: remc(5);
+      left: remc(0);
+      background-color: $black;
+
+      @include tablet {
+        width: remc(29);
+        height: remc(4);
+        top: remc(5);
+        left: remc(0);
+      }
     }
 
-    &__title--second{
-        font-size: remc(13.5);
-        line-height: remc(20);
-        text-transform: uppercase;
-        width: remc(205);
-        padding-top: remc(30);
-        padding-bottom: remc(10);
-        
-        @include tablet{
-            padding: 0 0 remc(15) 0;
-            width: remc(100);
-            font-size: remc(9);
-            line-height: remc(15);
-        }
-       }
- 
-    &__subtitle{
-        position: relative;
-        font-family: $acrom-medium;
-        font-size: remc(13.5);
-        line-height: remc(20);
-        width: remc(275);
-        padding-bottom: remc(30);
-        padding-left: remc(30);
-
-        &:before{
-            content: '';
-            display: block;
-            position: absolute;
-            width: remc(15);
-            height: remc(4);
-            top: remc(5);
-            left: remc(0);
-            background-color: $black;
-
-            @include tablet{
-                width: remc(29);
-                height: remc(4);
-                top: remc(5);
-                left: remc(0);
-            }
-        }
-        
-
-        @include tablet{
-            font-size: remc(9);
-            line-height: remc(13);
-            width: remc(178);
-            padding-left: remc(40);
-            padding-bottom: remc(0);
-           }
-        }
-    
-     &__subtitle--second{
-        font-size: remc(13.5);
-        line-height: remc(20);
-        width: remc(200);
-
-        @include tablet{
-            width: remc(140);
-            font-size: remc(8);
-            line-height: remc(12);
-        }
-       }
-
-       &__wrapper{
-           margin-left: remc(25);
-       }
-
-       &__image{
-           flex-shrink: 0;
-       }
+    @include tablet {
+      font-size: remc(9);
+      line-height: remc(13);
+      width: remc(178);
+      padding-left: remc(40);
+      padding-bottom: remc(0);
     }
- 
+  }
+
+  &__subtitle--second {
+    font-size: remc(13.5);
+    line-height: remc(20);
+
+    @include tablet {
+      width: remc(140);
+      font-size: remc(8);
+      line-height: remc(12);
+    }
+  }
+
+  &__wrapper {
+    width: col(6);
+    margin: 0 auto;
+
+    @include tablet {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+  }
+}
