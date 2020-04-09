@@ -5,10 +5,27 @@
     justify-content: center;
     align-items: center;
     font-size: remc(13.5);
+    position: relative;
 
     @include tablet{
       flex-direction: row;
       flex-wrap: wrap;
+      
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: 'IT';
+      font-size: remc(198);
+      line-height: remc(159);
+      left: remc(180);
+      top: remc(30);
+      font-family: $acrom-xbold;
+      color: $bg_text;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      z-index: -1;
     }
 
     &__container {
@@ -28,7 +45,12 @@
       @include tablet{
         width: remc(145);
         font-size: remc(9);
-      line-height: remc(13);
+        line-height: remc(13);
+      }
+
+      @include desktop{
+      font-size: remc(10);
+      line-height: remc(15);
       }
 
       &:before{
@@ -42,7 +64,6 @@
         background-color: $black;
         transform: rotate(-45deg);
       }
-
     }
      
     
@@ -201,4 +222,4 @@
       align-items: center;
       padding-top: remc(50);
     }}
-}
+    }

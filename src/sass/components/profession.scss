@@ -9,6 +9,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
+        padding-bottom: remc(90);
     }
  
     &__title{
@@ -25,7 +26,7 @@
             line-height: remc(33);
             width: remc(245);
             margin-right: remc(34);
-            padding: 0;
+            padding: 0 0 remc(30) 0;
     }
         @include desktop{
         font-size: remc(30);
@@ -34,11 +35,18 @@
     }
 
     &__title--second{
-        font-size: remc(9);
-        line-height: remc(14);
+        font-size: remc(13.5);
+        line-height: remc(20);
+        text-transform: uppercase;
+        width: remc(205);
+        padding-top: remc(30);
+        padding-bottom: remc(10);
         
         @include tablet{
-            padding: 0;
+            padding: 0 0 remc(15) 0;
+            width: remc(100);
+            font-size: remc(9);
+            line-height: remc(15);
         }
        }
  
@@ -47,30 +55,48 @@
         font-family: $acrom-medium;
         font-size: remc(13.5);
         line-height: remc(20);
-        width: remc(235);
+        width: remc(275);
         padding-bottom: remc(30);
+        padding-left: remc(30);
+
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: remc(15);
+            height: remc(4);
+            top: remc(5);
+            left: remc(0);
+            background-color: $black;
+
+            @include tablet{
+                width: remc(29);
+                height: remc(4);
+                top: remc(5);
+                left: remc(0);
+            }
+        }
         
 
         @include tablet{
             font-size: remc(9);
             line-height: remc(13);
-            flex-wrap: wrap;
-            width: remc(195);
+            width: remc(178);
+            padding-left: remc(40);
+            padding-bottom: remc(0);
            }
- 
-        &:last-child{
-         font-family: $acrom;
+        }
+    
+     &__subtitle--second{
+        font-size: remc(13.5);
+        line-height: remc(20);
+        width: remc(200);
 
-         @include tablet{
-            font-size: remc(9);
-            line-height: remc(13);
-            order: 1;
-         }
-     }
-    }
-     &--second{
-        font-size: remc(8);
-        line-height: remc(13);
+        @include tablet{
+            width: remc(140);
+            font-size: remc(8);
+            line-height: remc(12);
+        }
        }
 
        &__wrapper{
