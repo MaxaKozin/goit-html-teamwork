@@ -113,14 +113,14 @@ slider .arrows:hover {
 
   
   @include tablet {
-    padding-left: remc(36);
+    padding-left: remc(23.2);
     height: remc(9);
     bottom: remc(-18);
   }
 
   @include desktop {
-    padding-left: remc(40);
-    bottom: remc(-20);
+    padding-left: remc(28.8);
+    bottom: remc(-21.6);
   }
 }
 
