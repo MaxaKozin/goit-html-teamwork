@@ -116,18 +116,18 @@
     background-color: $white;
     box-shadow: 0 remc(8) remc(14) #00000026;
     padding: remc(20);
-    max-height: remc(213);
+    height: remc(213);
 
     @include tablet {
       box-shadow: 0 remc(11) remc(22) #00000026;
       padding: remc(28);
-      max-height: remc(305);
+      height: remc(305);
     }
 
     @include desktop {
       box-shadow: 0 remc(14) remc(27) #00000026;
       padding: remc(31);
-      max-height: remc(340);
+      height: remc(340);
     }
   }
 
