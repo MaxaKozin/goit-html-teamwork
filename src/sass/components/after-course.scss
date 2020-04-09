@@ -19,7 +19,11 @@
 
   &__container {
     margin: 0 auto;
-    width: 47%;
+    width: col(6);
+    
+    @include phone-only {
+      padding-left: 7px;
+    }
   }
 
   &__title {
@@ -188,7 +192,7 @@
       font-size: remc(9);
       line-height: remc(13.5);
       width: remc(80);
-      
+
       &:before {
         left: -1.775rem;
       }
