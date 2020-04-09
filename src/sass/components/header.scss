@@ -50,7 +50,7 @@
     justify-content: space-between;
     padding-bottom: remc(24);
     &--sidebar {
-      right: 0;
+      cursor: pointer;
       &:hover .header__navigation--list,
       &:focus .header__navigation--list {
         display: block;
@@ -58,8 +58,8 @@
       }
       &-icon {
         @include flex($type: 'column');
-        width: 28px;
-        height: 17px;
+        width: remc(28);
+        height: remc(17);
         fill: $white;
         &:hover,
         &:focus {
@@ -71,31 +71,27 @@
       display: none;
       position: absolute;
       right: 0;
-      top: remc(34);
+      top: remc(18);
       background-color: $bg_footer;
       background-image: url(../images/bg_accent_cloud.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      border: 1px solid yellow;
+      border: 1px solid yellowgreen;
       width: col(12);
       text-align: center;
       @include tablet {
-        width: col(4);
+        width: col(12);
       }
       &-item {
         @extend %small-xbold;
         color: $white;
         text-transform: uppercase;
+        padding: remc(10) 0;
         &:hover,
         &:focus {
           color: $orange;
           background-color: blanchedalmond;
-        }
-        @include tablet {
-          &:not(:last-child) {
-            padding-bottom: 10px;
-          }
         }
       }
     }
@@ -127,35 +123,49 @@
         margin-bottom: remc(36);
         text-transform: uppercase;
         z-index: 1;
+        &-before {
+          padding-left: remc(15);
+          display: inline-block;
+          &::before {
+            display: inline-block;
+            content: '';
+            background-color: $white;
+            width: remc(8);
+            height: remc(3);
+            position: absolute;
+            top: remc(18);
+            left: remc(4);
+          }
+        }
         @include tablet {
           font-size: remc(45);
           line-height: remc(56);
           margin-bottom: remc(22);
           &-before {
-            padding-left: 80px;
+            padding-left: remc(80);
             display: inline-block;
             &::before {
               display: inline-block;
               content: '';
               background-color: $white;
-              width: 56px;
-              height: 8px;
+              width: remc(56);
+              height: remc(8);
               position: absolute;
-              top: 24px;
+              top: remc(24);
               left: 0;
             }
           }
           &-after {
-            padding-right: 68px;
+            padding-right: (remc(68));
             display: inline-block;
             &::after {
               display: inline-block;
               content: '';
               background-color: $white;
-              width: 56px;
-              height: 8px;
+              width: remc(56);
+              height: remc(8);
               position: absolute;
-              top: 24px;
+              top: remc(24);
               right: 0;
             }
           }
@@ -270,14 +280,20 @@
     @extend %xsmall-xbold;
     border: none;
     background-color: $orange;
-    box-shadow: 0px 5px 6px 0px $button_shadow;
+    box-shadow: 0 remc(5) remc(6) 0 $button_shadow;
     width: remc(219);
     height: remc(55);
+    cursor: pointer;
     color: $white;
     text-transform: uppercase;
     letter-spacing: remc(2);
     display: block;
     margin: 0 auto;
+    &:hover,
+    &:focus {
+      background-color: $cyan;
+      color: $orange;
+    }
     @include tablet {
       font-size: remc(7);
       line-height: remc(10);
@@ -311,8 +327,8 @@
       &::after {
         display: inline-block;
         content: '';
-        width: 11px;
-        height: 1px;
+        width: remc(11);
+        height: remc(1);
         background-color: white;
         position: absolute;
         right: 0;
@@ -344,7 +360,7 @@
       right: remc(20);
       &--items {
         &:not(:last-child) {
-          margin-right: 20px;
+          margin-right: remc(20);
         }
       }
     }

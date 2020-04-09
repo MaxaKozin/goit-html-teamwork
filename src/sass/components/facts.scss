@@ -4,11 +4,23 @@
   @include tablet {
     flex-direction: row;
     align-items: flex-start;
-    background-image: url(../images/graph.png);
-    background-repeat: no-repeat;
-    z-index: -1;
-    background-position-x: right;
-    background-position-y: center;
+  }
+  &__bg-img {
+    @include tablet {
+      display: block;
+      width: col(4);
+      height: 120px;
+      background-image: url(../images/graph.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      bottom: remc(56);
+      right: remc(-45);
+    }
+    @include desktop {
+      bottom: remc(60);
+    }
   }
   &__container {
     @include flex($type: 'column-center');
