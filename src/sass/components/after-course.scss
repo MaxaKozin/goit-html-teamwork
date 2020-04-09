@@ -13,16 +13,16 @@
 
   @include tablet {
     @include flex('between-start');
-    background-size: 13rem 13rem;
-    padding: 3.125rem 0 3.125rem;
+    margin-bottom: remc(95.6);
   }
 
   &__container {
-    margin: 0 auto;
     width: col(6);
-    
+
     @include phone-only {
-      padding-left: 7px;
+      margin: 0 auto;
+      width: 63%;
+      padding-left: remc(35);
     }
   }
 
@@ -48,14 +48,19 @@
 
   &__list {
     list-style: none;
-    width: 240px;
+    width: col(12);
     counter-reset: section 00;
 
     @include tablet {
       @include flex('between-start');
       flex-wrap: wrap;
       width: col(12);
-      padding: 0 25px;
+    }
+
+    &-container {
+      @include tablet {
+        margin-left: remc(25);
+      }
     }
   }
 
@@ -84,12 +89,12 @@
       }
     }
     @include tablet {
-      width: remc(121);
+      width: 44%;
       min-height: remc(82.4);
     }
 
     @include desktop {
-      width: remc(140.2);
+      width: 44%;
       min-height: remc(91.2);
     }
   }
@@ -244,7 +249,6 @@
       display: block;
       width: remc(257);
       margin-left: remc(22.4);
-      margin-right: remc(8);
     }
     @include desktop {
       width: remc(287);
