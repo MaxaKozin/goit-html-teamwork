@@ -143,12 +143,9 @@
 
   .ddddd {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-  }
-
-  .tests {
-    padding-left: 9.125rem;
+    
   }
 
   .option_tab_p {
@@ -156,14 +153,19 @@
   }
 
   .cont_dev {
-    width: 11.25rem;
+   
   }
 
   .text_img_description {
     padding-top: 0;
     display: flex;
+    flex-wrap: nowrap;
+    width: 300px;
     margin: 0;
-    width: 28.75rem;
+  }
+
+  .tests {
+    padding-left: 6rem;
   }
 
   .text_decor_bg,
@@ -171,34 +173,36 @@
   .text_decor_bg3,
   .text_decor_bg4,
   .text_decor_bg5 {
-    font-size: 1rem;
+    font-size: 0.860rem;
   }
 
   .text_decor_bg {
-    width: 5.2rem;
+    width: 4.4rem;
   }
 
   .text_decor_bg2 {
-    width: 8rem;
+    width: 6.8rem;
   }
 
   .text_decor_bg3 {
-    width: 6rem;
+    width: 5.2rem;
     margin-bottom: 0.125rem;
   }
 
   .text_decor_bg4 {
-    width: 6.7rem;
+    width: 5.6rem;
     margin-bottom: 0.125rem;
   }
 
   .text_decor_bg5 {
-    width: 10.4rem;
+    width: 9rem;
+    margin-bottom: 0.125rem;
   }
 
   .text_decor_bold {
-    width: 16.25rem;
-    margin-right: 0px;
+    width: 15rem;
+    font-size: 0.8rem;
+    margin: 0;
     padding-top: 0;
 
     br {
@@ -207,7 +211,8 @@
   }
 
   .text_decor_regular {
-    width: 16.25rem;
+    width: 15rem;
+    font-size: 0.8rem;
 
     br {
       display: none;
