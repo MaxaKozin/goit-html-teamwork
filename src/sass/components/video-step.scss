@@ -86,6 +86,10 @@
     }
   }
 
+  .section-paragraph--video-step {
+    width: col(7);
+  }
+
   .video-step__list {
     display: flex;
     justify-content: space-between;

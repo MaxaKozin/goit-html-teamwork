@@ -1,18 +1,19 @@
 .end-paragraph {
   font-family: $acrom-medium;
-  font-size: remc(18);
-  line-height: remc(24);
+  font-size: remc(15);
+  line-height: remc(19);
+  width: col(10);
   color: $orange;
-  padding-left: remc(30);
+  padding-left: remc(22);
   position: relative;
 
   &:before {
     content: "/";
     display: block;
     color: $black;
-    font-size: remc(50);
+    font-size: remc(36);
     position: absolute;
-    top: remc(15);
+    top: remc(8);
     left: 0;
   }
 }
