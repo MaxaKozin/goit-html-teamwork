@@ -1,7 +1,7 @@
 .section-paragraph {
   @extend %small-medium;
   letter-spacing: -0.025em;
-  width: remc(300);
+  width: remc(302);
   padding-left: remc(36);
   position: relative;
 
@@ -21,7 +21,8 @@
   .section-paragraph {
     font-size: remc(9);
     line-height: remc(14);
-    width: remc(176);
+    width: remc(166);
+    padding-left: remc(46);
   }
 }
 

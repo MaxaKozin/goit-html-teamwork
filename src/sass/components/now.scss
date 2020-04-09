@@ -6,16 +6,30 @@
     align-items: center;
     font-size: remc(13.5);
 
+    @include tablet{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     &__container {
         width: col(8);
       }
     
     &__argument{
+      font-size: remc(13.5);
+      line-height: remc(20);
+      font-family: $acrom-medium;
       position: relative;
       color: $orange;
-      width: 340px;
+      width: remc(340);
       padding-top: remc(43);
       padding-bottom: remc(23);
+
+      @include tablet{
+        width: remc(145);
+        font-size: remc(9);
+      line-height: remc(13);
+      }
 
       &:before{
         position: absolute;
@@ -34,16 +48,31 @@
     
     &__title{
       font-size: remc(18);
-      background-color: $black;
+      font-family: $acrom-xbold;
+      background: $black;
       color: $white;
       padding: remc(2) remc(10);
+      text-transform: uppercase;
+
+      @include tablet{
+        font-size: remc(27);
+        line-height: remc(34);
+        padding: remc(0) remc(0);
+      }
     }
 
     &__second--argument{
+      font-size: remc(13.5);
+      line-height: remc(20);
       position: relative;
-      width: 260px;
       font-family: $acrom-medium;
       padding-top: remc(25);
+
+      @include tablet{
+        font-size: remc(9);
+        line-height: remc(13);
+        width: remc(175);
+      }
 
       &:before{
         position: absolute;
@@ -54,28 +83,47 @@
         top: remc(30);
         left: remc(-35);
         background-color: $black;
+
       }
     }
 
     &__second--title{
-      width: 365px;
+      width: remc(365);
       font-size: remc(13.5);
+      line-height: remc(20);
       font-family: $acrom-xbold;
+      text-transform: uppercase;
       padding-top: remc(55);
       padding-bottom: remc(30);
+
+      @include tablet{
+        width: remc(125);
+        padding: 0;
+      }
     }
 
     &__list{
-      
       list-style: none;
-      text-align: center left;
-      width: 265px;
+      text-align: left;
+
+      @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: remc(30);
+      }
     }
 
     &__item{
       font-size: remc(13.5);
       position: relative;
       counter-reset: section;
+      width: remc(265);
+
+      @include tablet{
+        width: remc(125);
+        margin-left: remc(38);
+        text-align: left;
+      }
 
       &:before{
         position: absolute;
@@ -87,7 +135,6 @@
         left: remc(-50);
         color: $white;
         padding: remc(0) remc(5);
-        
         transform: rotate(-90deg);
         background-color: $orange;
       }
@@ -118,12 +165,40 @@
     }
 
     &__item--title{
+      font-size: remc(13.5);
+      line-height: remc(19.5);
       font-family: $acrom-bold;
+
+      @include tablet{
+        font-size: remc(9);
+        line-height: remc(12);
+      }
    
     }
 
     &__item--describe{
+       font-size: remc(13.5);
+       line-height: remc(19.5);
        font-family: $acrom;
        padding-bottom: remc(28);
+       color: $secondary_text;
+
+       @include tablet{
+        font-size: remc(8);
+        line-height: remc(12);}
     }
+
+    &__wrapper{
+      @include tablet{
+      width: remc(280);
+      margin-left: remc(85);
+    }}
+
+    &__wrapper--second{
+      @include tablet{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: remc(50);
+    }}
 }

@@ -1,69 +1,178 @@
-.img_desk_tab {
-  display: none;
+.section-hard {
+  padding-top: remc(40);
+  padding-bottom: remc(43);
+
+  @include tablet {
+    padding-top: remc(0);
+    padding-bottom: remc(54);
+  }
+
+  @include desktop {
+    padding-bottom: remc(61);
+  }
 }
 
-.warning_head {
+.hard {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  text-transform: uppercase;
-  font-family: $acrom-xbold, $acrom-bold;
-  font-size: 1.125rem;
-  padding-bottom: 2.5rem;
+  justify-content: space-between;
 
-  .warning_title {
-    display: flex;
-    font-family: $acrom-medium;
-    color: $black;
-    font-weight: bold;
-    font-size: remc(14);
-    line-height: remc(16);
-    padding-top: 1.5rem;
+  &__image {
+    display: none;
+    position: relative;
 
-    &::before {
+    @include tablet {
       display: block;
-      background-color: $black;
-      content: '';
-      width: 2rem;
-      height: 0.16rem;
-      transform: translate(-20%, 300%);
+      width: col(5);
+    }
+
+    @include desktop {
+      padding-top: remc(20);
+    }
+
+    &:after {
+      content: 'HARD';
+      display: block;
+      position: absolute;
+      font-size: remc(150);
+      font-family: $acrom-xbold;
+      text-transform: uppercase;
+      opacity: 0.06;
+      top: 50%;
+      transform: rotate(90deg) translate(-15%, 15%);
+      z-index: -1;
+
+      @include desktop {
+        font-size: remc(170);
+      }
     }
   }
-}
 
-.list_item_container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 340px;
-  margin: 0 auto;
-  list-style: square;
-}
+  .warning {
+    width: col(10);
+    margin: 0 auto;
 
-.list_style_head {
-  font-family: $acrom-xbold;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: remc(14);
-  line-height: remc(16);
-  padding-bottom: 0.6rem;
-}
+    @include tablet {
+      width: col(6);
+      margin: 0;
+      padding-top: remc(55);
+    }
 
-.list_style_description {
-  font-family: $acrom;
-  font-size: remc(13);
-  line-height: remc(16);
-  padding-bottom: 1.25rem;
-}
+    @include desktop {
+      padding-top: remc(62);
+    }
 
-@include tablet {
-  .img_desk_tab {
-    display: flex;
-    flex-wrap: nowrap;
-  }
+    &__wrapper {
+      width: col(9);
+      margin: 0 auto;
 
-  .tab_options {
-    display: flex;
-    justify-content: space-around;
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    &__heading {
+      margin-bottom: remc(23);
+
+      @include tablet {
+        margin-bottom: remc(17);
+        line-height: remc(27);
+      }
+
+      @include desktop {
+        margin-bottom: remc(21);
+        line-height: remc(32);
+      }
+    }
+
+    &__description {
+      @include tablet {
+        margin-bottom: remc(41);
+        line-height: remc(11.7);
+      }
+
+      @include desktop {
+        margin-bottom: remc(45);
+        line-height: remc(13);
+      }
+    }
+
+    &__list {
+      padding-left: remc(45);
+
+      @include tablet {
+        padding-left: remc(28);
+      }
+
+      @include desktop {
+        padding-left: remc(32);
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: remc(18);
+
+        @include tablet {
+          margin-bottom: remc(18);
+        }
+
+        @include desktop {
+          margin-bottom: remc(22);
+        }
+      }
+    }
+
+    &__subheading {
+      font-family: $acrom-xbold;
+      font-size: remc(13);
+      line-height: remc(20.5);
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: remc(10);
+
+      @include tablet {
+        font-size: remc(9);
+        line-height: remc(14.58);
+        margin-bottom: remc(8);
+      }
+
+      @include desktop {
+        font-size: remc(10);
+        line-height: remc(16.25);
+        margin-bottom: remc(9);
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: remc(-25);
+        top: remc(6);
+        height: remc(7);
+        width: remc(7);
+        background-color: $black;
+
+        @include tablet {
+          left: remc(-28);
+          top: remc(4);
+        }
+      }
+    }
+
+    &__subdescription {
+      font-size: remc(13);
+      line-height: remc(20.5);
+      color: $secondary-text;
+
+      @include tablet {
+        font-size: remc(8);
+        line-height: remc(11.78);
+      }
+
+      @include desktop {
+        font-size: remc(9);
+        line-height: remc(13.13);
+      }
+    }
   }
 }

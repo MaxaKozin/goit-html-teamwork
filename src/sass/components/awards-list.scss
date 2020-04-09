@@ -108,6 +108,21 @@
   @extend %small-xbold;
 }
 
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .awards-item:first-of-type {
+    background-image: url(../images/icon/icon_prize1@2x.png);
+  }
+
+  .awards-item--01 {
+    background-image: url(../images/icon/icon_prize2@2x.png);
+  }
+
+  .awards-item--02,
+  .awards-item--03 {
+    background-image: url(../images/icon/icon_prize3-4@2x.png);
+  }
+}
+
 @include tablet {
   .awards-list {
     width: col(12);
