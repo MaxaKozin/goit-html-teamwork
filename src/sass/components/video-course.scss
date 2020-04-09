@@ -1,158 +1,185 @@
-.video-course{
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.video-course {
+  background-color: $white;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 
-    &__container {
-        width: col(8);
-      }
+  &__container {
+    margin: 0 auto;
+    margin-bottom: remc(11.2);
+    width: col(8);
+  }
 
-    &__title{
-      font-family: $acrom-xbold;
-      font-size: remc(18);
-      padding-bottom: remc(20);
-    }
+  &__title {
+    @extend %medium-xbold;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding-bottom: remc(14.4);
+  }
 
-    &__subtitle{
-      position: relative;
-      width: 230px;
-      font-size: remc(13.5);
-      font-family: $acrom-medium;
-      padding-bottom: remc(35);
+  &__subtitle {
+    margin: 0 auto;
+    text-align: initial;
+    position: relative;
+    width: remc(215.2);
+    font-size: remc(13.5);
+    line-height: remc(19.5);
+    font-family: $acrom-medium;
+    padding-bottom: remc(35);
+    padding-left: remc(11.8);
 
-      &:before{
-        position: absolute;
-        display: block;
-        content: '';
-        width: remc(20);
-        height: remc(2);
-        top: remc(5);
-        left: remc(-40);
-        background-color: $black;
-      }
-    }
-
-    &__image{
-      padding-bottom: remc(28);
-    }
-
-   &__cause{
-     font-size: remc(13.5);
-     font-family: $acrom-xbold;
-     background-color: $black;
-     color: $white;
-     margin-bottom: remc(15);
-     padding: remc(2) remc(2);
-   }
-
-   &__cause--describe{
-     font-family: $acrom;
-     color: $secondary_text;
-     font-size: remc(13.5);
-     width: 315px;
-     padding-bottom: remc(28);
-   }
-
-   &__title--second{
-     font-size: remc(13.5);
-     line-height: remc(19);
-     font-family: $acrom-xbold;
-     width: 375px;
-     text-transform: uppercase;
-     padding-bottom: remc(25);
-   }
-
-   &__list{
-     list-style: none;
-     font-size: remc(13.5);
-     line-height: remc(19);
-     width: 250px;
-   }
-
-   &__item{
-     position: relative;
-
-    &:before{
+    &:before {
       position: absolute;
       display: block;
       content: '';
-      width: remc(49);
-      height: remc(13);
+      width: remc(20);
+      height: remc(2);
+      top: remc(7.6);
+      left: remc(-25.6);
+      background-color: $black;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: remc(195.8);
+    padding-bottom: remc(28);
+  }
+
+  &__cause {
+    @extend %small-xbold;
+    display: inline;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $black;
+    width: remc(240);
+    margin-bottom: remc(8.96);
+  }
+
+  &__cause--describe {
+    @extend %small-regular;
+    color: $secondary_text;
+    // font-size: remc(13.5);
+    width: remc(304);
+    padding-bottom: remc(24.8);
+    padding-top: remc(6.752);
+  }
+
+  &__title--second {
+    margin: 0 auto;
+    font-size: remc(13.5);
+    line-height: remc(19);
+    font-family: $acrom-xbold;
+    width: 375px;
+    text-transform: uppercase;
+    padding-bottom: remc(20.8);
+    padding-left: remc(3.4);
+  }
+
+  &__list {
+    margin: 0 auto;
+    margin-bottom: remc(57.6);
+    width: col(8);
+
+    list-style: none;
+    font-size: remc(13.5);
+    line-height: remc(19);
+    width: remc(275.2);
+  }
+
+  &__item {
+    position: relative;
+    margin-left: remc(14.4);
+    margin-bottom: remc(23.28);
+
+    &:before {
+      @extend %small-bold;
+      position: absolute;
+      display: block;
+      content: '';
       top: remc(25);
-      left: remc(-50);
+      left: remc(-43.6);
       color: $white;
-      padding: remc(0) remc(5);
-      
+      padding: 0 6px;
       transform: rotate(-90deg);
       background-color: $orange;
     }
 
-    &:nth-child(1):before{
+    &:nth-child(1):before {
       content: '[001]';
     }
 
-    &:nth-child(2):before{
+    &:nth-child(2):before {
       content: '[002]';
     }
 
-    &:nth-child(3):before{
+    &:nth-child(3):before {
       content: '[003]';
     }
 
-    &:nth-child(4):before{
+    &:nth-child(4):before {
       content: '[004]';
     }
 
-    &:nth-child(5):before{
+    &:nth-child(5):before {
       content: '[005]';
     }
-   }
-
-   &__item--title{
-    font-family: $acrom-bold;
-    padding-bottom: remc(12);
-   }
-
-   &__item--subtitle{
-     font-family: $acrom;
-     padding-bottom: remc(30);
-   }
-
-   &__price--container{
-    display: flex;
-    flex-wrap: wrap;
   }
 
-   &__price{
-    
-     font-size: remc(17);
-     font-family: $acrom-medium;
-     line-height: remc(29);
-     background-color: $cyan_mark;
-     width: 143px;
-     text-align: center;
-   }
+  &__item--title {
+    @extend %small-bold;
+    padding-bottom: remc(5.6);
+    letter-spacing: -0.01rem;
+  }
 
-   &__price-first{
-    
-     text-decoration: line-through;
-     font-size: remc(17);
-     line-height: remc(44);
-     color: $old_price;
-     padding: remc(0) remc(20);
-     flex-wrap: wrap;
-   }
+  &__item--subtitle {
+    font-family: $acrom;
+    // padding-bottom: remc(30);
+  }
 
-   &__price-second{
-    
-     font-size: remc(36);
-     line-height: remc(44);
-     font-family: $acrom-xbold;
-     padding: remc(0) remc(20);
-     flex-wrap: wrap;
-   }
+  &__price-block {
+    @include flex('hor');
+  }
 
+  &__price-title {
+    display: inline;
+    font-family: $acrom-medium;
+    font-size: remc(17);
+    line-height: remc(29);
+    background-color: $cyan_mark;
+    text-align: center;
 
+    &--wrapper {
+      width: remc(143);
+      padding-top: remc(5);
+      margin-right: remc(21.2);
+    }
+  }
+
+  &__price-wrapper {
+    @include flex('column-center');
+  }
+
+  &__price-first {
+    font-family: $acrom-xbold;
+    font-size: remc(17);
+    line-height: remc(14.8);
+    text-decoration: line-through;
+    color: $old_price;
+    margin-bottom: remc(15);
+  }
+
+  &__price-second {
+    font-family: $acrom-xbold;
+    font-size: remc(36);
+    line-height: remc(34.4);
+
+    &--hrn-height {
+      font-size: remc(19.4);
+      line-height: remc(43.6);      
+    }
+  }
 }

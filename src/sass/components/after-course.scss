@@ -19,13 +19,10 @@
 
   &__container {
     margin: 0 auto;
-    width: col(6);
+    width: 47%;
   }
 
   &__title {
-    // font-family: $acrom-xbold;
-    // font-size: remc(18);
-    // width: 210px;
     padding-bottom: remc(40.8);
     @extend %medium-xbold;
     text-align: initial;
@@ -37,16 +34,12 @@
       line-height: remc(34);
       margin-top: remc(20);
       padding-bottom: remc(40.2);
-      // width: col(6);
     }
     @include desktop {
       font-size: remc(30);
       line-height: remc(37);
       padding-bottom: remc(48.2);
     }
-  }
-
-  &__list-container {
   }
 
   &__list {
@@ -221,7 +214,7 @@
     width: remc(215);
     height: remc(46);
     margin-top: remc(33.4);
-    margin-bottom: remc(65);
+    margin-bottom: remc(61.8);
 
     @include tablet {
       font-size: remc(6.73);
