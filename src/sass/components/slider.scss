@@ -1,0 +1,163 @@
+.slider {
+  position: relative;
+  resize: none;
+}
+
+.slider label {
+  cursor: pointer;
+}
+
+.slider input,
+.slider .slide,
+.slider .arrows label {
+  display: none;
+}
+
+.slider input:nth-child(1):checked ~ .slides .slide:nth-child(1),
+.slider input:nth-child(2):checked ~ .slides .slide:nth-child(2),
+.slider input:nth-child(3):checked ~ .slides .slide:nth-child(3) {
+  display: flex;
+}
+
+.slider .arrows {
+  position: absolute;
+  bottom: remc(-15);
+  display: block;
+  height: remc(15);
+  width: remc(15);
+  color: $white;
+  background-color: $black;
+  line-height: remc(15);
+  text-align: center;
+
+  @include tablet {
+    bottom: remc(-21);
+    width: remc(21);
+    height: remc(21);
+    line-height: remc(21);
+  }
+
+  @include desktop {
+    bottom: remc(-23);
+    width: remc(23);
+    height: remc(23);
+    line-height: remc(23);
+  }
+}
+
+.slider .arrow-right {
+  text-align: center;
+  right: 0;
+}
+
+.slider .arrow-left {
+  text-align: center;
+  right: remc(15);
+
+  @include tablet {
+    right: remc(21);
+  }
+
+  @include desktop {
+    right: remc(23);
+  }
+}
+
+.slider .arrows label {
+  width: remc(15);
+
+  @include tablet {
+    width: remc(21);
+  }
+
+  @include desktop {
+    width: remc(23);
+  }
+}
+
+slider .arrows:hover {
+  color: $orange;
+}
+
+.slider .arrow-left label:before {
+  content: '‹';
+  font-size: remc(20);
+  line-height: remc(13);
+  
+  @include tablet {
+    line-height: remc(19);
+  }
+}
+
+.slider .arrow-right label:before {
+  content: '›';
+  font-size: remc(20);
+  line-height: remc(13);
+
+  @include tablet {
+    line-height: remc(19);
+  }
+}
+
+.slider input:nth-child(1):checked ~ .arrows label:nth-child(1),
+.slider input:nth-child(2):checked ~ .arrows label:nth-child(2),
+.slider input:nth-child(3):checked ~ .arrows label:nth-child(3) {
+  display: table-cell;
+}
+
+.slider .dots {
+  position: absolute;
+  bottom: remc(-18);
+  left: 0;
+  padding-left: remc(24);
+
+  
+  @include tablet {
+    padding-left: remc(36);
+    height: remc(9);
+    bottom: remc(-18);
+  }
+
+  @include desktop {
+    padding-left: remc(40);
+    bottom: remc(-20);
+  }
+}
+
+.slider .dots label {
+  transition: all 0.2s linear;
+  font-family: $acrom-xbold;
+  font-size: remc(4);
+  cursor: pointer;
+
+  @include tablet {
+    font-size: remc(6);
+  }
+}
+
+.slider .dots label:hover {
+  font-size: remc(7);
+
+  @include tablet {
+    font-size: remc(10);
+  }
+
+  @include desktop {
+    font-size: remc(11);
+  }
+}
+
+.slider input:nth-child(1):checked ~ .dots label:nth-child(1),
+.slider input:nth-child(2):checked ~ .dots label:nth-child(2),
+.slider input:nth-child(3):checked ~ .dots label:nth-child(3) {
+  text-decoration: line-through;
+  font-size: remc(7);
+
+  @include tablet {
+    font-size: remc(10);
+  }
+
+  @include desktop {
+    font-size: remc(11);
+  }
+}
