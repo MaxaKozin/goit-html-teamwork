@@ -29,11 +29,14 @@
 }
 
 .modal_call {
-  width: 50vw;
-  height: 40vh;
+  width: 100vw;
   overflow-y: scroll;
   padding: remc(20);
   display: none;
+
+  @include tablet {
+    width: 50vw;
+  }
 
   &__form {
     padding-top: 10%;
