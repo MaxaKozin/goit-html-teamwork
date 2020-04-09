@@ -73,6 +73,8 @@
   }
 
   &__picture-element2 {
+    display: none;
+
     @include tablet {
       width: col(6);
     }
@@ -114,9 +116,9 @@
     font-size: remc(13.5);
     line-height: remc(19);
     font-family: $acrom-xbold;
-    width: 375px;
+    width: remc(375);
     text-transform: uppercase;
-    padding-bottom: remc(20.8);
+    padding-bottom: remc(22.4);
     padding-left: remc(3.4);
 
     @include tablet {
@@ -132,7 +134,6 @@
     list-style: none;
     font-size: remc(13.5);
     line-height: remc(19);
-    width: remc(275.2);
 
     &--wrapper {
       @include tablet {
@@ -151,7 +152,7 @@
 
   &__item {
     position: relative;
-    margin-left: remc(14.4);
+    margin-left: remc(28.8);
     margin-bottom: remc(23.28);
 
     &:before {
@@ -206,7 +207,8 @@
   }
 
   &__price-block {
-    @include flex('hor');
+    @include flex('between-start');
+    padding-top: remc(34);
   }
 
   &__price-title {
@@ -220,12 +222,12 @@
     &--wrapper {
       width: remc(143);
       padding-top: remc(5);
-      margin-right: remc(21.2);
     }
   }
 
   &__price-wrapper {
     @include flex('column-center');
+    width: remc(207);
   }
 
   &__price-first {
