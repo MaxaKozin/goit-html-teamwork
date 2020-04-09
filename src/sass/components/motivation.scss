@@ -4,7 +4,7 @@
   align-items: center;
   @extend %small-regular;
   padding-top: remc(56);
-  padding-bottom: remc(76);
+  padding-bottom: remc(40);
   @include tablet {
     display: flex;
     flex-direction: row;
@@ -141,7 +141,7 @@
     }
   }
   &-list {
-    padding-bottom: remc(44);
+    // padding-bottom: remc(44);
     padding-left: remc(18);
     @include tablet {
       width: col(12);
