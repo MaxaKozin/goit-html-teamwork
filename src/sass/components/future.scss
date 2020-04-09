@@ -1,7 +1,7 @@
 .future {
   @include flex($type: 'column-center');
   padding-top: remc(3);
-  padding-bottom: remc(41);
+  padding-bottom: remc(38);
   @include tablet {
     flex-direction: row;
     justify-content: space-between;

@@ -1,6 +1,7 @@
 .facts {
   @include flex($type: 'column-center');
-  padding-bottom: remc(50);
+  padding-top: remc(34);
+  padding-bottom: remc(48);
   @include tablet {
     flex-direction: row;
     align-items: flex-start;

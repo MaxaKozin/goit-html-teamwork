@@ -1,288 +1,164 @@
-.cont_other {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.text_other_head {
-  display: flex;
-  justify-content: space-around;
-  text-transform: uppercase;
-  font-family: $acrom-xbold, $acrom-bold;
-  font-size: 1.8rem;
-  padding-bottom: 1rem;
-}
-
-.text_other_description {
-  padding-left: 44px;
-  display: flex;
-  font-family: $acrom-medium;
-  color: $black;
-  font-weight: bold;
-  font-size: remc(14);
-  line-height: remc(16);
-  padding-bottom: 2.5rem;
-
-  &::before {
-    display: block;
-    background-color: $black;
-    content: '';
-    width: 2rem;
-    height: 0.16rem;
-    transform: translate(-20%, 300%);
+.section {
+  margin-top: remc(36);
+  padding-top: remc(36);
+  @include tablet {
+    margin-top: remc(56);
+    margin-bottom: remc(54);
   }
 }
-
-.img_other {
-  display: flex;
-  justify-content: space-around;
+.head {
+  @include tablet {
+    display: flex;
+  }
 }
-
-.text_img_description {
-  width: 25rem;
+.section-head {
+  width: remc(318);
   margin: 0 auto;
-  padding-top: 1.25rem;
+  margin-bottom: remc(32);
+  @include tablet {
+    width: remc(200);
+  }
+  &__header {
+    @extend %medium-xbold;
+    width: remc(213);
+    text-transform: uppercase;
+    margin-bottom: remc(16);
+    padding-left: remc(38);
+    @include tablet {
+      font-size: remc(27);
+      line-height: remc(34);
+      width: remc(190);
+      padding-left: 0;
+      margin-bottom: remc(30);
+    }
+  }
+  &__description {
+    @extend %small-medium;
+    padding-left: remc(38);
+    &::before {
+      display: block;
+      content: '';
+      width: remc(20);
+      height: remc(3);
+      background-color: $black;
+      position: absolute;
+      top: remc(8);
+      left: 0;
+    }
+    @include tablet {
+      width: 95%;
+      font-size: remc(9);
+      line-height: remc(13);
+    }
+  }
+  &__image {
+    @include tablet {
+      align-self: flex-start;
+    }
+  }
 }
-
-.text_decor_bg,
-.text_decor_bg2,
-.text_decor_bg3,
-.text_decor_bg4,
-.text_decor_bg5 {
-  font-family: $acrom-bold;
-  color: $white;
-  background-color: $black;
-}
-
-.text_decor_bg {
-  width: 7.625rem;
-  margin-bottom: 0.125rem;
-}
-
-.text_decor_bg2 {
-  width: 11.75rem;
-}
-
-.text_decor_bg3 {
-  width: 17.7rem;
-  margin-bottom: 0.125rem;
-}
-
-.text_decor_bg4 {
-  width: 16.5rem;
-  margin-bottom: 0.125rem;
-}
-
-.text_decor_bg5 {
-  width: 15.5rem;
-}
-
-.text_decor_bold {
-  font-family: $acrom-bold;
+.section-description {
+  line-height: remc(20);
   font-size: remc(14);
-  line-height: remc(16);
-  color: $black;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.text_decor_regular {
-  font-family: $acrom;
-  font-size: remc(14);
-  line-height: remc(16);
-  color: $secondary_text;
-  padding-bottom: 1.25rem;
-}
-
-.img_opthens_tab {
-  display: none;
-}
-
-.modbile_hiden {
-  display: none;
-}
-
-@include tablet {
-  .cont_other {
+  padding-top: remc(16);
+  @include tablet {
     display: flex;
+    justify-content: space-between;
+    line-height: remc(15);
+    font-size: remc(9);
   }
-
-  .tab_hide {
-    display: none;
+  &__image-desk {
+    padding-top: remc(27);
+    align-self: flex-end;
   }
-
-  .modbile_hiden {
-    display: flex;
-    width: 16.875rem;
-    height: 14.375rem;
-    padding-top: 1.25rem;
+  &-paragraphs {
+    @include tablet {
+      width: col(7);
+    }
   }
-
-  .img_opthens_tab {
-    display: flex;
-    width: 18rem;
-    height: 12rem;
-    margin-right: 0px;
+  &__header {
+    @extend %small-xbold;
+    text-transform: uppercase;
+    color: $white;
+    width: remc(224);
+    margin-bottom: remc(16);
+    @include tablet {
+      width: remc(196);
+    }
+    @include desktop {
+      line-height: remc(16);
+      font-size: remc(10);
+    }
+    &--text {
+      @include tablet {
+        width: remc(82);
+        margin: 0;
+        font-size: remc(9);
+        line-height: remc(15);
+      }
+      @include desktop {
+        width: remc(86);
+      }
+    }
+    &--bgc {
+      background-color: $black;
+      display: inline-block;
+    }
   }
-
-  .text_other_head {
-    display: flex;
-    flex-direction: column;
-    font-size: remc(38);
-    width: 16rem;
-
-    .br_hide {
+  &__text {
+    width: remc(380);
+    @include tablet {
+      width: remc(170);
+    }
+    &--bold {
+      @extend %small-bold;
+      margin-bottom: remc(16);
+      @include tablet {
+        width: remc(170);
+        margin: 0;
+        margin-bottom: remc(13);
+        font-size: remc(9);
+        line-height: remc(13);
+      }
+    }
+    &--regular {
+      @extend %small-regular;
+      @include tablet {
+        line-height: remc(12);
+        font-size: remc(8);
+        margin: 0;
+      }
+      @include desktop {
+        line-height: remc(13);
+        font-size: remc(9);
+      }
+    }
+  }
+  &__image-mobile {
+    @include tablet {
       display: none;
     }
   }
-
-  .text_other_description {
-    display: flex;
-    width: 16rem;
-  }
-
-  .ddddd {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .tests {
-    padding-left: 9.125rem;
-  }
-
-  .option_tab_p {
-    padding-left: 0.875rem;
-  }
-
-  .cont_dev {
-    width: 11.25rem;
-  }
-
-  .text_img_description {
-    padding-top: 0;
-    display: flex;
-    margin: 0;
-    width: 28.75rem;
-  }
-
-  .text_decor_bg,
-  .text_decor_bg2,
-  .text_decor_bg3,
-  .text_decor_bg4,
-  .text_decor_bg5 {
-    font-size: 1rem;
-  }
-
-  .text_decor_bg {
-    width: 5.2rem;
-  }
-
-  .text_decor_bg2 {
-    width: 8rem;
-  }
-
-  .text_decor_bg3 {
-    width: 6rem;
-    margin-bottom: 0.125rem;
-  }
-
-  .text_decor_bg4 {
-    width: 6.7rem;
-    margin-bottom: 0.125rem;
-  }
-
-  .text_decor_bg5 {
-    width: 10.4rem;
-  }
-
-  .text_decor_bold {
-    width: 16.25rem;
-    margin-right: 0px;
-    padding-top: 0;
-
-    br {
+  &__image-desk {
+    @media screen and (max-width: 767px) {
       display: none;
     }
   }
-
-  .text_decor_regular {
-    width: 16.25rem;
-
-    br {
-      display: none;
+  &__list {
+    padding-left: remc(40);
+    padding-top: remc(40);
+    padding-bottom: remc(30);
+    @include tablet {
+      display: flex;
+      margin-bottom: remc(35);
+      padding-bottom: 0;
+      padding-top: remc(8);
     }
-  }
-}
-
-@include desktop {
-  .ddddd {
-    width: 44.625rem;
-    margin: 0 auto;
-  }
-
-  .tests {
-    padding-left: 9.9rem;
-  }
-
-  .modbile_hiden {
-    width: 19.125rem;
-    height: auto;
-  }
-
-  .img_opthens_tab {
-    width: 19.125rem;
-    height: 13.125rem;
-  }
-
-  .text_img_description {
-    width: 25rem;
-  }
-
-  .text_decor_bg,
-  .text_decor_bg2,
-  .text_decor_bg3,
-  .text_decor_bg4,
-  .text_decor_bg5 {
-    font-size: 0.860rem;
-  }
-
-  .text_decor_bg {
-    width: 4.4rem;
-  }
-
-  .text_decor_bg2 {
-    width: 6.8rem;
-  }
-
-  .text_decor_bg3 {
-    width: 5.2rem;
-    margin-bottom: 0.125rem;
-  }
-
-  .text_decor_bg4 {
-    width: 5.6rem;
-    margin-bottom: 0.125rem;
-  }
-
-  .text_decor_bg5 {
-    width: 9rem;
-    margin-bottom: 0.125rem;
-  }
-
-  .option_tab_p {
-    padding-left: 0.8rem;
-  }
-
-  .fix_w {
-    width: 15rem;
-  }
-
-  .text_decor_bold {
-    width: 15rem;
-  }
-
-  .text_decor_regular {
-    width: 15rem;
+    &--order-2 {
+      order: 2;
+    }
+    &--order-3 {
+      order: 3;
+    }
   }
 }
