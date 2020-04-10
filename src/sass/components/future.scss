@@ -18,11 +18,12 @@
       flex-wrap: wrap;
       justify-content: start;
       align-items: flex-start;
+      padding: 0;
     }
   }
   &__photo {
     @include tablet {
-      width: col(10);
+      width: col(10.5);
     }
   }
   &-title {
@@ -35,16 +36,14 @@
       background-color: $black;
     }
     @include tablet {
+      width: col(3.5);
       margin-top: remc(32);
       margin-bottom: 0;
-      width: col(3);
       font-size: remc(9);
       line-height: remc(15);
     }
     @include desktop {
       margin-top: remc(38);
-      margin-bottom: 0;
-      width: col(3);
       font-size: remc(10);
       line-height: remc(16);
     }
@@ -61,8 +60,7 @@
     @include desktop {
       font-size: remc(10);
       line-height: remc(15);
-      padding-left: remc(20);
-      margin-top: remc(38);
+      margin-top: remc(40);
     }
     &__subtext {
       @extend %small-regular;
@@ -82,15 +80,17 @@
       }
     }
   }
-  &__container--list {
-    @include flex($type: 'column-center');
-    @include tablet {
-      padding-left: remc(18);
-      width: col(6);
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: start;
+  &__container {
+    &--list {
+      @include flex($type: 'column-center');
+      @include tablet {
+        padding-left: remc(18);
+        width: col(6);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
     }
   }
   &-subtitle {
@@ -101,13 +101,13 @@
       background-color: $black;
     }
     @include tablet {
-      width: col(10);
+      width: col(10.5);
       font-size: remc(27);
       line-height: remc(34);
     }
     @include desktop {
       font-size: remc(30);
-      line-height: remc(34);
+      line-height: remc(38);
     }
     &__text {
       @extend %small-regular;
@@ -128,6 +128,7 @@
         width: col(7);
         font-size: remc(9);
         line-height: remc(13);
+        margin-top: remc(20);
         &::before {
           width: remc(29);
           top: remc(4);
@@ -174,7 +175,7 @@
     @include tablet {
       padding-left: remc(30);
       width: col(10);
-      margin-top: remc(22);
+      margin-top: remc(38);
       &__item {
         &::before {
           width: remc(8);
@@ -185,21 +186,21 @@
         &--title {
           font-size: remc(9);
           line-height: remc(15);
-          margin-bottom: remc(8);
+          margin-bottom: remc(6);
         }
         &--text {
           font-size: remc(8);
           line-height: remc(12);
         }
         &:not(:last-child) {
-          margin-bottom: remc(14);
+          margin-bottom: remc(16);
         }
       }
     }
     @include desktop {
       padding-left: remc(30);
       width: col(10);
-      margin-top: remc(22);
+      margin-top: remc(44);
       &__item {
         &::before {
           width: remc(8);
