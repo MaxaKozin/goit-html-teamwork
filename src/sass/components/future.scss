@@ -8,6 +8,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
   }
+  
   &__container {
     @include flex($type: 'column-center');
     padding-bottom: remc(50);
@@ -19,17 +20,21 @@
       justify-content: start;
       align-items: flex-start;
       padding: 0;
+
     }
   }
+  
   &__photo {
     @include tablet {
       width: col(10.5);
     }
   }
+  
   &-title {
     margin-top: remc(34);
     margin-bottom: remc(30);
     @extend %medium-bold;
+    
     &__span {
       text-transform: uppercase;
       color: $white;
@@ -48,6 +53,7 @@
       line-height: remc(16);
     }
   }
+  
   &-text {
     @extend %small-bold;
     @include tablet {
@@ -62,9 +68,11 @@
       line-height: remc(15);
       margin-top: remc(40);
     }
+    
     &__subtext {
       @extend %small-regular;
       margin-bottom: remc(50);
+      
       &--span {
         background-color: $cyan_mark;
       }
@@ -93,8 +101,10 @@
       }
     }
   }
+  
   &-subtitle {
     @extend %medium-bold;
+    
     &__span {
       color: $white;
       text-transform: uppercase;
@@ -109,10 +119,12 @@
       font-size: remc(30);
       line-height: remc(38);
     }
+    
     &__text {
       @extend %small-regular;
       padding-left: remc(26);
       margin-top: remc(18);
+      
       &::before {
         display: block;
         content: '';
@@ -129,7 +141,7 @@
         font-size: remc(9);
         line-height: remc(13);
         margin-top: remc(20);
-        &::before {
+          &::before {
           width: remc(29);
           top: remc(4);
         }
@@ -139,6 +151,7 @@
         width: col(7);
         font-size: remc(10);
         line-height: remc(15);
+        
         &::before {
           width: remc(32);
           top: remc(5);
@@ -146,9 +159,11 @@
       }
     }
   }
+  
   &-list {
     padding-left: remc(22);
     margin-top: remc(44);
+    
     &__item {
       &::before {
         display: block;
@@ -160,14 +175,17 @@
         left: remc(-22);
         top: remc(7);
       }
+      
       &--title {
         @extend %small-xbold;
         text-transform: uppercase;
         margin-bottom: remc(20);
       }
+      
       &--text {
         @extend %small-regular;
       }
+      
       &:not(:last-child) {
         margin-bottom: remc(28);
       }
@@ -183,15 +201,18 @@
           left: remc(-30);
           top: remc(5);
         }
+        
         &--title {
           font-size: remc(9);
           line-height: remc(15);
           margin-bottom: remc(6);
         }
+        
         &--text {
           font-size: remc(8);
           line-height: remc(12);
         }
+        
         &:not(:last-child) {
           margin-bottom: remc(16);
         }
@@ -208,15 +229,17 @@
           left: remc(-30);
           top: remc(5);
         }
-        &--title {
+          &--title {
           font-size: remc(10);
           line-height: remc(16);
           margin-bottom: remc(8);
         }
+        
         &--text {
           font-size: remc(9);
           line-height: remc(13);
         }
+        
         &:not(:last-child) {
           margin-bottom: remc(20);
         }
