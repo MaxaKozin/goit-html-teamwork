@@ -10,17 +10,12 @@
     @include tablet {
       display: block;
       width: col(4);
-      height: 120px;
-      background-image: url(../images/graph.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
       position: absolute;
-      bottom: remc(56);
-      right: remc(-45);
+      bottom: remc(67);
+      right: remc(-35);
     }
     @include desktop {
-      bottom: remc(60);
+      right: remc(-40);
     }
   }
   &__container {

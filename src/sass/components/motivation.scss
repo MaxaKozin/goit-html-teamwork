@@ -21,14 +21,14 @@
     font-size: remc(98);
     opacity: 0.051;
     @include tablet {
-      top: remc(380);
+      top: remc(400);
       left: remc(-460);
       font-size: remc(140);
       z-index: -1;
     }
     @include desktop {
-      top: remc(424);
-      left: remc(-512);
+      top: remc(420);
+      left: remc(-534);
       font-size: remc(156);
     }
   }
