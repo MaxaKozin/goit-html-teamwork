@@ -8,18 +8,19 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
-
+  
   &__container {
     margin: 0 auto remc(11.2);
     width: col(8);
-    
+
     @include tablet {
       display: flex;
-      margin: 0 auto 0 0;
+      padding-top: remc(51.8);
+      margin: 0;
       flex-wrap: wrap;
       width: col(6);
-      margin-bottom: 0;
     }
   }
 
@@ -31,8 +32,12 @@
       justify-content: center;
       align-items: center;
       width: col(6);
-      margin-right: remc(35);
-      margin-bottom: remc(28);
+      margin-right: auto;
+      margin-bottom: remc(23.2);
+    }
+
+    @include desktop {
+      margin-bottom: remc(56.8);
     }
   }
 
@@ -41,7 +46,7 @@
     text-align: center;
     margin: 0 auto;
     text-transform: uppercase;
-    margin-bottom: remc(21);
+    margin-bottom: remc(16.2);
 
     @include tablet {
       text-align: initial;
@@ -49,14 +54,15 @@
       text-transform: uppercase;
       font-size: remc(27);
       line-height: remc(34);
-      margin-bottom: remc(22);
+      margin-bottom: remc(14);
       width: remc(215);
     }
 
     @include desktop {
       font-size: remc(30);
       line-height: remc(37.5);
-      margin-bottom: remc(25);
+      margin-bottom: remc(18.6);
+      margin-top: remc(23.2);
       width: remc(240);
     }
   }
@@ -75,14 +81,15 @@
     @include tablet {
       font-size: remc(9);
       line-height: remc(13.46);
-      margin-bottom: 0;
+      margin-bottom: remc(9);
       padding-left: remc(17);
     }
 
     @include desktop {
       font-size: remc(10);
       line-height: remc(15);
-      padding-left: remc(20);
+      padding-left: remc(23.2);
+      margin: 0;
     }
 
     &:before {
@@ -99,6 +106,7 @@
         width: remc(29);
         height: remc(4);
         left: remc(-29);
+        top: remc(6);
       }
 
       @include desktop {
@@ -115,6 +123,11 @@
     @include tablet {
       order: -2;
       margin-bottom: remc(28);
+      width: remc(275);
+    }
+
+    @include desktop {
+      width: auto;
     }
   }
 
@@ -124,23 +137,28 @@
       display: block;
       width: remc(225);
       margin-right: remc(54);
+      margin-top: remc(21);
     }
 
     @include desktop {
       width: remc(251);
       margin-right: remc(61);
+      margin-top: remc(25.8);
     }
   }
 
   &__image {
     width: 100%;
-    height: remc(195.8);
+    height: remc(165.4);
     margin-bottom: remc(30);
 
     @include tablet {
       margin-bottom: 0;
-      width: remc(275);
       height: auto;
+    }
+
+    @include desktop {
+      width: auto;
     }
   }
 
@@ -149,9 +167,9 @@
     text-transform: uppercase;
     color: $white;
     width: remc(240);
-    margin-bottom: remc(8.96);
+    margin-bottom: remc(0.96);
 
-    >span {
+    > span {
       background-color: $black;
     }
 
@@ -160,25 +178,25 @@
       width: remc(95);
       font-size: remc(9);
       line-height: remc(14.58);
+      margin-bottom: remc(26.6);
 
-      &:nth-child(1) {
-        margin-bottom: remc(33);
-      }
+      // &:nth-child(1) {
+      //   margin-bottom: remc(26.6);
+      // }
     }
-    
+
     @include desktop {
       width: remc(105);
       font-size: remc(10);
       line-height: remc(16.25);
     }
-
   }
 
   &__cause--describe {
     @extend %small-regular;
     color: $secondary_text;
     width: remc(304);
-    padding-bottom: remc(24.8);
+    padding-bottom: remc(23.2);
     padding-top: remc(6.752);
 
     @include tablet {
@@ -206,19 +224,26 @@
     padding-left: remc(3.4);
 
     @include tablet {
-      width: remc(105);
+      align-self: flex-start;
+      width: col(2);
       margin: 0;
       padding: 0;
       font-size: remc(9);
-      line-height: remc(14.58);
-      padding-bottom: remc(27);
+      line-height: remc(15);
+      padding-top: remc(52.8);
+    }
+
+    @include desktop {
+      padding-top: remc(59.2);
+      font-size: remc(10);
+      line-height: remc(16.25);
     }
   }
 
   &__list {
     margin: 0 auto;
     margin-bottom: remc(57.6);
-    width: col(8);
+    width: 68%;
 
     list-style: none;
     font-size: remc(13.5);
@@ -226,9 +251,6 @@
 
     &--wrapper {
       @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         width: col(9);
       }
     }
@@ -240,12 +262,15 @@
       padding-top: remc(55);
       margin-bottom: 0;
     }
+
+    @include desktop {
+      padding-top: remc(59.8);
+    }
   }
 
   &__item {
     position: relative;
     padding-left: remc(31);
-
     margin-bottom: remc(23.28);
 
     &:before {
@@ -264,7 +289,8 @@
         font-size: remc(6);
         line-height: remc(7);
         padding: 0 remc(2);
-        left: remc(-5);
+        left: remc(-3.4);
+        top: remc(10);
       }
     }
 
@@ -289,14 +315,15 @@
     }
 
     @include tablet {
-      @include flex('between-start');
-      flex-wrap: wrap;
       width: col(4);
       margin: 0;
+      min-height: remc(96);
+      padding-bottom: remc(23.8);
+    }
 
-      &:nth-child(-n+3) {
-        margin-bottom: remc(25);
-      }
+    @include desktop {
+      display: block;
+      padding-bottom: remc(27);
     }
   }
 
@@ -306,6 +333,7 @@
     letter-spacing: -0.01rem;
 
     @include tablet {
+      width: remc(105);
       font-size: remc(9);
       line-height: remc(11.78);
       padding: 0;
@@ -313,8 +341,10 @@
     }
 
     @include desktop {
+      width: remc(114.6);
       font-size: remc(10);
       line-height: remc(13.13);
+      margin-bottom: remc(4.2);
     }
   }
 
@@ -335,15 +365,17 @@
     }
   }
 
-  .video-course__item--price {
-    @include tablet {
-      width: col(4);
-    }
-  }
-
   &__price-block {
     @include flex('between-start');
     padding-top: remc(34);
+
+    @include tablet {
+      min-height: remc(55);
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding: 0;
+      padding-right: remc(10.4);
+    }
   }
 
   &__price-title {
@@ -362,29 +394,42 @@
       line-height: remc(15);
     }
 
-    >span {
+    > span {
       background-color: $cyan_mark;
     }
 
     &--wrapper {
-      width: remc(143);
+      width: remc(251.8);
       padding-top: remc(5);
       margin-right: remc(21.2);
 
       @include tablet {
-        width: auto;
+        width: remc(67);
         margin-right: remc(13);
+        margin-bottom: remc(5);
       }
 
       @include desktop {
         margin-right: remc(15);
+        margin-bottom: remc(6);
+        width: remc(76);
       }
     }
   }
 
   &__price-wrapper {
-    @include flex('column-center');
+    @include flex('column');
+    justify-content: center;
     width: remc(207);
+
+    @include tablet {
+      width: auto;
+    }
+
+    @include desktop {
+      padding-top: remc(17);
+      width: auto;
+    }
   }
 
   &__price-first {
