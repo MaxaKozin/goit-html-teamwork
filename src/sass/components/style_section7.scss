@@ -23,7 +23,7 @@
   
   &__header {
     @extend %medium-xbold;
-    width: remc(213);
+    width: remc(225);
     text-transform: uppercase;
     margin-bottom: remc(16);
     padding-left: remc(38);
@@ -104,8 +104,8 @@
       @include tablet {
         width: remc(82);
         margin: 0;
+        line-height: remc(16);
         font-size: remc(9);
-        line-height: remc(15);
       }
       @include desktop {
         width: remc(86);
@@ -113,8 +113,13 @@
     }
     
     &--bgc {
-      background-color: $black;
       display: inline-block;
+      background-color: $black;
+      line-height: remc(18);
+
+      @include tablet {
+        line-height: remc(15);
+      }
     }
   }
   
