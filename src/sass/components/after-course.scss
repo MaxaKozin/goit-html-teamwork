@@ -16,6 +16,10 @@
     margin-bottom: remc(95.6);
   }
 
+  @include desktop {
+    margin-bottom: remc(119.6);
+  }
+
   &__container {
     width: col(6);
 
