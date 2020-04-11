@@ -5,151 +5,225 @@
   align-items: center;
   font-size: remc(13.5);
   position: relative;
-
+  padding-top: remc(18);
+  padding-bottom: remc(40);
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: remc(52);
+    padding-bottom: remc(52);
   }
-
   &:before {
     display: block;
     position: absolute;
     content: 'IT';
-    font-size: remc(198);
-    line-height: remc(159);
-    left: remc(180);
-    top: remc(30);
-    font-family: $acrom-xbold;
-    color: $bg_text;
-    text-transform: uppercase;
     transform: rotate(90deg);
     z-index: -1;
+    font-family: $acrom-xbold;
+    color: $bg_text;
+    font-size: remc(226);
+    line-height: remc(181);
+    left: remc(168);
+    top: remc(36);
+    text-transform: uppercase;
+    @include tablet {
+      font-size: remc(198);
+      line-height: remc(159);
+      left: remc(106);
+      top: remc(72);
+      text-transform: uppercase;
+    }
+    @include desktop {
+      font-size: remc(221);
+      line-height: remc(177);
+      left: remc(100);
+      top: remc(72);
+    }
   }
 
   &__container {
-    width: col(8);
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      width: col(12);
+    }
   }
-
+  &__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      width: col(5);
+      justify-content: center;
+    }
+    @include desktop {
+      width: col(4.6);
+    }
+  }
   &__argument {
+    width: col(10);
     font-size: remc(13.5);
     line-height: remc(20);
     font-family: $acrom-medium;
     position: relative;
     color: $orange;
-    width: remc(340);
-    padding-top: remc(43);
-    padding-bottom: remc(23);
-
+    padding-left: remc(27);
+    margin-bottom: remc(23);
     @include tablet {
-      width: remc(145);
+      width: col(6);
       font-size: remc(9);
       line-height: remc(13);
+      padding-left: remc(24);
+      margin-bottom: remc(16);
     }
 
     @include desktop {
       font-size: remc(10);
       line-height: remc(15);
+      margin-bottom: remc(18);
     }
 
     &:before {
       position: absolute;
       display: block;
       content: '';
-      width: remc(13);
-      height: remc(2);
-      top: remc(50);
-      left: remc(-30);
       background-color: $black;
-      transform: rotate(-45deg);
+      transform: rotate(-55deg);
+      width: remc(12);
+      height: remc(2);
+      top: remc(10);
+      left: remc(0);
+
+      @include tablet {
+        width: remc(14);
+        height: remc(2);
+      }
+      @include desktop {
+        width: remc(15);
+        height: remc(2);
+      }
     }
   }
 
   &__title {
     font-size: remc(18);
     font-family: $acrom-xbold;
-    background: $black;
-    color: $white;
-    padding: remc(2) remc(10);
-    text-transform: uppercase;
-
+    &--span {
+      background: $black;
+      color: $white;
+      text-transform: uppercase;
+    }
     @include tablet {
       font-size: remc(27);
       line-height: remc(34);
       padding: remc(0) remc(0);
     }
-  }
-
-  &__second--argument {
-    font-size: remc(13.5);
-    line-height: remc(20);
-    position: relative;
-    font-family: $acrom-medium;
-    padding-top: remc(25);
-
-    @include tablet {
-      font-size: remc(9);
-      line-height: remc(13);
-      width: remc(175);
-    }
-
-    &:before {
-      position: absolute;
-      display: block;
-      content: '';
-      width: remc(20);
-      height: remc(2);
-      top: remc(30);
-      left: remc(-35);
-      background-color: $black;
+    @include desktop {
+      font-size: remc(30);
+      line-height: remc(38);
+      &--span {
+        line-height: remc(40);
+      }
     }
   }
-
+  &__second {
+    &--argument {
+      width: col(8);
+      font-size: remc(13.5);
+      line-height: remc(20);
+      position: relative;
+      font-family: $acrom-medium;
+      padding-left: remc(38);
+      margin-top: remc(22);
+      @include tablet {
+        font-size: remc(9);
+        line-height: remc(13);
+        width: col(8);
+        padding-left: remc(46);
+        margin-top: remc(26);
+      }
+      @include desktop {
+        font-size: remc(10);
+        line-height: remc(15);
+        padding-left: remc(52);
+        margin-top: remc(24);
+      }
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        background-color: $black;
+        width: remc(20);
+        height: remc(3);
+        top: remc(10);
+        left: remc(0);
+        @include tablet {
+          width: remc(29);
+          height: remc(4);
+          top: remc(3);
+          left: remc(0);
+        }
+      }
+    }
+  }
   &__second--title {
-    width: remc(365);
+    width: col(12);
     font-size: remc(13.5);
     line-height: remc(20);
     font-family: $acrom-xbold;
     text-transform: uppercase;
-    padding-top: remc(55);
-    padding-bottom: remc(30);
+    margin-bottom: remc(30);
 
     @include tablet {
-      width: remc(115);
+      width: col(2);
       padding: 0;
-      margin-right: remc(50);
     }
 
-    @include desktop {}
+    @include desktop {
+      width: col(1.8);
+    }
   }
-
   &__list {
-    list-style: none;
-    text-align: left;
     width: col(8);
     margin: 0 auto;
-
+    padding-top: remc(32);
     @include tablet {
       margin: 0;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       width: col(9);
+      padding-top: 0;
     }
   }
-
   &__item {
     font-size: remc(13.5);
     position: relative;
     counter-reset: section;
     width: remc(265);
-
-    @include tablet {
-      width: remc(125);
-      padding-left: remc(38);
-      text-align: left;
-      width: col(4);
+    &:not(:last-child) {
+      padding-bottom: remc(30);
     }
-
+    @include tablet {
+      padding-left: remc(24);
+      text-align: left;
+      width: col(3.435);
+      &:not(:last-child) {
+        padding-bottom: 0;
+      }
+      &:nth-child(-n + 3) {
+        padding-bottom: remc(36);
+      }
+    }
+    @include desktop {
+      width: col(3.08);
+      &:nth-child(-n + 3) {
+        padding-bottom: remc(36);
+      }
+    }
     &:before {
       position: absolute;
       display: block;
@@ -163,8 +237,7 @@
 
       @include tablet {
         top: remc(10);
-        left: remc(5);
-        
+        left: 0;
         font-size: remc(7);
         padding: 0 remc(2);
       }
@@ -210,7 +283,6 @@
     font-size: remc(13.5);
     line-height: remc(19.5);
     font-family: $acrom;
-    padding-bottom: remc(28);
     color: $secondary_text;
 
     @include tablet {
@@ -220,20 +292,23 @@
   }
 
   &__wrapper {
-    width: col(9);
-    margin: 0 auto;
+    padding-top: remc(46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     @include tablet {
-      margin: 0;
-      width: remc(280);
-      margin-left: remc(85);
+      padding-top: 0;
+      align-items: flex-start;
+      width: col(6);
     }
-  }
-
-  &__wrapper--second {
-    @include tablet {
-      display: flex;
-      justify-content: center;
-      padding-top: remc(50);
+    &--second {
+      padding-top: remc(55);
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        padding-top: remc(50);
+      }
     }
   }
 }
